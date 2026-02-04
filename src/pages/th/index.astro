@@ -74,9 +74,12 @@ const webUrl = 'https://web.candlemaster.app';
           <p class="description">{t.hero.description}</p>
 
           <div class="cta-buttons">
-            <a href={appUrl} class="btn btn-primary">
-              <span class="btn-icon">📱</span>
-              เล่นฟรีบนมือถือ
+            <a href="https://app.candlemaster.app" class="btn-3d" target="_blank" rel="noopener noreferrer">
+              <span class="btn-3d-content">
+                <span class="btn-3d-icon">📱</span>
+                <span class="btn-3d-text">เล่นฟรีบนมือถือ</span>
+              </span>
+              <span class="btn-3d-shine"></span>
             </a>
             <button class="btn btn-secondary btn-coming-soon" disabled>
               <span class="btn-icon">💻</span>
@@ -106,8 +109,8 @@ const webUrl = 'https://web.candlemaster.app';
       <!-- Features Section -->
       <section class="features">
         <div class="container">
-          <h2 class="section-title">{t.features.badge}</h2>
-          <p class="section-subtitle">เรียนเทรดผ่านการเล่น - วิธีที่ฉลาดที่สุดในการเป็นมืออาชีพ</p>
+          <h2 class="section-title">{t.features.title} <span class="text-gradient">{t.features.titleHighlight}</span></h2>
+          <p class="section-subtitle">{t.features.badge}</p>
 
           <div class="feature-grid">
             <div class="feature-card">
@@ -228,7 +231,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>ทุนจำลอง $100K</span>
+                  <span>{t.pricing.free.features.themes}</span>
                 </li>
                 <li class="feature-item disabled">
                   <span class="feature-icon cross">✕</span>
@@ -272,17 +275,17 @@ const webUrl = 'https://web.candlemaster.app';
                   <span class="feature-icon check">✓</span>
                   <span>{t.pricing.proMonthly.features.data}</span>
                 </li>
+                <li class="feature-item">
+                  <span class="feature-icon check">✓</span>
+                  <span>{t.pricing.proMonthly.features.themes}</span>
+                </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
                   <span>{t.pricing.proMonthly.features.academy}</span>
                 </li>
-                <li class="feature-item highlight">
-                  <span class="feature-icon check">✓</span>
-                  <span><strong>Position Calculator</strong></span>
-                </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>รีเซ็ตข้อมูลเกม</span>
+                  <span>{t.pricing.proMonthly.features.updates}</span>
                 </li>
               </ul>
 
@@ -309,7 +312,7 @@ const webUrl = 'https://web.candlemaster.app';
               <ul class="pricing-features">
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>{t.pricing.proLifetime.features.everything}</strong></span>
+                  <span>{t.pricing.proLifetime.features.everything}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
@@ -321,15 +324,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>บริการ Priority Support</span>
-                </li>
-                <li class="feature-item savings">
-                  <span class="feature-icon check">💰</span>
-                  <span><strong>ประหยัด $17.89/ปี</strong> เทียบรายเดือน</span>
-                </li>
-                <li class="feature-item savings">
-                  <span class="feature-icon check">💰</span>
-                  <span>คุ้มทุนใน <strong>8 เดือน</strong></span>
+                  <span>{t.pricing.proLifetime.features.support}</span>
                 </li>
               </ul>
 
@@ -566,14 +561,14 @@ const webUrl = 'https://web.candlemaster.app';
 
   .free-highlight {
     display: inline-block;
-    background: var(--gradient-profit);
+    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%);
     color: white;
     padding: var(--spacing-xs) var(--spacing-lg);
     border-radius: var(--border-radius-full);
     font-size: var(--text-sm);
     font-weight: 600;
     margin-bottom: var(--spacing-lg);
-    box-shadow: var(--glow-profit);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
   }
 
   .description {
@@ -653,6 +648,91 @@ const webUrl = 'https://web.candlemaster.app';
     padding: var(--spacing-md) var(--spacing-2xl);
     font-size: var(--text-lg);
     min-height: 56px;
+  }
+
+  /* 3D Gradient Button */
+  .btn-3d {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 36px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow:
+      0 6px 0 #B8860B,
+      0 8px 20px rgba(255, 165, 0, 0.4),
+      inset 0 2px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(0);
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 10px 0 #B8860B,
+      0 14px 30px rgba(255, 165, 0, 0.5),
+      inset 0 2px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-3d:active {
+    transform: translateY(4px);
+    box-shadow:
+      0 2px 0 #B8860B,
+      0 4px 10px rgba(255, 165, 0, 0.3),
+      inset 0 2px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-3d-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-3d-icon {
+    font-size: 1.5rem;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .btn-3d-text {
+    letter-spacing: 0.5px;
+  }
+
+  .btn-3d-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .btn-3d:hover .btn-3d-shine {
+    left: 100%;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
   }
 
   /* Hero Stats */

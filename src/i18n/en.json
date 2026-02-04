@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Candle Master - Learn Trading Through Play",
-    "description": "Master candlestick patterns and trading strategies through gamified learning. Practice with real historical data, zero risk."
+    "title": "Candle Master - Trading Game for Serious Beginner Traders!",
+    "description": "Learn candlestick patterns and trading strategies through gameplay. Practice with real data, zero risk."
   },
   "nav": {
     "features": "Features",
@@ -10,25 +10,25 @@
     "playFree": "Play Free"
   },
   "hero": {
-    "badge": "🎮 Education Gaming App",
-    "title": "Master Trading",
-    "titleHighlight": "Through Play",
-    "description": "Learn candlestick patterns and trading strategies with real historical data. Zero risk, pure skill building.",
+    "badge": "Trading Game Built by Traders",
+    "title": "Real Trading",
+    "titleHighlight": "No Real Pain",
+    "description": "History Always Repeats Itself - Practice trading with legendary stocks before entering the real market.",
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
       "desktopComingSoon": "Desktop - Coming Soon"
     },
     "stats": {
-      "stocks": "20+ Legendary Stocks",
-      "data": "1980-2025 Data",
+      "stocks": "300+ Legendary Stocks",
+      "data": "Data from 1980-2025",
       "risk": "Zero Risk"
     }
   },
   "features": {
     "badge": "Why Candle Master?",
     "title": "Everything You Need to",
-    "titleHighlight": "Master Trading",
+    "titleHighlight": "Become a Pro Trader",
     "cards": {
       "realData": {
         "title": "Real Historical Data",
@@ -37,11 +37,11 @@
       "academy": {
         "badge": "PRO",
         "title": "Candle Academy",
-        "description": "Master Candlestick Patterns, Chart Patterns, and Money Management through interactive lessons."
+        "description": "Learn candlestick patterns, chart patterns, and money management through interactive lessons."
       },
       "legendary": {
         "title": "Legendary Stocks",
-        "description": "Trade iconic stocks from around the world. Learn patterns from market history."
+        "description": "Trade legendary stocks from around the world. Learn from the past for future victories."
       },
       "themes": {
         "title": "Beautiful Themes",
@@ -56,30 +56,30 @@
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Pick a Stock",
-        "description": "Choose from 20+ legendary stocks with real historical data"
+        "title": "Mystery Stock",
+        "description": "Randomly encounter legendary stocks and secret timeframes from 1980-2025"
       },
       "step2": {
         "number": "02",
-        "title": "Analyze the Chart",
-        "description": "Read candlestick patterns and make your prediction"
+        "title": "Analyze Chart",
+        "description": "Read candlestick patterns - no stock name, no date, pure skill"
       },
       "step3": {
         "number": "03",
-        "title": "Make Your Move",
-        "description": "Buy, Sell, or Hold - then see the real outcome"
+        "title": "Make Decision",
+        "description": "Buy, Sell, or Hold - then see the results"
       },
       "step4": {
         "number": "04",
-        "title": "Learn & Improve",
-        "description": "Track your progress and master the patterns"
+        "title": "Reveal & Learn",
+        "description": "Discover which stock, what timeframe, and keep improving your skills"
       }
     }
   },
   "pricing": {
     "badge": "Simple Pricing",
-    "title": "Start Free,",
-    "titleHighlight": "Go PRO",
+    "title": "Play Free Now,",
+    "titleHighlight": "Upgrade PRO When Ready",
     "launchBanner": "🎉 Launch Sale - Limited Time Only!",
     "free": {
       "badge": "Forever Free",
@@ -88,8 +88,8 @@
       "period": "forever",
       "description": "Perfect for getting started",
       "features": {
-        "days": "100 Trading Days",
-        "stocks": "20 Legendary Stocks",
+        "days": "100 Moves per game",
+        "stocks": "10 Legendary Stocks",
         "data": "Random Historical Data 1980-2025",
         "themes": "3 Beautiful Themes"
       },
@@ -103,9 +103,9 @@
       "period": "/month",
       "description": "☕ Buy the dev a coffee & unlock PRO",
       "features": {
-        "days": "Unlimited Trading Days",
-        "stocks": "All Legendary Stocks",
-        "data": "All Historical Data",
+        "days": "200 Moves per game",
+        "stocks": "300+ Legendary Stocks worldwide",
+        "data": "Random Historical Data 1980-2025",
         "themes": "3 Beautiful Themes",
         "academy": "Full Candle Academy Access",
         "updates": "All Future Updates"
@@ -118,21 +118,21 @@
       "priceOriginal": "$39.99",
       "price": "$29.99",
       "period": "one-time",
-      "description": "☕ Buy 8 coffees, own forever",
+      "description": "☕ Buy 8 coffees, get PRO forever",
       "features": {
         "everything": "Everything in PRO Monthly",
-        "forever": "Pay once, own forever",
+        "forever": "Pay once, PRO-Member forever",
         "updates": "Lifetime updates included",
-        "support": "Support indie development"
+        "support": "Support Indie Developer - Thank you so much!"
       },
       "cta": "Get Lifetime Access"
     },
     "coffeeNote": "☕ Skip one coffee, learn trading for a month"
   },
   "cta": {
-    "title": "Ready to Master",
-    "titleHighlight": "the Market?",
-    "description": "Join traders learning the smart way. Start free, no credit card required.",
+    "title": "Ready to Become",
+    "titleHighlight": "a Pro Trader?",
+    "description": "Start free, no credit card required.",
     "appStore": "App Store",
     "googlePlay": "Google Play"
   },

@@ -59,7 +59,7 @@ src/
 ├── styles/
 │   └── theme.css              # Midnight theme variables
 public/
-├── favicon.svg
+├── favicon.svg                # Candle Master icon (candlesticks)
 ├── favicon.ico
 └── og-image.png               # (TODO: add OG image)
 ```
@@ -73,7 +73,12 @@ public/
 - **Loss**: Red (#EF4444)
 - **Font**: Geist Sans (Claude-like)
 
-### Pricing
+### Game Concept: Blind Trading
+- Random legendary stocks from 1980-2025
+- Player doesn't know which stock until game ends
+- "History Always Repeats Itself" - learn from real market history
+
+### Pricing (Current)
 | Plan | Regular | Launch Price |
 |------|---------|--------------|
 | Free | $0 | $0 |
@@ -81,10 +86,30 @@ public/
 | PRO Lifetime | $39.99 | $29.99 |
 
 ### Free Tier Limits
-- 100 Trading Days per Game
-- 20 Legendary Stocks
+- 100 Moves per Game
+- 10 Legendary Stocks
 - Historical Data 1980-2025
-- $100K Virtual Capital
+- 2 Chart Themes
+
+### PRO Features
+- 200 Moves per Game
+- 300+ Legendary Stocks worldwide
+- All Chart Themes
+- Candle Academy
+- Position Calculator
+- Lifetime updates (Lifetime plan)
+
+## i18n Content Editing
+
+Content is stored in JSON files:
+- `src/i18n/en.json` - English
+- `src/i18n/th.json` - Thai
+
+To edit content:
+1. Open the JSON file in VS Code
+2. Run `npm run dev` to preview changes
+3. Edit content directly in the JSON
+4. Save and see live updates at http://localhost:4321
 
 ## Deployment
 
@@ -102,6 +127,7 @@ public/
 - [x] Twitter Card tags
 - [x] Canonical URL
 - [x] Alternate language hreflang tags
+- [x] Favicon (Candle Master icon)
 - [ ] OG image (og-image.png)
 - [ ] Sitemap
 - [ ] robots.txt
@@ -112,3 +138,5 @@ public/
 - [ ] Add OG image
 - [ ] Add sitemap.xml
 - [ ] Add robots.txt
+- [ ] PWA installation guide page
+- [ ] Affiliate program integration
