@@ -1,0 +1,357 @@
+---
+// Candle Master Landing Page
+const appUrl = 'https://app.candlemaster.app';
+const webUrl = 'https://web.candlemaster.app';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Candle Master - Trading Simulator Game | Practice Trading Risk-Free</title>
+    <meta name="description" content="Master candlestick patterns and trading strategies with Candle Master. Practice blind trading on real historical data. No real money, no risk - just pure skill building." />
+    <meta name="keywords" content="trading simulator, candlestick patterns, stock trading game, trading practice, blind trading, learn trading" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Candle Master - Trading Simulator Game" />
+    <meta property="og:description" content="Practice trading on real historical data. Master candlestick patterns risk-free." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://candlemaster.app" />
+    <meta property="og:image" content="https://candlemaster.app/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Candle Master - Trading Simulator Game" />
+    <meta name="twitter:description" content="Practice trading on real historical data. Master candlestick patterns risk-free." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://candlemaster.app" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1>Candle Master</h1>
+          <p class="tagline">Master the Art of Reading Charts</p>
+          <p class="description">
+            Practice trading on real historical data without knowing the stock.
+            Build your pattern recognition skills risk-free.
+          </p>
+
+          <div class="cta-buttons">
+            <a href={appUrl} class="btn btn-primary">Play on Mobile</a>
+            <a href={webUrl} class="btn btn-secondary">Play on Desktop</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <h2>Why Candle Master?</h2>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Blind Trading</h3>
+              <p>Trade on real historical data without knowing the stock. Pure skill, no bias.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Real Market Data</h3>
+              <p>Practice with actual candlestick charts from global markets.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Pattern Academy</h3>
+              <p>Learn 20+ candlestick patterns and chart formations.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <h3>Risk-Free Practice</h3>
+              <p>Start with $100,000 virtual capital. No real money at risk.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2>How It Works</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Start a Game</h3>
+              <p>Get a random stock chart - you won't know which one!</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Read the Chart</h3>
+              <p>Analyze candlesticks, MA lines, and volume patterns.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Make Your Move</h3>
+              <p>Buy, sell, or hold. Up to 3 positions at once.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <h3>See Results</h3>
+              <p>Track your P&L and improve your strategy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to Master the Market?</h2>
+          <p>Start practicing today - it's free!</p>
+          <a href={appUrl} class="btn btn-primary btn-large">Start Playing Now</a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>&copy; 2025 Candle Master. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<style>
+  /* Reset & Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 100px 0 80px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: #a0aec0;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    color: #cbd5e0;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  /* Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-large {
+    padding: 20px 48px;
+    font-size: 1.25rem;
+  }
+
+  /* Features Section */
+  .features {
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .features h2,
+  .how-it-works h2,
+  .cta-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .feature-card p {
+    color: #a0aec0;
+    line-height: 1.6;
+  }
+
+  /* How It Works */
+  .how-it-works {
+    padding: 80px 0;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 16px;
+  }
+
+  .step h3 {
+    margin-bottom: 8px;
+  }
+
+  .step p {
+    color: #a0aec0;
+    font-size: 0.95rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 80px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-section p {
+    color: #a0aec0;
+    margin-bottom: 32px;
+    font-size: 1.125rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #718096;
+    font-size: 0.875rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+    }
+
+    .features h2,
+    .how-it-works h2,
+    .cta-section h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
