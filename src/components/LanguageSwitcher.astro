@@ -1,0 +1,53 @@
+---
+import { getAlternateLanguages, type Lang } from '../i18n/utils';
+
+interface Props {
+  currentLang: Lang;
+  currentPath: string;
+}
+
+const { currentLang, currentPath } = Astro.props;
+const alternateLanguages = getAlternateLanguages(currentPath, currentLang);
+---
+
+<div class="language-switcher">
+  {alternateLanguages.map((lang) => (
+    <a
+      href={lang.path}
+      class:list={['lang-link', { active: lang.lang === currentLang }]}
+      aria-current={lang.lang === currentLang ? 'page' : undefined}
+    >
+      {lang.name}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .lang-link {
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .lang-link:hover {
+    color: var(--text-primary);
+    background: var(--surface-elevated);
+  }
+
+  .lang-link.active {
+    color: var(--accent);
+    background: rgba(234, 179, 8, 0.1);
+    border-color: rgba(234, 179, 8, 0.3);
+  }
+</style>

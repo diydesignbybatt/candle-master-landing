@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "title": "Candle Master - Learn Trading Through Play",
+    "description": "Master candlestick patterns and trading strategies through gamified learning. Practice with real historical data, zero risk."
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "playFree": "Play Free"
+  },
+  "hero": {
+    "badge": "🎮 Education Gaming App",
+    "title": "Master Trading",
+    "titleHighlight": "Through Play",
+    "description": "Learn candlestick patterns and trading strategies with real historical data. Zero risk, pure skill building.",
+    "cta": {
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "desktopComingSoon": "Desktop - Coming Soon"
+    },
+    "stats": {
+      "stocks": "20+ Legendary Stocks",
+      "data": "1980-2025 Data",
+      "risk": "Zero Risk"
+    }
+  },
+  "features": {
+    "badge": "Why Candle Master?",
+    "title": "Everything You Need to",
+    "titleHighlight": "Master Trading",
+    "cards": {
+      "realData": {
+        "title": "Real Historical Data",
+        "description": "Practice with actual market data from 1980-2025. Random scenarios every time you play."
+      },
+      "academy": {
+        "badge": "PRO",
+        "title": "Candle Academy",
+        "description": "Master Candlestick Patterns, Chart Patterns, and Money Management through interactive lessons."
+      },
+      "legendary": {
+        "title": "Legendary Stocks",
+        "description": "Trade iconic stocks from around the world. Learn patterns from market history."
+      },
+      "themes": {
+        "title": "Beautiful Themes",
+        "description": "3 stunning chart themes to match your style. Trade in comfort."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple & Fun",
+    "title": "How It",
+    "titleHighlight": "Works",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Pick a Stock",
+        "description": "Choose from 20+ legendary stocks with real historical data"
+      },
+      "step2": {
+        "number": "02",
+        "title": "Analyze the Chart",
+        "description": "Read candlestick patterns and make your prediction"
+      },
+      "step3": {
+        "number": "03",
+        "title": "Make Your Move",
+        "description": "Buy, Sell, or Hold - then see the real outcome"
+      },
+      "step4": {
+        "number": "04",
+        "title": "Learn & Improve",
+        "description": "Track your progress and master the patterns"
+      }
+    }
+  },
+  "pricing": {
+    "badge": "Simple Pricing",
+    "title": "Start Free,",
+    "titleHighlight": "Go PRO",
+    "launchBanner": "🎉 Launch Sale - Limited Time Only!",
+    "free": {
+      "badge": "Forever Free",
+      "plan": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Perfect for getting started",
+      "features": {
+        "days": "100 Trading Days",
+        "stocks": "20 Legendary Stocks",
+        "data": "Random Historical Data 1980-2025",
+        "themes": "3 Beautiful Themes"
+      },
+      "cta": "Play Free Now"
+    },
+    "proMonthly": {
+      "badge": "🔥 Launch Sale",
+      "plan": "PRO Monthly",
+      "priceOriginal": "$4.99",
+      "price": "$3.99",
+      "period": "/month",
+      "description": "☕ Buy the dev a coffee & unlock PRO",
+      "features": {
+        "days": "Unlimited Trading Days",
+        "stocks": "All Legendary Stocks",
+        "data": "All Historical Data",
+        "themes": "3 Beautiful Themes",
+        "academy": "Full Candle Academy Access",
+        "updates": "All Future Updates"
+      },
+      "cta": "Get PRO Monthly"
+    },
+    "proLifetime": {
+      "badge": "Best Value",
+      "plan": "PRO Lifetime",
+      "priceOriginal": "$39.99",
+      "price": "$29.99",
+      "period": "one-time",
+      "description": "☕ Buy 8 coffees, own forever",
+      "features": {
+        "everything": "Everything in PRO Monthly",
+        "forever": "Pay once, own forever",
+        "updates": "Lifetime updates included",
+        "support": "Support indie development"
+      },
+      "cta": "Get Lifetime Access"
+    },
+    "coffeeNote": "☕ Skip one coffee, learn trading for a month"
+  },
+  "cta": {
+    "title": "Ready to Master",
+    "titleHighlight": "the Market?",
+    "description": "Join traders learning the smart way. Start free, no credit card required.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "footer": {
+    "tagline": "Learn trading through play",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "download": "Download"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "contact": "Contact",
+        "blog": "Blog"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
+    },
+    "copyright": "© 2025 Candle Master. All rights reserved.",
+    "madeWith": "Made with ❤️ for traders"
+  },
+  "language": {
+    "en": "English",
+    "th": "ไทย"
+  }
+}

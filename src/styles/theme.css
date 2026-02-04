@@ -1,0 +1,178 @@
+/* ============================================
+   CANDLE MASTER - Landing Page Theme
+   Based on Midnight Theme + Gaming Accents
+   ============================================ */
+
+:root {
+  /* ─────────────────────────────────────────
+     CORE COLORS (from Midnight Theme)
+     ───────────────────────────────────────── */
+
+  /* Backgrounds - Deep blue-black for premium feel */
+  --bg-primary: #0F172A;      /* Main background */
+  --bg-secondary: #1E293B;    /* Cards, sections */
+  --bg-tertiary: #273549;     /* Elevated elements */
+  --bg-glass: rgba(30, 41, 59, 0.8);  /* Glass effect */
+
+  /* Text - Cool gray scale */
+  --text-primary: #F1F5F9;    /* Headings, important */
+  --text-secondary: #94A3B8;  /* Body text */
+  --text-tertiary: #64748B;   /* Muted, captions */
+  --text-inverse: #0F172A;    /* Text on light bg */
+
+  /* Borders & Dividers */
+  --border-default: #334155;
+  --border-light: #475569;
+  --border-glow: rgba(99, 102, 241, 0.5);
+
+  /* ─────────────────────────────────────────
+     ACCENT COLORS (Gaming + Trading vibe)
+     ───────────────────────────────────────── */
+
+  /* Primary Accent - Gold/Amber (CTA buttons, highlights) */
+  --accent-primary: #F59E0B;
+  --accent-primary-hover: #FBBF24;
+  --accent-primary-glow: rgba(245, 158, 11, 0.4);
+
+  /* Secondary Accent - Warm Yellow (Links, secondary actions) */
+  --accent-secondary: #FCD34D;
+  --accent-secondary-hover: #FDE68A;
+  --accent-secondary-glow: rgba(252, 211, 77, 0.3);
+
+  /* Tertiary Accent - Orange (Premium features) */
+  --accent-tertiary: #FB923C;
+  --accent-tertiary-hover: #FDBA74;
+  --accent-tertiary-glow: rgba(251, 146, 60, 0.3);
+
+  /* Trading Colors */
+  --color-profit: #22C55E;    /* Green - gains */
+  --color-profit-glow: rgba(34, 197, 94, 0.3);
+  --color-loss: #EF4444;      /* Red - losses */
+  --color-loss-glow: rgba(239, 68, 68, 0.3);
+
+  /* ─────────────────────────────────────────
+     GRADIENTS (Eye-catching, gaming feel)
+     ───────────────────────────────────────── */
+
+  /* Primary CTA gradient - Gold to Orange */
+  --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #FB923C 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #FBBF24 0%, #FDBA74 100%);
+
+  /* Secondary gradient - Yellow to Gold */
+  --gradient-secondary: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+
+  /* Profit gradient */
+  --gradient-profit: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+
+  /* Background gradient - Subtle depth */
+  --gradient-bg: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+  --gradient-bg-radial: radial-gradient(ellipse at top, #1E293B 0%, #0F172A 70%);
+
+  /* Card hover gradient */
+  --gradient-card-hover: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+
+  /* ─────────────────────────────────────────
+     EFFECTS & SHADOWS
+     ───────────────────────────────────────── */
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+
+  /* Glow effects */
+  --glow-primary: 0 0 20px var(--accent-primary-glow), 0 0 40px rgba(245, 158, 11, 0.2);
+  --glow-secondary: 0 0 20px var(--accent-secondary-glow);
+  --glow-profit: 0 0 20px var(--color-profit-glow);
+
+  /* ─────────────────────────────────────────
+     TYPOGRAPHY (Claude-like with Geist)
+     ───────────────────────────────────────── */
+
+  --font-primary: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Geist', 'Inter', -apple-system, sans-serif;  /* Same font, different weight */
+
+  /* Font sizes - Mobile-first, scales up */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 2rem;        /* 32px */
+  --text-4xl: 2.5rem;      /* 40px */
+  --text-5xl: 3.5rem;      /* 56px */
+  --text-6xl: 4rem;        /* 64px */
+  --text-7xl: 5rem;        /* 80px */
+
+  /* ─────────────────────────────────────────
+     SPACING & LAYOUT
+     ───────────────────────────────────────── */
+
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  --spacing-3xl: 4rem;    /* 64px */
+  --spacing-4xl: 6rem;    /* 96px */
+
+  --container-max: 1200px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* ─────────────────────────────────────────
+     TRANSITIONS
+     ───────────────────────────────────────── */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-accent { color: var(--accent-primary); }
+.text-profit { color: var(--color-profit); }
+.text-loss { color: var(--color-loss); }
+
+/* Background colors */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+
+/* Gradient text */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+.glow-on-hover:hover {
+  box-shadow: var(--glow-primary);
+}

@@ -1,10 +1,10 @@
 ---
-// Candle Master Landing Page - English (Default)
-import HeroBackground from '../components/HeroBackground.astro';
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
-import { useTranslations } from '../i18n/utils';
+// Candle Master Landing Page - Thai Version
+import HeroBackground from '../../components/HeroBackground.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import { useTranslations } from '../../i18n/utils';
 
-const lang = 'en';
+const lang = 'th';
 const t = useTranslations(lang);
 
 const appUrl = 'https://app.candlemaster.app';
@@ -20,13 +20,13 @@ const webUrl = 'https://web.candlemaster.app';
     <!-- SEO Meta Tags -->
     <title>{t.meta.title}</title>
     <meta name="description" content={t.meta.description} />
-    <meta name="keywords" content="trading simulator, candlestick patterns, stock trading game, trading practice, blind trading, learn trading" />
+    <meta name="keywords" content="เกมจำลองการเทรด, รูปแบบแท่งเทียน, เกมหุ้น, ฝึกเทรด, เรียนเทรด, trading simulator" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://candlemaster.app" />
+    <meta property="og:url" content="https://candlemaster.app/th/" />
     <meta property="og:image" content="https://candlemaster.app/og-image.png" />
 
     <!-- Twitter Card -->
@@ -35,7 +35,7 @@ const webUrl = 'https://web.candlemaster.app';
     <meta name="twitter:description" content={t.meta.description} />
 
     <!-- Canonical & Alternate Languages -->
-    <link rel="canonical" href="https://candlemaster.app" />
+    <link rel="canonical" href="https://candlemaster.app/th/" />
     <link rel="alternate" hreflang="en" href="https://candlemaster.app/" />
     <link rel="alternate" hreflang="th" href="https://candlemaster.app/th/" />
     <link rel="alternate" hreflang="x-default" href="https://candlemaster.app/" />
@@ -49,7 +49,7 @@ const webUrl = 'https://web.candlemaster.app';
 
     <!-- Theme CSS -->
     <style>
-      @import '../styles/theme.css';
+      @import '../../styles/theme.css';
     </style>
   </head>
 
@@ -71,13 +71,13 @@ const webUrl = 'https://web.candlemaster.app';
           </div>
           <h1 class="text-gradient">Candle Master</h1>
           <p class="tagline">{t.hero.title} <span class="text-gradient">{t.hero.titleHighlight}</span></p>
-          <p class="free-highlight">100% Free to Play - No Credit Card Required</p>
+          <p class="free-highlight">เล่นฟรี 100% - ไม่ต้องใช้บัตรเครดิต</p>
           <p class="description">{t.hero.description}</p>
 
           <div class="cta-buttons">
             <a href={appUrl} class="btn btn-primary">
               <span class="btn-icon">📱</span>
-              Play Free on Mobile
+              เล่นฟรีบนมือถือ
             </a>
             <button class="btn btn-secondary btn-coming-soon" disabled>
               <span class="btn-icon">💻</span>
@@ -88,7 +88,7 @@ const webUrl = 'https://web.candlemaster.app';
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-value">$100K</span>
-              <span class="stat-label">Starting Capital</span>
+              <span class="stat-label">ทุนเริ่มต้น</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
@@ -98,7 +98,7 @@ const webUrl = 'https://web.candlemaster.app';
             <div class="stat-divider"></div>
             <div class="stat">
               <span class="stat-value">1980-2025</span>
-              <span class="stat-label">Historical Data</span>
+              <span class="stat-label">{t.hero.stats.data}</span>
             </div>
           </div>
         </div>
@@ -107,8 +107,8 @@ const webUrl = 'https://web.candlemaster.app';
       <!-- Features Section -->
       <section class="features">
         <div class="container">
-          <h2 class="section-title">{t.features.badge} <span class="text-gradient">Candle Master</span>?</h2>
-          <p class="section-subtitle">Learn trading through play - the smartest way to master the market</p>
+          <h2 class="section-title">{t.features.badge}</h2>
+          <p class="section-subtitle">เรียนเทรดผ่านการเล่น - วิธีที่ฉลาดที่สุดในการเป็นมืออาชีพ</p>
 
           <div class="feature-grid">
             <div class="feature-card">
@@ -131,8 +131,8 @@ const webUrl = 'https://web.candlemaster.app';
 
             <div class="feature-card">
               <div class="feature-icon">💰</div>
-              <h3>Risk-Free Practice</h3>
-              <p>Start with $100,000 virtual capital. Learn from mistakes without losing real money.</p>
+              <h3>ฝึกฝนไร้ความเสี่ยง</h3>
+              <p>เริ่มต้นด้วยทุนจำลอง $100,000 เรียนรู้จากข้อผิดพลาดโดยไม่สูญเสียเงินจริง</p>
             </div>
           </div>
         </div>
@@ -141,8 +141,8 @@ const webUrl = 'https://web.candlemaster.app';
       <!-- How It Works -->
       <section class="how-it-works">
         <div class="container">
-          <h2 class="section-title">{t.howItWorks.title} <span class="text-gradient">{t.howItWorks.titleHighlight}</span></h2>
-          <p class="section-subtitle">Simple gameplay, powerful learning</p>
+          <h2 class="section-title">{t.howItWorks.title}<span class="text-gradient">{t.howItWorks.titleHighlight}</span></h2>
+          <p class="section-subtitle">เกมเพลย์ง่าย เรียนรู้ได้เยอะ</p>
 
           <div class="steps">
             <div class="step">
@@ -192,13 +192,13 @@ const webUrl = 'https://web.candlemaster.app';
           <!-- Promo Banner -->
           <div class="promo-banner">
             <span class="promo-icon">🚀</span>
-            <span class="promo-text"><strong>Launch Special!</strong> Limited time offer - Save up to 33%</span>
+            <span class="promo-text"><strong>{t.pricing.launchBanner}</strong></span>
           </div>
 
           <h2 class="section-title">{t.pricing.title} <span class="text-gradient">{t.pricing.titleHighlight}</span></h2>
           <p class="section-subtitle">
             {t.pricing.coffeeNote}<br>
-            <span class="subtitle-emphasis">Your choice.</span>
+            <span class="subtitle-emphasis">คุณเลือกได้</span>
           </p>
 
           <div class="pricing-grid three-col">
@@ -217,11 +217,11 @@ const webUrl = 'https://web.candlemaster.app';
               <ul class="pricing-features">
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>100</strong> {t.pricing.free.features.days}</span>
+                  <span>{t.pricing.free.features.days}</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>20</strong> {t.pricing.free.features.stocks}</span>
+                  <span>{t.pricing.free.features.stocks}</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
@@ -229,7 +229,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>$100K Virtual Capital</span>
+                  <span>ทุนจำลอง $100K</span>
                 </li>
                 <li class="feature-item disabled">
                   <span class="feature-icon cross">✕</span>
@@ -263,11 +263,11 @@ const webUrl = 'https://web.candlemaster.app';
               <ul class="pricing-features">
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>200</strong> Trading Days per Game</span>
+                  <span>{t.pricing.proMonthly.features.days}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>300+</strong> {t.pricing.proMonthly.features.stocks}</span>
+                  <span>{t.pricing.proMonthly.features.stocks}</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
@@ -275,7 +275,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>Candle Academy</strong> {t.pricing.proMonthly.features.academy}</span>
+                  <span>{t.pricing.proMonthly.features.academy}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
@@ -283,7 +283,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>Reset Game Data</span>
+                  <span>รีเซ็ตข้อมูลเกม</span>
                 </li>
               </ul>
 
@@ -291,7 +291,7 @@ const webUrl = 'https://web.candlemaster.app';
                 <span class="btn-icon">⚡</span>
                 {t.pricing.proMonthly.cta}
               </a>
-              <p class="pricing-note">Cancel anytime. No questions asked.</p>
+              <p class="pricing-note">ยกเลิกได้ทุกเมื่อ</p>
             </div>
 
             <!-- Pro Lifetime -->
@@ -314,23 +314,23 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>Lifetime</strong> access - no renewals</span>
+                  <span>{t.pricing.proLifetime.features.forever}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span><strong>{t.pricing.proLifetime.features.updates}</strong></span>
+                  <span>{t.pricing.proLifetime.features.updates}</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>Priority support</span>
+                  <span>บริการ Priority Support</span>
                 </li>
                 <li class="feature-item savings">
                   <span class="feature-icon check">💰</span>
-                  <span><strong>Save $17.89/year</strong> vs monthly</span>
+                  <span><strong>ประหยัด $17.89/ปี</strong> เทียบรายเดือน</span>
                 </li>
                 <li class="feature-item savings">
                   <span class="feature-icon check">💰</span>
-                  <span>Pays for itself in <strong>8 months</strong></span>
+                  <span>คุ้มทุนใน <strong>8 เดือน</strong></span>
                 </li>
               </ul>
 
@@ -338,7 +338,7 @@ const webUrl = 'https://web.candlemaster.app';
                 <span class="btn-icon">👑</span>
                 {t.pricing.proLifetime.cta}
               </a>
-              <p class="pricing-note">One-time payment. No subscription.</p>
+              <p class="pricing-note">จ่ายครั้งเดียว ไม่มีค่าสมาชิกรายเดือน</p>
             </div>
           </div>
 
@@ -347,23 +347,23 @@ const webUrl = 'https://web.candlemaster.app';
             <div class="comparison-item loss">
               <span class="comparison-icon">📉</span>
               <div class="comparison-content">
-                <span class="comparison-label">Average beginner loss in real market</span>
-                <span class="comparison-value">-$1,000 to -$10,000+</span>
+                <span class="comparison-label">การขาดทุนเฉลี่ยของมือใหม่ในตลาดจริง</span>
+                <span class="comparison-value">-$1,000 ถึง -$10,000+</span>
               </div>
             </div>
             <div class="comparison-vs">VS</div>
             <div class="comparison-item gain">
               <span class="comparison-icon">☕</span>
               <div class="comparison-content">
-                <span class="comparison-label">Learn with Candle Master PRO</span>
-                <span class="comparison-value">$3.99/mo or $29.99 forever</span>
+                <span class="comparison-label">เรียนรู้กับ Candle Master PRO</span>
+                <span class="comparison-value">$3.99/เดือน หรือ $29.99 ตลอดชีพ</span>
               </div>
             </div>
           </div>
 
           <div class="pricing-faq">
             <p class="faq-item">
-              <strong>Already playing?</strong> You can upgrade to PRO directly in the app settings.
+              <strong>เล่นอยู่แล้ว?</strong> คุณสามารถอัพเกรดเป็น PRO ได้ในหน้าตั้งค่าของแอพ
             </p>
           </div>
         </div>
@@ -374,11 +374,11 @@ const webUrl = 'https://web.candlemaster.app';
         <div class="container">
           <div class="cta-card">
             <h2>{t.cta.title} <span class="text-gradient">{t.cta.titleHighlight}</span></h2>
-            <p class="cta-free-text">Start playing now - <strong>100% FREE forever</strong></p>
+            <p class="cta-free-text">เริ่มเล่นตอนนี้ - <strong>ฟรี 100% ตลอดไป</strong></p>
             <p class="cta-sub">{t.cta.description}</p>
             <a href={appUrl} class="btn btn-primary btn-large">
               <span class="btn-icon">🚀</span>
-              Start Playing Free
+              เริ่มเล่นฟรี
             </a>
           </div>
         </div>
@@ -415,7 +415,7 @@ const webUrl = 'https://web.candlemaster.app';
           const link = STRIPE_LINKS[type];
 
           if (link.includes('YOUR_')) {
-            alert('Stripe checkout is not configured yet. Please upgrade to PRO from within the app settings.');
+            alert('Stripe checkout ยังไม่ได้ตั้งค่า กรุณาอัพเกรดเป็น PRO ในหน้าตั้งค่าของแอพ');
             return;
           }
 
@@ -441,7 +441,7 @@ const webUrl = 'https://web.candlemaster.app';
 </html>
 
 <style>
-  @import '../styles/theme.css';
+  @import '../../styles/theme.css';
 
   /* Reset & Base */
   * {

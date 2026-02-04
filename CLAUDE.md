@@ -8,16 +8,18 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Tech Stack
 
-- **Framework**: Astro
+- **Framework**: Astro 5.x
 - **Adapter**: @astrojs/cloudflare
 - **Deployment**: Cloudflare Pages
 - **Output**: Static
+- **i18n**: URL-based routing (English default, Thai at /th/)
 
 ## URLs
 
 | URL | Purpose |
 |-----|---------|
-| https://candlemaster.app | Production (this site) |
+| https://candlemaster.app | Production - English |
+| https://candlemaster.app/th/ | Production - Thai |
 | https://app.candlemaster.app | Mobile App (PWA) |
 | https://web.candlemaster.app | Desktop/iPad App |
 
@@ -41,13 +43,48 @@ npm run preview  # Preview production build
 
 ```
 src/
+├── components/
+│   ├── HeroBackground.astro   # SVG candlestick animation
+│   └── LanguageSwitcher.astro # i18n language toggle
+├── i18n/
+│   ├── en.json                # English translations
+│   ├── th.json                # Thai translations
+│   └── utils.ts               # i18n helper functions
+├── layouts/
+│   └── Layout.astro           # Shared layout
 ├── pages/
-│   └── index.astro    # Landing page
+│   ├── index.astro            # Landing page (English)
+│   └── th/
+│       └── index.astro        # Landing page (Thai)
+├── styles/
+│   └── theme.css              # Midnight theme variables
 public/
 ├── favicon.svg
 ├── favicon.ico
-└── og-image.png       # (TODO: add OG image)
+└── og-image.png               # (TODO: add OG image)
 ```
+
+## Design System
+
+### Theme: Midnight with Gold/Yellow Accents
+- **Primary**: Gold/Yellow (#EAB308, #F59E0B)
+- **Background**: Dark (#0A0A0A, #111111)
+- **Profit**: Green (#22C55E)
+- **Loss**: Red (#EF4444)
+- **Font**: Geist Sans (Claude-like)
+
+### Pricing
+| Plan | Regular | Launch Price |
+|------|---------|--------------|
+| Free | $0 | $0 |
+| PRO Monthly | $4.99/mo | $3.99/mo |
+| PRO Lifetime | $39.99 | $29.99 |
+
+### Free Tier Limits
+- 100 Trading Days per Game
+- 20 Legendary Stocks
+- Historical Data 1980-2025
+- $100K Virtual Capital
 
 ## Deployment
 
@@ -64,13 +101,14 @@ public/
 - [x] Open Graph tags
 - [x] Twitter Card tags
 - [x] Canonical URL
+- [x] Alternate language hreflang tags
 - [ ] OG image (og-image.png)
 - [ ] Sitemap
 - [ ] robots.txt
 
-## Design Notes
+## TODO
 
-- Dark theme with gradient background
-- Purple/pink accent colors
-- Mobile responsive
-- Links to app.candlemaster.app and web.candlemaster.app
+- [ ] Configure actual Stripe Payment Links (currently placeholders)
+- [ ] Add OG image
+- [ ] Add sitemap.xml
+- [ ] Add robots.txt
