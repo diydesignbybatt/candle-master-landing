@@ -54,14 +54,13 @@ const webUrl = 'https://web.candlemaster.app';
   </head>
 
   <body>
-    <!-- Language Switcher (Fixed Position) -->
-    <div class="lang-switcher-container">
-      <LanguageSwitcher currentLang={lang} currentPath="/" />
-    </div>
-
     <main>
       <!-- Hero Section -->
       <section class="hero">
+        <!-- Language Switcher (Top Right) -->
+        <div class="lang-switcher-container">
+          <LanguageSwitcher currentLang={lang} currentPath="/" />
+        </div>
         <div class="hero-bg"></div>
         <HeroBackground />
         <div class="container">
@@ -470,10 +469,10 @@ const webUrl = 'https://web.candlemaster.app';
 
   /* Language Switcher Container */
   .lang-switcher-container {
-    position: fixed;
+    position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    z-index: 1000;
+    z-index: 100;
     background: var(--bg-secondary);
     border: 1px solid var(--border-default);
     border-radius: var(--border-radius-md);
@@ -957,6 +956,7 @@ const webUrl = 'https://web.candlemaster.app';
     .lang-switcher-container {
       top: var(--spacing-sm);
       right: var(--spacing-sm);
+      position: absolute;
     }
   }
 
