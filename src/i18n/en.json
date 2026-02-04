@@ -163,5 +163,46 @@
   "language": {
     "en": "English",
     "th": "ไทย"
+  },
+  "tutorial": {
+    "title": "See How to",
+    "titleHighlight": "Play",
+    "subtitle": "Swipe through to see the app in action"
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "items": [
+      {
+        "question": "Is Candle Master really free?",
+        "answer": "Yes! The basic version is 100% free forever. You get 100 moves per game, 10 legendary stocks, and all 3 beautiful themes. No credit card required, no hidden fees."
+      },
+      {
+        "question": "What stocks are included?",
+        "answer": "We have 300+ legendary stocks from around the world, with historical data spanning from 1980 to 2025. Free users can access 10 stocks, while PRO members unlock the full collection."
+      },
+      {
+        "question": "How is this different from paper trading?",
+        "answer": "Candle Master uses 'blind trading' - you don't know which stock you're trading or what time period it's from. This eliminates hindsight bias and forces you to rely purely on chart reading skills."
+      },
+      {
+        "question": "Can I use it on desktop?",
+        "answer": "Currently Candle Master is optimized for mobile as a Progressive Web App (PWA). Desktop version is coming soon! Sign up for our waitlist to be notified when it launches."
+      },
+      {
+        "question": "How do I cancel PRO subscription?",
+        "answer": "You can cancel anytime from your app settings. No questions asked, no hassle. If you have the lifetime plan, there's nothing to cancel - you own it forever!"
+      }
+    ]
+  },
+  "emailSignup": {
+    "title": "Stay in the Loop",
+    "subtitle": "Get trading tips, feature updates, and be first to know when Desktop launches",
+    "emailPlaceholder": "Enter your email",
+    "submitText": "Subscribe",
+    "desktopWaitlistLabel": "Notify me when Desktop launches",
+    "newsletterLabel": "Send me trading tips & updates",
+    "successMessage": "You're subscribed! Check your inbox for a welcome email.",
+    "errorMessage": "Something went wrong. Please try again."
   }
 }

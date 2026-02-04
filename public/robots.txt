@@ -1,0 +1,8 @@
+# Candle Master - robots.txt
+# https://candlemaster.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://candlemaster.app/sitemap.xml

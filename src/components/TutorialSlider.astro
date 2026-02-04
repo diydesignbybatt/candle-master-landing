@@ -1,0 +1,353 @@
+---
+/**
+ * TutorialSlider Component
+ * Displays tutorial screenshots in a phone mockup frame with slider/carousel
+ */
+
+interface Props {
+  title: string;
+  titleHighlight?: string;
+  subtitle?: string;
+}
+
+const { title, titleHighlight, subtitle } = Astro.props;
+
+// Tutorial images from /tutorial folder (001-009.webp)
+const tutorialImages = [
+  { src: '/tutorial/002.webp', alt: 'Trading screen with legendary stock data' },
+  { src: '/tutorial/003.webp', alt: 'How to open a position' },
+  { src: '/tutorial/004.webp', alt: 'Managing your positions' },
+  { src: '/tutorial/005.webp', alt: 'Skip to next candle' },
+  { src: '/tutorial/006.webp', alt: 'Transaction fees explained' },
+  { src: '/tutorial/007.webp', alt: 'Trading result - Market Monk' },
+  { src: '/tutorial/008.webp', alt: 'Trade history and performance' },
+];
+---
+
+<section class="tutorial-section">
+  <div class="container">
+    <h2 class="section-title">{title} {titleHighlight && <span class="text-gradient">{titleHighlight}</span>}</h2>
+    {subtitle && <p class="section-subtitle">{subtitle}</p>}
+
+    <div class="tutorial-slider-wrapper">
+      <!-- Phone Mockup Frame -->
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <!-- Slider Container -->
+          <div class="slider-container" id="tutorial-slider">
+            {tutorialImages.map((img, index) => (
+              <div class="slide" data-index={index}>
+                <img src={img.src} alt={img.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="slider-dots">
+        {tutorialImages.map((_, index) => (
+          <button
+            class={`dot ${index === 0 ? 'active' : ''}`}
+            data-index={index}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      <!-- Arrow Navigation (Desktop) -->
+      <button class="slider-arrow prev" aria-label="Previous slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="slider-arrow next" aria-label="Next slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('tutorial-slider');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    const prevBtn = document.querySelector('.slider-arrow.prev');
+    const nextBtn = document.querySelector('.slider-arrow.next');
+    const slides = document.querySelectorAll('.slide');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function goToSlide(index: number) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+
+      currentIndex = index;
+
+      if (slider) {
+        slider.scrollTo({
+          left: slider.clientWidth * index,
+          behavior: 'smooth'
+        });
+      }
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    // Dot click handlers
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Arrow click handlers
+    prevBtn?.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn?.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Scroll snap detection
+    slider?.addEventListener('scrollend', () => {
+      if (slider) {
+        const newIndex = Math.round(slider.scrollLeft / slider.clientWidth);
+        if (newIndex !== currentIndex) {
+          currentIndex = newIndex;
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+          });
+        }
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+      if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+    });
+  });
+</script>
+
+<style>
+  .tutorial-section {
+    padding: var(--spacing-4xl) 0;
+    background: var(--bg-primary);
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tutorial-slider-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+
+  /* Phone Mockup */
+  .phone-mockup {
+    position: relative;
+    width: 280px;
+    height: 580px;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow:
+      0 0 0 3px #333,
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 28px;
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    z-index: 10;
+  }
+
+  .phone-notch::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 50%;
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .phone-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+
+  /* Slider */
+  .slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* Navigation Dots */
+  .slider-dots {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-default);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: 0;
+  }
+
+  .dot:hover {
+    background: var(--text-tertiary);
+  }
+
+  .dot.active {
+    background: var(--accent-primary);
+    transform: scale(1.2);
+  }
+
+  /* Arrow Navigation */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    z-index: 10;
+  }
+
+  .slider-arrow:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+
+  .slider-arrow.prev {
+    left: calc(50% - 200px);
+  }
+
+  .slider-arrow.next {
+    right: calc(50% - 200px);
+  }
+
+  /* Hide arrows on mobile */
+  @media (max-width: 768px) {
+    .slider-arrow {
+      display: none;
+    }
+
+    .phone-mockup {
+      width: 260px;
+      height: 540px;
+    }
+  }
+
+  /* Larger screens */
+  @media (min-width: 1024px) {
+    .phone-mockup {
+      width: 320px;
+      height: 660px;
+    }
+
+    .slider-arrow.prev {
+      left: calc(50% - 240px);
+    }
+
+    .slider-arrow.next {
+      right: calc(50% - 240px);
+    }
+  }
+</style>

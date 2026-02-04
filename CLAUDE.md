@@ -13,6 +13,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Deployment**: Cloudflare Pages
 - **Output**: Static
 - **i18n**: URL-based routing (English default, Thai at /th/)
+- **Email Service**: Resend (for newsletter/waitlist)
 
 ## URLs
 
@@ -36,7 +37,7 @@ This file provides guidance to Claude Code when working with this repository.
 ```bash
 npm run dev      # Start dev server
 npm run build    # Build for production
-npm run preview  # Preview production build
+npx wrangler pages dev dist --port 4321  # Preview with Cloudflare (preview not supported by adapter)
 ```
 
 ## Project Structure
@@ -45,7 +46,10 @@ npm run preview  # Preview production build
 src/
 ├── components/
 │   ├── HeroBackground.astro   # SVG candlestick animation
-│   └── LanguageSwitcher.astro # i18n language toggle
+│   ├── LanguageSwitcher.astro # i18n language toggle
+│   ├── TutorialSlider.astro   # Phone mockup + screenshot slider
+│   ├── FAQ.astro              # Accordion FAQ section
+│   └── EmailSignup.astro      # Newsletter + waitlist form
 ├── i18n/
 │   ├── en.json                # English translations
 │   ├── th.json                # Thai translations
@@ -54,15 +58,32 @@ src/
 │   └── Layout.astro           # Shared layout
 ├── pages/
 │   ├── index.astro            # Landing page (English)
-│   └── th/
-│       └── index.astro        # Landing page (Thai)
+│   ├── th/
+│   │   └── index.astro        # Landing page (Thai)
+│   └── api/
+│       └── subscribe.ts       # Email signup API (Resend)
 ├── styles/
 │   └── theme.css              # Midnight theme variables
 public/
 ├── favicon.svg                # Candle Master icon (candlesticks)
 ├── favicon.ico
-└── og-image.png               # (TODO: add OG image)
+├── og-image.webp              # Open Graph image
+├── sitemap.xml                # SEO sitemap
+├── robots.txt                 # Search engine rules
+└── tutorial/                  # Tutorial screenshots (001-009.webp)
 ```
+
+## Landing Page Sections
+
+1. **Hero** - Animated candlestick background + main CTA
+2. **Features** - 4 cards (Blind Trading, Legendary Stocks, Academy, Risk-Free)
+3. **How It Works** - 4 steps with connectors
+4. **Tutorial Slider** - Phone mockup with screenshot carousel
+5. **Pricing** - Free / PRO Monthly / PRO Lifetime cards
+6. **FAQ** - Accordion-style questions
+7. **Email Signup** - Newsletter + Desktop waitlist
+8. **CTA** - Final call to action
+9. **Footer**
 
 ## Design System
 
@@ -82,14 +103,14 @@ public/
 | Plan | Regular | Launch Price |
 |------|---------|--------------|
 | Free | $0 | $0 |
-| PRO Monthly | $4.99/mo | $3.99/mo |
-| PRO Lifetime | $39.99 | $29.99 |
+| PRO Monthly | $4.99/mo | $3.99/mo (~฿140) |
+| PRO Lifetime | $39.99 | $29.99 (~฿1,050) |
 
 ### Free Tier Limits
 - 100 Moves per Game
 - 10 Legendary Stocks
 - Historical Data 1980-2025
-- 2 Chart Themes
+- 3 Chart Themes
 
 ### PRO Features
 - 200 Moves per Game
@@ -105,11 +126,33 @@ Content is stored in JSON files:
 - `src/i18n/en.json` - English
 - `src/i18n/th.json` - Thai
 
+**Thai Language Tone:**
+- Hero section: สนุก/casual ("ครับโผมมม")
+- Pricing section: Professional ("ขอบคุณมากครับ")
+- Prices shown in both USD and THB
+
 To edit content:
 1. Open the JSON file in VS Code
 2. Run `npm run dev` to preview changes
 3. Edit content directly in the JSON
 4. Save and see live updates at http://localhost:4321
+
+## Email Signup (Resend)
+
+The email signup form collects:
+- Email address
+- Desktop waitlist opt-in
+- Newsletter opt-in
+
+**Setup Required:**
+1. Create account at https://resend.com
+2. Create an Audience in Resend dashboard
+3. Update `YOUR_AUDIENCE_ID` in `src/pages/api/subscribe.ts`
+4. Add environment variable:
+   ```bash
+   # In wrangler.toml or Cloudflare dashboard
+   RESEND_API_KEY = "re_xxxxx"
+   ```
 
 ## Deployment
 
@@ -128,15 +171,17 @@ To edit content:
 - [x] Canonical URL
 - [x] Alternate language hreflang tags
 - [x] Favicon (Candle Master icon)
-- [ ] OG image (og-image.png)
-- [ ] Sitemap
-- [ ] robots.txt
+- [x] OG image (og-image.webp)
+- [x] Sitemap (sitemap.xml)
+- [x] robots.txt
+- [x] Schema.org JSON-LD structured data
 
 ## TODO
 
 - [ ] Configure actual Stripe Payment Links (currently placeholders)
-- [ ] Add OG image
-- [ ] Add sitemap.xml
-- [ ] Add robots.txt
+- [ ] Configure Resend API key and audience ID
+- [ ] Update tutorial images (currently placeholder quality)
 - [ ] PWA installation guide page
-- [ ] Affiliate program integration
+- [ ] Affiliate program integration (planned for later)
+- [ ] Add testimonials when user reviews available
+- [ ] Google Analytics / conversion tracking

@@ -2,6 +2,9 @@
 // Candle Master Landing Page - Thai Version
 import HeroBackground from '../../components/HeroBackground.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import TutorialSlider from '../../components/TutorialSlider.astro';
+import FAQ from '../../components/FAQ.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
 import { useTranslations } from '../../i18n/utils';
 
 const lang = 'th';
@@ -27,7 +30,42 @@ const webUrl = 'https://web.candlemaster.app';
     <meta property="og:description" content={t.meta.description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://candlemaster.app/th/" />
-    <meta property="og:image" content="https://candlemaster.app/og-image.png" />
+    <meta property="og:image" content="https://candlemaster.app/og-image.webp" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1920" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Candle Master",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS, Android, Web",
+        "inLanguage": "th",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free tier - 100 moves per game, 10 stocks"
+          },
+          {
+            "@type": "Offer",
+            "price": "3.99",
+            "priceCurrency": "USD",
+            "description": "PRO Monthly - 200 moves, 300+ stocks, full academy"
+          },
+          {
+            "@type": "Offer",
+            "price": "29.99",
+            "priceCurrency": "USD",
+            "description": "PRO Lifetime - One-time payment, lifetime access"
+          }
+        ],
+        "description": "เรียนรู้แท่งเทียนและกลยุทธ์การเทรดผ่านการเล่นเกม ฝึกฝนกับข้อมูลจริงตั้งแต่ 1980-2025 ไม่มีความเสี่ยง"
+      }
+    </script>
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -187,6 +225,13 @@ const webUrl = 'https://web.candlemaster.app';
           </div>
         </div>
       </section>
+
+      <!-- Tutorial Slider Section -->
+      <TutorialSlider
+        title={t.tutorial.title}
+        titleHighlight={t.tutorial.titleHighlight}
+        subtitle={t.tutorial.subtitle}
+      />
 
       <!-- Pricing Section -->
       <section class="pricing">
@@ -362,6 +407,24 @@ const webUrl = 'https://web.candlemaster.app';
           </div>
         </div>
       </section>
+
+      <!-- FAQ Section -->
+      <FAQ
+        title={`${t.faq.title}`}
+        items={t.faq.items}
+      />
+
+      <!-- Email Signup Section -->
+      <EmailSignup
+        title={t.emailSignup.title}
+        subtitle={t.emailSignup.subtitle}
+        emailPlaceholder={t.emailSignup.emailPlaceholder}
+        submitText={t.emailSignup.submitText}
+        desktopWaitlistLabel={t.emailSignup.desktopWaitlistLabel}
+        newsletterLabel={t.emailSignup.newsletterLabel}
+        successMessage={t.emailSignup.successMessage}
+        errorMessage={t.emailSignup.errorMessage}
+      />
 
       <!-- CTA Section -->
       <section class="cta-section">
