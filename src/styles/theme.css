@@ -93,6 +93,7 @@
 
   --font-primary: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Geist', 'Inter', -apple-system, sans-serif;  /* Same font, different weight */
+  --font-thai: 'IBM Plex Sans Thai', 'Geist', 'Inter', -apple-system, sans-serif;
 
   /* Font sizes - Mobile-first, scales up */
   --text-xs: 0.75rem;      /* 12px */
@@ -140,6 +141,13 @@
 /* ============================================
    UTILITY CLASSES
    ============================================ */
+
+/* Thai Font - IBM Plex Sans Thai */
+.thai-font {
+  font-family: var(--font-thai);
+  --font-display: var(--font-thai);
+  --font-primary: var(--font-thai);
+}
 
 /* Text colors */
 .text-primary { color: var(--text-primary); }
