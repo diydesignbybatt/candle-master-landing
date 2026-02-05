@@ -152,6 +152,12 @@ const webUrl = 'https://web.candlemaster.app';
             </button>
           </div>
 
+          <!-- USP Statement -->
+          <div class="usp-statement">
+            <p class="usp-line">ไม่มีกลุ่ม Signal ไม่มีข่าวมัวๆ</p>
+            <p class="usp-line highlight">มีแค่คุณ เครื่องมือพื้นฐาน และ<span class="text-gradient">ทักษะ</span></p>
+          </div>
+
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-value">$100K</span>
@@ -772,13 +778,34 @@ const webUrl = 'https://web.candlemaster.app';
     margin-bottom: var(--spacing-2xl);
   }
 
+  /* USP Statement */
+  .usp-statement {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .usp-line {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  .usp-line.highlight {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--spacing-xs);
+  }
+
   /* Buttons */
   .cta-buttons {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl);
     width: 100%;
     max-width: 400px;
     margin-left: auto;
