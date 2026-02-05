@@ -44,18 +44,7 @@ const appUrl = 'https://app.candlemaster.app';
   </head>
 
   <body>
-    <!-- Atmospheric Background Effects -->
-    <div class="gradient-mesh" aria-hidden="true"></div>
-    <div class="geometric-pattern" aria-hidden="true"></div>
-
-    <!-- Floating Gradient Orbs -->
-    <div class="gradient-orb gradient-orb-1" aria-hidden="true"></div>
-    <div class="gradient-orb gradient-orb-2" aria-hidden="true"></div>
-
-    <!-- Noise Texture Overlay -->
-    <div class="noise-overlay" aria-hidden="true" style="background: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);"></div>
-
-    <main class="ambient-light">
+    <main>
       <section class="install-page vignette">
         <!-- Language Switcher (Top Right) -->
         <div class="lang-switcher-container glass-panel">
@@ -73,17 +62,15 @@ const appUrl = 'https://app.candlemaster.app';
         <div class="container">
           <!-- Header -->
           <div class="install-header">
-            <div class="app-icon-large">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="app-icon-svg">
-                <rect width="512" height="512" rx="96" fill="#1A1D23"/>
-                <line x1="170" y1="100" x2="170" y2="160" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
-                <rect x="130" y="160" width="80" height="180" rx="8" fill="none" stroke="#FAF9F6" stroke-width="12"/>
-                <line x1="170" y1="340" x2="170" y2="420" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
-                <line x1="342" y1="120" x2="342" y2="180" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
-                <rect x="302" y="180" width="80" height="160" rx="8" fill="#FAF9F6"/>
-                <line x1="342" y1="340" x2="342" y2="400" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
-              </svg>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="app-icon-large">
+              <rect width="512" height="512" rx="96" fill="#1A1D23"/>
+              <line x1="170" y1="100" x2="170" y2="160" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
+              <rect x="130" y="160" width="80" height="180" rx="8" fill="none" stroke="#FAF9F6" stroke-width="12"/>
+              <line x1="170" y1="340" x2="170" y2="420" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
+              <line x1="342" y1="120" x2="342" y2="180" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
+              <rect x="302" y="180" width="80" height="160" rx="8" fill="#FAF9F6"/>
+              <line x1="342" y1="340" x2="342" y2="400" stroke="#FAF9F6" stroke-width="12" stroke-linecap="round"/>
+            </svg>
             <h1>{t.install.title} <span class="text-gradient">{t.install.titleHighlight}</span></h1>
             <p class="install-subtitle">{t.install.subtitle}</p>
           </div>
@@ -188,7 +175,6 @@ const appUrl = 'https://app.candlemaster.app';
   body {
     background: var(--bg-primary);
     color: var(--text-primary);
-    min-height: 100vh;
     overflow-x: hidden;
   }
 
@@ -243,12 +229,8 @@ const appUrl = 'https://app.candlemaster.app';
   /* Install Page */
   .install-page {
     position: relative;
-    min-height: 100vh;
-    padding: var(--spacing-4xl) 0 var(--spacing-3xl);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: var(--spacing-4xl) 0 var(--spacing-xl);
+    overflow: hidden;
   }
 
   /* Header */
@@ -261,19 +243,9 @@ const appUrl = 'https://app.candlemaster.app';
     width: 100px;
     height: 100px;
     margin: 0 auto var(--spacing-lg);
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.05) 100%);
-    border: 2px solid rgba(245, 158, 11, 0.3);
+    border: 2px solid rgba(245, 158, 11, 0.4);
     border-radius: var(--border-radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
-  }
-
-  .app-icon-svg {
-    width: 64px;
-    height: 64px;
-    border-radius: var(--border-radius-lg);
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.25);
   }
 
   .install-header h1 {
@@ -296,7 +268,8 @@ const appUrl = 'https://app.candlemaster.app';
     text-align: center;
     padding: var(--spacing-xl);
     border-radius: var(--border-radius-xl);
-    margin-bottom: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+    margin-bottom: 0;
     border: 1px solid rgba(139, 92, 246, 0.3);
     position: relative;
     overflow: hidden;
@@ -565,6 +538,7 @@ const appUrl = 'https://app.candlemaster.app';
     flex-wrap: wrap;
     gap: var(--spacing-sm);
     justify-content: center;
+    margin-bottom: 0;
   }
 
   .feature-pill {
