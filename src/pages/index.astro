@@ -97,35 +97,60 @@ const webUrl = 'https://web.candlemaster.app';
   </head>
 
   <body>
-    <main>
+    <!-- Atmospheric Background Effects -->
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="geometric-pattern" aria-hidden="true"></div>
+
+    <!-- Floating Gradient Orbs -->
+    <div class="gradient-orb gradient-orb-1" aria-hidden="true"></div>
+    <div class="gradient-orb gradient-orb-2" aria-hidden="true"></div>
+    <div class="gradient-orb gradient-orb-3" aria-hidden="true"></div>
+
+    <!-- SVG Noise Filter Definition -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+      <defs>
+        <filter id="noise-filter">
+          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" result="noise"/>
+          <feColorMatrix type="saturate" values="0"/>
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay" aria-hidden="true" style="background: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);"></div>
+
+    <main class="ambient-light">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero vignette">
         <!-- Language Switcher (Top Right) -->
-        <div class="lang-switcher-container">
+        <div class="lang-switcher-container glass-panel">
           <LanguageSwitcher currentLang={lang} currentPath="/" />
         </div>
         <div class="hero-bg"></div>
+        <!-- Hero Accent Lines -->
+        <div class="hero-accent-lines" aria-hidden="true">
+          <div class="accent-line accent-line-1"></div>
+          <div class="accent-line accent-line-2"></div>
+          <div class="accent-line accent-line-3"></div>
+        </div>
         <HeroBackground />
         <div class="container">
           <div class="hero-badge">
-            <span class="badge-icon">🎮</span>
-            <span>{t.hero.badge.replace('🎮 ', '')}</span>
+            <span>Built by Traders, for Beginners</span>
           </div>
-          <h1 class="text-gradient">Candle Master</h1>
+          <h1 class="text-gradient text-glow-subtle">Candle Master</h1>
           <p class="tagline">{t.hero.title} <span class="text-gradient">{t.hero.titleHighlight}</span></p>
           <p class="free-highlight">100% Free to Play - No Credit Card Required</p>
           <p class="description">{t.hero.description}</p>
 
           <div class="cta-buttons">
-            <a href="https://app.candlemaster.app" class="btn-3d" target="_blank" rel="noopener noreferrer">
+            <a href="/install" class="btn-3d">
               <span class="btn-3d-content">
-                <span class="btn-3d-icon">📱</span>
                 <span class="btn-3d-text">Play Free on Mobile</span>
               </span>
               <span class="btn-3d-shine"></span>
             </a>
             <button class="btn btn-secondary btn-coming-soon" disabled>
-              <span class="btn-icon">💻</span>
               {t.hero.cta.desktopComingSoon}
             </button>
           </div>
@@ -149,39 +174,65 @@ const webUrl = 'https://web.candlemaster.app';
         </div>
       </section>
 
+      <!-- Section Divider -->
+      <div class="section-divider" aria-hidden="true"></div>
+
       <!-- Features Section -->
-      <section class="features">
+      <section class="features particle-dots">
         <div class="container">
           <h2 class="section-title">{t.features.title} <span class="text-gradient">{t.features.titleHighlight}</span></h2>
           <p class="section-subtitle">{t.features.badge}</p>
 
           <div class="feature-grid">
-            <div class="feature-card">
-              <div class="feature-icon">🎯</div>
+            <div class="feature-card hover-lift frosted-overlay glass-panel">
+              <div class="feature-icon-svg">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v8M8 12h8"/>
+                </svg>
+              </div>
               <h3>Blind Trading</h3>
               <p>{t.features.cards.realData.description}</p>
             </div>
 
-            <div class="feature-card">
-              <div class="feature-icon">📊</div>
+            <div class="feature-card hover-lift frosted-overlay glass-panel">
+              <div class="feature-icon-svg">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 3v18h18"/>
+                  <path d="M7 16l4-4 4 4 5-6"/>
+                </svg>
+              </div>
               <h3>{t.features.cards.legendary.title}</h3>
               <p>{t.features.cards.legendary.description}</p>
             </div>
 
-            <div class="feature-card highlight-card">
-              <div class="feature-icon">🎓</div>
+            <div class="feature-card highlight-card hover-lift">
+              <div class="feature-icon-svg">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
               <h3>{t.features.cards.academy.title}</h3>
               <p>{t.features.cards.academy.description}</p>
             </div>
 
-            <div class="feature-card">
-              <div class="feature-icon">💰</div>
+            <div class="feature-card hover-lift frosted-overlay glass-panel">
+              <div class="feature-icon-svg">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
               <h3>Risk-Free Practice</h3>
               <p>Start with $100,000 virtual capital. Learn from mistakes without losing real money.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Section Divider -->
+      <div class="section-divider" aria-hidden="true"></div>
 
       <!-- How It Works -->
       <section class="how-it-works">
@@ -238,13 +289,15 @@ const webUrl = 'https://web.candlemaster.app';
         subtitle={t.tutorial.subtitle}
       />
 
+      <!-- Section Divider -->
+      <div class="section-divider" aria-hidden="true"></div>
+
       <!-- Pricing Section -->
-      <section class="pricing">
+      <section class="pricing particle-dots">
         <div class="container">
           <!-- Promo Banner -->
           <div class="promo-banner">
-            <span class="promo-icon">🚀</span>
-            <span class="promo-text"><strong>Launch Special!</strong> Limited time offer - Save up to 33%</span>
+            <span class="promo-text"><strong>Launch Special</strong> — Limited time offer, save up to 33%</span>
           </div>
 
           <h2 class="section-title">{t.pricing.title} <span class="text-gradient">{t.pricing.titleHighlight}</span></h2>
@@ -294,7 +347,6 @@ const webUrl = 'https://web.candlemaster.app';
               </ul>
 
               <a href={appUrl} class="btn btn-secondary btn-full">
-                <span class="btn-icon">🎮</span>
                 {t.pricing.free.cta}
               </a>
             </div>
@@ -339,17 +391,19 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-full" id="checkout-monthly-btn">
-                <span class="btn-icon">⚡</span>
-                {t.pricing.proMonthly.cta}
+              <a href="#" class="btn-3d btn-3d-full" id="checkout-monthly-btn">
+                <span class="btn-3d-content">
+                  <span class="btn-3d-text">{t.pricing.proMonthly.cta}</span>
+                </span>
+                <span class="btn-3d-shine"></span>
               </a>
               <p class="pricing-note">Cancel anytime. No questions asked.</p>
             </div>
 
             <!-- Pro Lifetime -->
-            <div class="pricing-card pro lifetime">
+            <div class="pricing-card pro lifetime border-animated">
               <div class="pricing-header">
-                <div class="pricing-badge lifetime-badge">👑 {t.pricing.proLifetime.badge}</div>
+                <div class="pricing-badge lifetime-badge">{t.pricing.proLifetime.badge}</div>
                 <h3 class="pricing-plan">{t.pricing.proLifetime.plan}</h3>
                 <div class="pricing-price">
                   <span class="price-original">{t.pricing.proLifetime.priceOriginal}</span>
@@ -378,9 +432,11 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-full btn-lifetime" id="checkout-lifetime-btn">
-                <span class="btn-icon">👑</span>
-                {t.pricing.proLifetime.cta}
+              <a href="#" class="btn-3d-purple btn-3d-purple-full" id="checkout-lifetime-btn">
+                <span class="btn-3d-content">
+                  <span class="btn-3d-text">{t.pricing.proLifetime.cta}</span>
+                </span>
+                <span class="btn-3d-shine"></span>
               </a>
               <p class="pricing-note">One-time payment. No subscription.</p>
             </div>
@@ -389,7 +445,6 @@ const webUrl = 'https://web.candlemaster.app';
           <!-- Value Comparison -->
           <div class="value-comparison">
             <div class="comparison-item loss">
-              <span class="comparison-icon">📉</span>
               <div class="comparison-content">
                 <span class="comparison-label">Average beginner loss in real market</span>
                 <span class="comparison-value">-$1,000 to -$10,000+</span>
@@ -397,7 +452,6 @@ const webUrl = 'https://web.candlemaster.app';
             </div>
             <div class="comparison-vs">VS</div>
             <div class="comparison-item gain">
-              <span class="comparison-icon">☕</span>
               <div class="comparison-content">
                 <span class="comparison-label">Learn with Candle Master PRO</span>
                 <span class="comparison-value">$3.99/mo or $29.99 forever</span>
@@ -431,16 +485,21 @@ const webUrl = 'https://web.candlemaster.app';
         errorMessage={t.emailSignup.errorMessage}
       />
 
+      <!-- Section Divider -->
+      <div class="section-divider" aria-hidden="true"></div>
+
       <!-- CTA Section -->
-      <section class="cta-section">
+      <section class="cta-section particle-dots">
         <div class="container">
-          <div class="cta-card">
+          <div class="cta-card glass-panel-strong shadow-dramatic-glow">
             <h2>{t.cta.title} <span class="text-gradient">{t.cta.titleHighlight}</span></h2>
             <p class="cta-free-text">Start playing now - <strong>100% FREE forever</strong></p>
             <p class="cta-sub">{t.cta.description}</p>
-            <a href={appUrl} class="btn btn-primary btn-large">
-              <span class="btn-icon">🚀</span>
-              Start Playing Free
+            <a href={appUrl} class="btn-3d">
+              <span class="btn-3d-content">
+                <span class="btn-3d-text">Start Playing Free</span>
+              </span>
+              <span class="btn-3d-shine"></span>
             </a>
           </div>
         </div>
@@ -451,7 +510,6 @@ const webUrl = 'https://web.candlemaster.app';
         <div class="container">
           <div class="footer-content">
             <div class="footer-brand">
-              <span class="footer-logo">🕯️</span>
               <span class="footer-name">Candle Master</span>
             </div>
             <p class="footer-copyright">{t.footer.copyright}</p>
@@ -536,10 +594,18 @@ const webUrl = 'https://web.candlemaster.app';
     top: var(--spacing-md);
     right: var(--spacing-md);
     z-index: 100;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-default);
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--border-radius-md);
     padding: var(--spacing-xs);
+    transition: all 0.3s ease;
+  }
+
+  .lang-switcher-container:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(245, 158, 11, 0.2);
   }
 
   /* Section Titles */
@@ -591,6 +657,54 @@ const webUrl = 'https://web.candlemaster.app';
     border-radius: 50%;
     filter: blur(120px);
     opacity: 0.4;
+  }
+
+  /* Hero Accent Lines - Decorative geometric elements */
+  .hero-accent-lines {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .accent-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+    opacity: 0.1;
+  }
+
+  .accent-line-1 {
+    top: 15%;
+    left: -10%;
+    width: 120%;
+    height: 1px;
+    transform: rotate(-5deg);
+    animation: line-pulse 8s ease-in-out infinite;
+  }
+
+  .accent-line-2 {
+    top: 45%;
+    right: -10%;
+    width: 60%;
+    height: 1px;
+    transform: rotate(3deg);
+    animation: line-pulse 8s ease-in-out infinite;
+    animation-delay: -2.5s;
+  }
+
+  .accent-line-3 {
+    bottom: 20%;
+    left: -5%;
+    width: 40%;
+    height: 1px;
+    transform: rotate(-2deg);
+    animation: line-pulse 8s ease-in-out infinite;
+    animation-delay: -5s;
+  }
+
+  @keyframes line-pulse {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.15; }
   }
 
   .hero-badge {
@@ -718,48 +832,105 @@ const webUrl = 'https://web.candlemaster.app';
     min-height: 56px;
   }
 
-  /* 3D Gradient Button */
+  /* 3D Glass Button - Glossy Convex Effect */
   .btn-3d {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 36px;
+    padding: 20px 40px;
     font-size: 1.125rem;
     font-weight: 700;
     text-decoration: none;
-    color: #0a0a0a;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    color: #1a1a1a;
     border: none;
-    border-radius: 16px;
+    border-radius: 50px;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow:
-      0 6px 0 #B8860B,
-      0 8px 20px rgba(255, 165, 0, 0.4),
-      inset 0 2px 0 rgba(255, 255, 255, 0.4),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.1);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     transform: translateY(0);
+
+    /* Base gradient - golden amber */
+    background:
+      linear-gradient(180deg,
+        #FFE066 0%,
+        #FFD700 15%,
+        #FFC107 50%,
+        #FF9800 85%,
+        #E65100 100%
+      );
+
+    /* Multi-layer shadow for 3D depth */
+    box-shadow:
+      /* Inner top highlight - glass reflection */
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      /* Inner bottom shadow - convex effect */
+      inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+      /* Outer bottom edge - 3D depth */
+      0 4px 0 #B8860B,
+      0 6px 0 #8B6914,
+      /* Outer glow */
+      0 8px 25px rgba(255, 165, 0, 0.5),
+      0 15px 40px rgba(255, 140, 0, 0.3);
+  }
+
+  /* Glass highlight overlay - creates convex glass look */
+  .btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 50px 50px 100px 100px;
+    pointer-events: none;
+  }
+
+  /* Secondary inner glow for extra depth */
+  .btn-3d::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 10%;
+    right: 10%;
+    height: 30%;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 50px;
+    filter: blur(1px);
+    pointer-events: none;
   }
 
   .btn-3d:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow:
-      0 10px 0 #B8860B,
-      0 14px 30px rgba(255, 165, 0, 0.5),
-      inset 0 2px 0 rgba(255, 255, 255, 0.5),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.1),
+      0 8px 0 #B8860B,
+      0 10px 0 #8B6914,
+      0 12px 35px rgba(255, 165, 0, 0.6),
+      0 20px 50px rgba(255, 140, 0, 0.4);
   }
 
   .btn-3d:active {
-    transform: translateY(4px);
+    transform: translateY(2px) scale(0.98);
     box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 2px 4px rgba(255, 255, 255, 0.3),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
       0 2px 0 #B8860B,
-      0 4px 10px rgba(255, 165, 0, 0.3),
-      inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+      0 3px 0 #8B6914,
+      0 4px 15px rgba(255, 165, 0, 0.4);
   }
 
   .btn-3d-content {
@@ -773,34 +944,167 @@ const webUrl = 'https://web.candlemaster.app';
   .btn-3d-icon {
     font-size: 1.5rem;
     animation: bounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
   }
 
   .btn-3d-text {
     letter-spacing: 0.5px;
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5));
   }
 
   .btn-3d-shine {
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: -150%;
+    width: 60%;
     height: 100%;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
+      100deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
     );
-    transition: left 0.5s ease;
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    z-index: 3;
   }
 
   .btn-3d:hover .btn-3d-shine {
-    left: 100%;
+    left: 150%;
   }
 
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-3px); }
+  }
+
+  /* 3D Glass Button - Purple Variant (Lifetime) */
+  .btn-3d-purple {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+
+    /* Base gradient - royal purple */
+    background:
+      linear-gradient(180deg,
+        #C084FC 0%,
+        #A855F7 15%,
+        #9333EA 50%,
+        #7C3AED 85%,
+        #5B21B6 100%
+      );
+
+    /* Multi-layer shadow for 3D depth */
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 2px 4px rgba(255, 255, 255, 0.25),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 4px 0 #6B21A8,
+      0 6px 0 #4C1D95,
+      0 8px 25px rgba(147, 51, 234, 0.5),
+      0 15px 40px rgba(139, 92, 246, 0.3);
+  }
+
+  .btn-3d-purple::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 50px 50px 100px 100px;
+    pointer-events: none;
+  }
+
+  .btn-3d-purple::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 10%;
+    right: 10%;
+    height: 30%;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 50px;
+    filter: blur(1px);
+    pointer-events: none;
+  }
+
+  .btn-3d-purple:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 2px 4px rgba(255, 255, 255, 0.35),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+      0 8px 0 #6B21A8,
+      0 10px 0 #4C1D95,
+      0 12px 35px rgba(147, 51, 234, 0.6),
+      0 20px 50px rgba(139, 92, 246, 0.4);
+  }
+
+  .btn-3d-purple:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 2px 4px rgba(255, 255, 255, 0.2),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+      0 2px 0 #6B21A8,
+      0 3px 0 #4C1D95,
+      0 4px 15px rgba(147, 51, 234, 0.4);
+  }
+
+  /* 3D Button - Full Width variant for pricing cards */
+  .btn-3d-full,
+  .btn-3d-purple-full {
+    width: 100%;
+  }
+
+  /* Feature Card SVG Icons */
+  .feature-icon-svg {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+  }
+
+  .feature-icon-svg svg {
+    stroke: var(--accent-primary);
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon-svg svg {
+    stroke: var(--accent-secondary);
+    transform: scale(1.1);
+  }
+
+  .highlight-card .feature-icon-svg {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.1) 100%);
+    border-color: rgba(245, 158, 11, 0.4);
   }
 
   /* Hero Stats */
@@ -851,27 +1155,48 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .feature-card {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-default);
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);
     text-align: center;
-    transition: all var(--transition-base);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle inner glow on cards */
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
   }
 
   .feature-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-primary);
-    box-shadow: var(--shadow-lg);
+    border-color: rgba(245, 158, 11, 0.3);
   }
 
   .feature-card.highlight-card {
-    border-color: var(--accent-primary);
-    background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(245, 158, 11, 0.1) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(245, 158, 11, 0.08) 100%);
     position: relative;
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.15);
   }
 
-  .feature-card.highlight-card::before {
+  .feature-card.highlight-card:hover {
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      0 8px 16px rgba(0, 0, 0, 0.15),
+      0 0 40px rgba(245, 158, 11, 0.2);
+  }
+
+  .feature-card.highlight-card::after {
     content: 'PRO';
     position: absolute;
     top: var(--spacing-md);
@@ -882,6 +1207,7 @@ const webUrl = 'https://web.candlemaster.app';
     font-weight: 700;
     padding: 2px 8px;
     border-radius: var(--border-radius-full);
+    z-index: 10;
   }
 
   .feature-icon {
@@ -943,8 +1269,35 @@ const webUrl = 'https://web.candlemaster.app';
     font-size: var(--text-xl);
     font-weight: 700;
     margin-bottom: var(--spacing-md);
-    box-shadow: var(--glow-primary);
+    box-shadow:
+      0 0 0 4px rgba(245, 158, 11, 0.1),
+      0 0 0 8px rgba(245, 158, 11, 0.05),
+      0 4px 20px rgba(245, 158, 11, 0.4),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    animation: step-pulse 3s ease-in-out infinite;
   }
+
+  @keyframes step-pulse {
+    0%, 100% {
+      box-shadow:
+        0 0 0 4px rgba(245, 158, 11, 0.1),
+        0 0 0 8px rgba(245, 158, 11, 0.05),
+        0 4px 20px rgba(245, 158, 11, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      box-shadow:
+        0 0 0 6px rgba(245, 158, 11, 0.15),
+        0 0 0 12px rgba(245, 158, 11, 0.08),
+        0 4px 30px rgba(245, 158, 11, 0.5),
+        inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .step:nth-child(3) .step-number { animation-delay: -0.75s; }
+  .step:nth-child(5) .step-number { animation-delay: -1.5s; }
+  .step:nth-child(7) .step-number { animation-delay: -2.25s; }
 
   .step-content h3 {
     font-family: var(--font-display);
@@ -962,7 +1315,21 @@ const webUrl = 'https://web.candlemaster.app';
   .step-connector {
     width: 2px;
     height: 40px;
-    background: var(--border-default);
+    background: linear-gradient(180deg, var(--accent-primary), var(--border-default), var(--accent-primary));
+    position: relative;
+  }
+
+  .step-connector::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-primary-glow);
   }
 
   @media (min-width: 769px) {
@@ -970,6 +1337,7 @@ const webUrl = 'https://web.candlemaster.app';
       width: 60px;
       height: 2px;
       margin-top: 28px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--border-default), var(--accent-primary));
     }
   }
 
@@ -982,27 +1350,46 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .cta-card {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-default);
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(245, 158, 11, 0.2);
     border-radius: var(--border-radius-xl);
     padding: var(--spacing-3xl);
     text-align: center;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
   }
 
   .cta-card::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, var(--accent-primary-glow) 0%, transparent 70%);
+    opacity: 0.4;
+    animation: cta-glow 4s ease-in-out infinite;
+  }
+
+  .cta-card::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
     left: 50%;
     transform: translateX(-50%);
     width: 400px;
-    height: 200px;
-    background: var(--accent-primary-glow);
-    border-radius: 50%;
-    filter: blur(80px);
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
     opacity: 0.3;
+    animation: cta-glow 4s ease-in-out infinite reverse;
+  }
+
+  @keyframes cta-glow {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.5; transform: translateX(-50%) scale(1.1); }
   }
 
   .cta-card h2 {
@@ -1045,7 +1432,19 @@ const webUrl = 'https://web.candlemaster.app';
      ============================================ */
   footer {
     padding: var(--spacing-xl) 0;
-    border-top: 1px solid var(--border-default);
+    border-top: 1px solid transparent;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.2));
+    position: relative;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-default), var(--accent-primary), var(--border-default), transparent);
   }
 
   .footer-content {
@@ -1188,38 +1587,58 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .pricing-card {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-default);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--border-radius-xl);
     padding: var(--spacing-xl);
     display: flex;
     flex-direction: column;
-    transition: all var(--transition-base);
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .pricing-card.pro {
-    border-color: var(--accent-primary);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: relative;
-    box-shadow: 0 0 40px var(--accent-primary-glow);
+    overflow: hidden;
   }
 
-  .pricing-card.pro::before {
+  /* Top edge glow */
+  .pricing-card::before {
     content: '';
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      0 8px 16px rgba(0, 0, 0, 0.15),
+      0 16px 32px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pricing-card.pro {
+    border-color: rgba(245, 158, 11, 0.3);
+    position: relative;
+    box-shadow:
+      0 0 60px var(--accent-primary-glow),
+      inset 0 1px 0 rgba(245, 158, 11, 0.1);
+  }
+
+  .pricing-card.pro::after {
+    content: '';
+    position: absolute;
+    top: -50%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 100px;
-    background: var(--accent-primary-glow);
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.4;
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(ellipse, var(--accent-primary-glow) 0%, transparent 70%);
+    opacity: 0.3;
     z-index: 0;
   }
 
@@ -1258,12 +1677,22 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .pricing-card.lifetime {
-    border-color: #8B5CF6;
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+      0 0 60px rgba(139, 92, 246, 0.3),
+      0 0 100px rgba(139, 92, 246, 0.1),
+      inset 0 1px 0 rgba(139, 92, 246, 0.2);
   }
 
-  .pricing-card.lifetime::before {
-    background: rgba(139, 92, 246, 0.3);
+  .pricing-card.lifetime::after {
+    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+  }
+
+  .pricing-card.lifetime:hover {
+    box-shadow:
+      0 0 80px rgba(139, 92, 246, 0.4),
+      0 0 120px rgba(139, 92, 246, 0.15),
+      0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .pricing-plan {
@@ -1279,6 +1708,7 @@ const webUrl = 'https://web.candlemaster.app';
     justify-content: center;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-sm);
+    flex-wrap: nowrap;
   }
 
   .price-amount {
@@ -1398,10 +1828,24 @@ const webUrl = 'https://web.candlemaster.app';
     gap: var(--spacing-lg);
     margin-top: var(--spacing-3xl);
     padding: var(--spacing-xl);
-    background: var(--bg-primary);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--border-radius-xl);
-    border: 1px solid var(--border-default);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   }
 
   .comparison-item {
@@ -1459,10 +1903,6 @@ const webUrl = 'https://web.candlemaster.app';
   @media (max-width: 768px) {
     .value-comparison {
       flex-direction: column;
-    }
-
-    .comparison-vs {
-      transform: rotate(90deg);
     }
   }
 

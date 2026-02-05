@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Candle Master - Trading Game for Serious Beginner Traders!",
-    "description": "Learn candlestick patterns and trading strategies through gameplay. Practice with real data, zero risk."
+    "title": "Candle Master - Free Stock Trading Game That Teaches You Trading Discipline",
+    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. Practice chart reading with Candle Master, a free trading game using real historical data from 1980-2025."
   },
   "nav": {
     "features": "Features",
@@ -10,38 +10,38 @@
     "playFree": "Play Free"
   },
   "hero": {
-    "badge": "Trading Game Built by Traders",
-    "title": "Real Trading",
-    "titleHighlight": "No Real Pain",
-    "description": "History Always Repeats Itself - Practice trading with legendary stocks before entering the real market.",
+    "badge": "By Traders, For Traders",
+    "title": "Real Trading,",
+    "titleHighlight": "Without Real Pain!",
+    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. We built this game so you can make mistakes without getting hurt. Using real data from 1980-2025.",
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
-      "desktopComingSoon": "Desktop - Coming Soon"
+      "desktopComingSoon": "Desktop Coming Soon"
     },
     "stats": {
-      "stocks": "300+ Legendary Stocks",
+      "stocks": "Legendary Stocks",
       "data": "Data from 1980-2025",
       "risk": "Zero Risk"
     }
   },
   "features": {
-    "badge": "Why Candle Master?",
-    "title": "Everything You Need to",
-    "titleHighlight": "Become a Pro Trader",
+    "badge": "Why Should You Try?",
+    "title": "What Makes",
+    "titleHighlight": "Candle Master Special",
     "cards": {
       "realData": {
         "title": "Real Historical Data",
-        "description": "Practice with actual market data from 1980-2025. Random scenarios every time you play."
+        "description": "Trade real market scenarios from 1980-2025. Feel the pressure of real price action without losing real money."
       },
       "academy": {
         "badge": "PRO",
         "title": "Candle Academy",
-        "description": "Learn candlestick patterns, chart patterns, and money management through interactive lessons."
+        "description": "Learn professional trading through easy-to-understand lessons that you can actually apply."
       },
       "legendary": {
-        "title": "Legendary Stocks",
-        "description": "Trade legendary stocks from around the world. Learn from the past for future victories."
+        "title": "300+ Legendary Stocks",
+        "description": "Experience Tesla's crashes, Apple's rallies, and Silver's volatility. Learn from history's biggest moves."
       },
       "themes": {
         "title": "Beautiful Themes",
@@ -50,64 +50,64 @@
     }
   },
   "howItWorks": {
-    "badge": "Simple & Fun",
+    "badge": "Simple & Straightforward",
     "title": "How It",
     "titleHighlight": "Works",
     "steps": {
       "step1": {
         "number": "01",
         "title": "Mystery Stock",
-        "description": "Randomly encounter legendary stocks and secret timeframes from 1980-2025"
+        "description": "You won't know which stock or when. Just like real trading - you can't predict the future."
       },
       "step2": {
         "number": "02",
-        "title": "Analyze Chart",
-        "description": "Read candlestick patterns - no stock name, no date, pure skill"
+        "title": "Read the Chart",
+        "description": "No company name, no news, no time period. Can you read price action alone?"
       },
       "step3": {
         "number": "03",
-        "title": "Make Decision",
-        "description": "Buy, Sell, or Hold - then see the results"
+        "title": "Make Your Call",
+        "description": "Buy, Sell, or Hold. Feel the pressure of decision-making without financial pain."
       },
       "step4": {
         "number": "04",
-        "title": "Reveal & Learn",
-        "description": "Discover which stock, what timeframe, and keep improving your skills"
+        "title": "Learn from Results",
+        "description": "See what happened. Was it Apple in 2008? Tesla in 2020? Learn from every trade."
       }
     }
   },
   "pricing": {
     "badge": "Simple Pricing",
-    "title": "Play Free Now,",
-    "titleHighlight": "Upgrade PRO When Ready",
-    "launchBanner": "🎉 Launch Sale - Limited Time Only!",
+    "title": "Start Free,",
+    "titleHighlight": "Upgrade When Ready",
+    "launchBanner": "Launch Sale - Limited Time Only!",
     "free": {
       "badge": "Forever Free",
       "plan": "Free",
       "price": "$0",
       "period": "forever",
-      "description": "Perfect for getting started",
+      "description": "Start learning without any commitment",
       "features": {
         "days": "100 Moves per game",
         "stocks": "10 Legendary Stocks",
         "data": "Random Historical Data 1980-2025",
         "themes": "3 Beautiful Themes"
       },
-      "cta": "Play Free Now"
+      "cta": "Start Playing Free"
     },
     "proMonthly": {
-      "badge": "🔥 Launch Sale",
+      "badge": "Launch Sale",
       "plan": "PRO Monthly",
       "priceOriginal": "$4.99",
       "price": "$3.99",
       "period": "/month",
-      "description": "☕ Buy the dev a coffee & unlock PRO",
+      "description": "Buy the dev a coffee & keep this project alive",
       "features": {
         "days": "200 Moves per game",
         "stocks": "300+ Legendary Stocks worldwide",
         "data": "Random Historical Data 1980-2025",
         "themes": "3 Beautiful Themes",
-        "academy": "Full Candle Academy Access",
+        "academy": "Full Academy Access",
         "updates": "All Future Updates"
       },
       "cta": "Get PRO Monthly"
@@ -118,20 +118,20 @@
       "priceOriginal": "$39.99",
       "price": "$29.99",
       "period": "one-time",
-      "description": "☕ Buy 8 coffees, get PRO forever",
+      "description": "Much cheaper than one bad trade",
       "features": {
         "everything": "Everything in PRO Monthly",
-        "forever": "Pay once, PRO-Member forever",
+        "forever": "Pay once, learn forever",
         "updates": "Lifetime updates included",
-        "support": "Support Indie Developer - Thank you so much!"
+        "support": "Support Indie Developer"
       },
       "cta": "Get Lifetime Access"
     },
-    "coffeeNote": "☕ Skip one coffee, learn trading for a month"
+    "coffeeNote": "The average beginner loses $1,000+ in their first month. This costs less than a coffee."
   },
   "cta": {
-    "title": "Ready to Become",
-    "titleHighlight": "a Pro Trader?",
+    "title": "Ready to Learn",
+    "titleHighlight": "Without the Pain?",
     "description": "Start free, no credit card required.",
     "appStore": "App Store",
     "googlePlay": "Google Play"
@@ -158,7 +158,7 @@
       }
     },
     "copyright": "© 2025 Candle Master. All rights reserved.",
-    "madeWith": "Made with ❤️ for traders"
+    "madeWith": "Made with love for traders"
   },
   "language": {
     "en": "English",
@@ -175,34 +175,69 @@
     "items": [
       {
         "question": "Is Candle Master really free?",
-        "answer": "Yes! The basic version is 100% free forever. You get 100 moves per game, 10 legendary stocks, and all 3 beautiful themes. No credit card required, no hidden fees."
+        "answer": "Yes! The basic version is 100% free forever. You get 100 moves per game, 10 legendary stocks, and all 3 themes. No credit card, no tricks."
       },
       {
-        "question": "What stocks are included?",
-        "answer": "We have 300+ legendary stocks from around the world, with historical data spanning from 1980 to 2025. Free users can access 10 stocks, while PRO members unlock the full collection."
+        "question": "Why should I practice here instead of paper trading?",
+        "answer": "Paper trading shows you the stock name and current news - you already know what happens. Candle Master uses 'blind trading' where you don't know the stock or time period. This forces you to actually learn chart reading, not just remember what happened to Tesla."
       },
       {
-        "question": "How is this different from paper trading?",
-        "answer": "Candle Master uses 'blind trading' - you don't know which stock you're trading or what time period it's from. This eliminates hindsight bias and forces you to rely purely on chart reading skills."
+        "question": "I'm a complete beginner. Is this for me?",
+        "answer": "Absolutely! We built this because we lost thousands as beginners. The Candle Academy teaches patterns from scratch, and you can practice as much as you want without risking a single dollar."
+      },
+      {
+        "question": "What stocks can I practice with?",
+        "answer": "300+ legendary stocks with data from 1980-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 10 stocks, PRO unlocks everything."
       },
       {
         "question": "Can I use it on desktop?",
-        "answer": "Currently Candle Master is optimized for mobile as a Progressive Web App (PWA). Desktop version is coming soon! Sign up for our waitlist to be notified when it launches."
+        "answer": "Currently mobile-optimized as a Progressive Web App. Desktop is coming soon - sign up for the waitlist to be notified."
       },
       {
-        "question": "How do I cancel PRO subscription?",
-        "answer": "You can cancel anytime from your app settings. No questions asked, no hassle. If you have the lifetime plan, there's nothing to cancel - you own it forever!"
+        "question": "How do I cancel PRO?",
+        "answer": "Cancel anytime from app settings. No questions, no hassle. Lifetime plan? Nothing to cancel - it's yours forever."
       }
     ]
   },
   "emailSignup": {
-    "title": "Stay in the Loop",
-    "subtitle": "Get trading tips, feature updates, and be first to know when Desktop launches",
+    "title": "Stay Updated",
+    "subtitle": "Get notified when Desktop launches and receive trading tips",
     "emailPlaceholder": "Enter your email",
     "submitText": "Subscribe",
     "desktopWaitlistLabel": "Notify me when Desktop launches",
-    "newsletterLabel": "Send me trading tips & updates",
-    "successMessage": "You're subscribed! Check your inbox for a welcome email.",
+    "newsletterLabel": "Send me trading tips",
+    "successMessage": "You're in! Check your inbox.",
     "errorMessage": "Something went wrong. Please try again."
+  },
+  "install": {
+    "meta": {
+      "title": "Play Candle Master - Free Trading Game",
+      "description": "Start playing Candle Master on your mobile browser. iOS and Android apps coming soon!"
+    },
+    "backHome": "Back",
+    "title": "Play",
+    "titleHighlight": "Candle Master",
+    "subtitle": "The best way to learn trading through practice",
+    "comingSoon": {
+      "badge": "Coming Soon",
+      "title": "Native Apps Are On The Way!",
+      "description": "We're working hard to bring Candle Master to App Store and Google Play. Stay tuned!",
+      "appStore": "Coming Soon",
+      "googlePlay": "Coming Soon"
+    },
+    "currentOption": {
+      "title": "Play Now in Your Browser",
+      "description": "No download needed - play instantly on any device",
+      "step1": "Click the button below to open the app",
+      "step2": "Start playing immediately - no signup required",
+      "step3": "Optional: Add to Home Screen for app-like experience"
+    },
+    "cta": "Open Candle Master",
+    "ctaNote": "Opens in your browser - works on any device",
+    "features": {
+      "free": "100% Free",
+      "noDownload": "No Download",
+      "instant": "Play Instantly"
+    }
   }
 }
