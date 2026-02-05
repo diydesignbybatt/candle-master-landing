@@ -140,7 +140,7 @@ const webUrl = 'https://web.candlemaster.app';
           <div class="hero-badge">
             <span>Built by Traders, for Beginners</span>
           </div>
-          <h1 class="text-gradient text-glow-subtle">Candle Master</h1>
+          <h1 class="text-gradient text-glow-subtle">CANDLE MASTER</h1>
           <p class="tagline">{t.hero.title} <span class="text-gradient">{t.hero.titleHighlight}</span></p>
           <p class="free-text"><span class="free-highlight">100% Free to Play</span></p>
           <p class="sub-tagline">Real Historical Data - Trading Simulator Game</p>
@@ -1446,11 +1446,50 @@ const webUrl = 'https://web.candlemaster.app';
      ============================================ */
   @media (max-width: 768px) {
     .hero {
-      padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+      padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+    }
+
+    /* Mobile Hero Spacing - More breathing room */
+    .hero h1 {
+      font-size: clamp(2.5rem, 10vw, 3.5rem);
+      margin-bottom: var(--spacing-xl);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-badge {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .tagline {
+      margin-bottom: var(--spacing-xl);
+      line-height: 1.6;
+    }
+
+    .free-text {
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .sub-tagline {
+      margin-top: var(--spacing-md);
+      margin-bottom: var(--spacing-3xl);
+    }
+
+    .cta-buttons {
+      margin-bottom: var(--spacing-4xl);
     }
 
     .hero-stats {
-      gap: var(--spacing-lg);
+      gap: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+    }
+
+    .stat {
+      gap: var(--spacing-sm);
+    }
+
+    .stat-value {
+      font-size: var(--text-2xl);
     }
 
     .stat-divider {
@@ -1477,7 +1516,7 @@ const webUrl = 'https://web.candlemaster.app';
     .cta-buttons {
       flex-direction: column;
       align-items: stretch;
-      gap: var(--spacing-sm);
+      gap: var(--spacing-md);
     }
 
     .btn {
