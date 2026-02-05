@@ -197,11 +197,36 @@ PWA installation guide page with:
 
 ## TODO
 
+### Landing Page
 - [ ] Configure actual Stripe Payment Links (currently placeholders)
 - [ ] Configure Resend API key and audience ID
 - [ ] Update tutorial images (currently placeholder quality)
 - [x] PWA installation guide page
+- [x] Light theme implementation (Minimal Light with Gold Accents)
 - [ ] Add actual tutorial images to install page mockup
-- [ ] Affiliate program integration (planned for later)
 - [ ] Add testimonials when user reviews available
 - [ ] Google Analytics / conversion tracking
+
+### Affiliate / Referral Program (Next Priority)
+- [ ] Research & decide on solution (considering Refgrow + Stripe)
+- [ ] Implement referral tracking system
+- [ ] Create referral dashboard/page
+- [ ] Set up affiliate commission structure
+
+### Mobile App (candle-master repo)
+- [ ] iOS deployment readiness check
+- [ ] Android deployment readiness check
+- [ ] Firebase integration verification
+- [ ] App Store / Google Play submission prep
+
+## Next Session Notes
+
+**Affiliate Program Options Being Considered:**
+- **Refgrow** (https://refgrow.com) - Works with Stripe
+- Need to evaluate: pricing, features, ease of integration
+
+**App Status (to verify):**
+- Location: `E:\CANDLE MASTER\PROJECT\Candle Master`
+- Stack: React + Vite (PWA)
+- Firebase status: needs verification
+- Platform readiness: iOS & Android - needs testing
