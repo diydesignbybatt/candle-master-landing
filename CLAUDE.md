@@ -65,7 +65,7 @@ src/
 │   └── api/
 │       └── subscribe.ts       # Email signup API (Resend)
 ├── styles/
-│   └── theme.css              # Midnight theme variables
+│   └── theme.css              # Minimal Light theme variables
 public/
 ├── favicon.svg                # Candle Master icon (candlesticks)
 ├── favicon.ico
@@ -89,12 +89,15 @@ public/
 
 ## Design System
 
-### Theme: Midnight with Gold/Yellow Accents
-- **Primary**: Gold/Yellow (#EAB308, #F59E0B)
-- **Background**: Dark (#0A0A0A, #111111)
-- **Profit**: Green (#22C55E)
-- **Loss**: Red (#EF4444)
-- **Font**: Geist Sans (Claude-like)
+### Theme: Minimal Light with Gold Accents
+- **Primary**: Gold/Amber (#F59E0B, #D97706)
+- **Background**: White/Off-white (#FFFFFF, #F8FAFC, #F1F5F9)
+- **Text**: Dark gray scale (#0F172A, #475569, #94A3B8)
+- **Profit**: Green (#16A34A)
+- **Loss**: Red (#DC2626)
+- **Font**: Geist Sans (Claude-like), IBM Plex Sans Thai
+- **Button Style**: 3D glass effect with shadows
+- **Cards**: White background with subtle borders
 
 ### Game Concept: Blind Trading
 - Random legendary stocks from 1980-2025
