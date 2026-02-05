@@ -75,21 +75,15 @@ const appUrl = 'https://app.candlemaster.app';
             <p class="install-subtitle">{t.install.subtitle}</p>
           </div>
 
-          <!-- Current Option (Play Now) -->
-          <div class="current-option">
-            <h3>{t.install.currentOption.title}</h3>
-            <p>{t.install.currentOption.description}</p>
-
-            <div class="browser-steps glass-panel">
-              <div class="step-item">
-                <div class="step-num">1</div>
-                <p>{t.install.currentOption.step1}</p>
-              </div>
-              <div class="step-item">
-                <div class="step-num">2</div>
-                <p>{t.install.currentOption.step2}</p>
-              </div>
-            </div>
+          <!-- Main CTA Button -->
+          <div class="main-cta">
+            <a href={appUrl} class="btn-3d btn-3d-large" target="_blank" rel="noopener noreferrer">
+              <span class="btn-3d-content">
+                <span class="btn-3d-icon">🎮</span>
+                <span class="btn-3d-text">{t.install.cta}</span>
+              </span>
+              <span class="btn-3d-shine"></span>
+            </a>
           </div>
 
           <!-- Add to Home Screen Instructions -->
@@ -151,18 +145,6 @@ const appUrl = 'https://app.candlemaster.app';
               <strong>{t.install.important.title}</strong>
               <p>{t.install.important.description}</p>
             </div>
-          </div>
-
-          <!-- Main CTA Button -->
-          <div class="main-cta">
-            <a href={appUrl} class="btn-3d btn-3d-large" target="_blank" rel="noopener noreferrer">
-              <span class="btn-3d-content">
-                <span class="btn-3d-icon">🎮</span>
-                <span class="btn-3d-text">{t.install.cta}</span>
-              </span>
-              <span class="btn-3d-shine"></span>
-            </a>
-            <p class="cta-note">{t.install.ctaNote}</p>
           </div>
 
           <!-- Features Reminder -->
