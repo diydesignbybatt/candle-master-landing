@@ -30,7 +30,6 @@ const {
 <section class="email-signup-section">
   <div class="container">
     <div class="signup-card">
-      <div class="signup-icon">📬</div>
       <h2 class="signup-title">{title}</h2>
       {subtitle && <p class="signup-subtitle">{subtitle}</p>}
 
@@ -59,28 +58,26 @@ const {
           <label class="checkbox-label">
             <input type="checkbox" name="desktop_waitlist" checked />
             <span class="checkmark"></span>
-            <span class="label-text">💻 {desktopWaitlistLabel}</span>
+            <span class="label-text">{desktopWaitlistLabel}</span>
           </label>
           <label class="checkbox-label">
             <input type="checkbox" name="newsletter" checked />
             <span class="checkmark"></span>
-            <span class="label-text">📰 {newsletterLabel}</span>
+            <span class="label-text">{newsletterLabel}</span>
           </label>
         </div>
 
         <!-- Messages -->
         <div class="form-message success" id="success-message" hidden>
-          <span class="message-icon">✅</span>
           <span>{successMessage}</span>
         </div>
         <div class="form-message error" id="error-message" hidden>
-          <span class="message-icon">❌</span>
           <span>{errorMessage}</span>
         </div>
       </form>
 
       <p class="privacy-note">
-        🔒 We respect your privacy. Unsubscribe anytime.
+        We respect your privacy. Unsubscribe anytime.
       </p>
     </div>
   </div>
@@ -212,13 +209,15 @@ const {
 
   .email-input {
     width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
+    height: 52px;
+    padding: 0 var(--spacing-lg);
     font-size: var(--text-base);
     background: var(--bg-primary);
     border: 1px solid var(--border-default);
     border-radius: var(--border-radius-md);
     color: var(--text-primary);
     transition: all var(--transition-base);
+    box-sizing: border-box;
   }
 
   .email-input:focus {
@@ -232,7 +231,8 @@ const {
   }
 
   .submit-btn {
-    padding: var(--spacing-md) var(--spacing-xl);
+    height: 52px;
+    padding: 0 var(--spacing-xl);
     font-size: var(--text-base);
     font-weight: 600;
     background: var(--gradient-primary);
@@ -245,6 +245,8 @@ const {
     align-items: center;
     justify-content: center;
     min-width: 120px;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 
   .submit-btn:hover:not(:disabled) {

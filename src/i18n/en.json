@@ -257,6 +257,10 @@
       "free": "100% Free",
       "noDownload": "No Download",
       "instant": "Play Instantly"
+    },
+    "tutorial": {
+      "title": "See It In Action",
+      "subtitle": "Swipe through to see how it works"
     }
   }
 }

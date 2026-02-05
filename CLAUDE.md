@@ -58,8 +58,10 @@ src/
 │   └── Layout.astro           # Shared layout
 ├── pages/
 │   ├── index.astro            # Landing page (English)
+│   ├── install.astro          # PWA install guide (English)
 │   ├── th/
-│   │   └── index.astro        # Landing page (Thai)
+│   │   ├── index.astro        # Landing page (Thai)
+│   │   └── install.astro      # PWA install guide (Thai)
 │   └── api/
 │       └── subscribe.ts       # Email signup API (Resend)
 ├── styles/
@@ -176,12 +178,27 @@ The email signup form collects:
 - [x] robots.txt
 - [x] Schema.org JSON-LD structured data
 
+## Install Page (/install)
+
+PWA installation guide page with:
+- Main CTA button to open app
+- Tutorial mockup with phone frame (placeholder for screenshots)
+- Add to Home Screen instructions for iOS and Android
+- Important warning about browser bars blocking game buttons
+- Coming Soon notice for native App Store/Google Play apps
+
+**Tutorial Image Specs:**
+- Recommended size: 1080 x 2340 px (iPhone ratio 9:19.5)
+- Format: .webp
+- Phone mockup scales to: 260-280px width on screen
+
 ## TODO
 
 - [ ] Configure actual Stripe Payment Links (currently placeholders)
 - [ ] Configure Resend API key and audience ID
 - [ ] Update tutorial images (currently placeholder quality)
-- [ ] PWA installation guide page
+- [x] PWA installation guide page
+- [ ] Add actual tutorial images to install page mockup
 - [ ] Affiliate program integration (planned for later)
 - [ ] Add testimonials when user reviews available
 - [ ] Google Analytics / conversion tracking
