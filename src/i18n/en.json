@@ -229,12 +229,27 @@
       "title": "Play Now in Your Browser",
       "description": "No download needed - play instantly on any device",
       "step1": "Click the button below to open the app",
-      "step2": "Start playing immediately - no signup required",
-      "step3": "Add to Home Screen for the best experience"
+      "step2": "Start playing immediately - no signup required"
+    },
+    "addToHome": {
+      "title": "Add to Home Screen",
+      "subtitle": "For the best experience without browser bars blocking buttons",
+      "ios": {
+        "title": "iPhone / iPad",
+        "step1": "Tap the Share button (box with arrow)",
+        "step2": "Scroll down and tap \"Add to Home Screen\"",
+        "step3": "Tap \"Add\" in the top right"
+      },
+      "android": {
+        "title": "Android",
+        "step1": "Tap the menu (⋮) in the top right",
+        "step2": "Tap \"Add to Home screen\" or \"Install app\"",
+        "step3": "Tap \"Add\" or \"Install\""
+      }
     },
     "important": {
       "title": "Important",
-      "description": "Browser bars may block game buttons. Add to Home Screen to remove browser UI and get the best experience!"
+      "description": "Browser bars may block game buttons. Follow the steps above to add to Home Screen for the best experience!"
     },
     "cta": "Open Candle Master",
     "ctaNote": "Opens in your browser - works on any device",
