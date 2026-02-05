@@ -96,6 +96,15 @@ const appUrl = 'https://app.candlemaster.app';
             </div>
           </div>
 
+          <!-- Important Warning -->
+          <div class="important-warning">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+              <strong>{t.install.important.title}</strong>
+              <p>{t.install.important.description}</p>
+            </div>
+          </div>
+
           <!-- Main CTA Button -->
           <div class="main-cta">
             <a href={appUrl} class="btn-3d btn-3d-large" target="_blank" rel="noopener noreferrer">
@@ -408,6 +417,41 @@ const appUrl = 'https://app.candlemaster.app';
     color: var(--text-secondary);
     font-size: var(--text-sm);
     line-height: 1.5;
+  }
+
+  /* Important Warning */
+  .important-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: rgba(251, 191, 36, 0.1);
+    border: 2px solid rgba(251, 191, 36, 0.4);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .warning-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .warning-content {
+    text-align: left;
+  }
+
+  .warning-content strong {
+    display: block;
+    color: #FBBF24;
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .warning-content p {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    margin: 0;
   }
 
   /* Main CTA */

@@ -230,7 +230,11 @@
       "description": "No download needed - play instantly on any device",
       "step1": "Click the button below to open the app",
       "step2": "Start playing immediately - no signup required",
-      "step3": "Optional: Add to Home Screen for app-like experience"
+      "step3": "Add to Home Screen for the best experience"
+    },
+    "important": {
+      "title": "Important",
+      "description": "Browser bars may block game buttons. Add to Home Screen to remove browser UI and get the best experience!"
     },
     "cta": "Open Candle Master",
     "ctaNote": "Opens in your browser - works on any device",
