@@ -1,91 +1,90 @@
 /* ============================================
    CANDLE MASTER - Landing Page Theme
-   Based on Midnight Theme + Gaming Accents
-   Enhanced with Atmospheric Effects
+   Minimal Light Theme - Clean & Trustworthy
    ============================================ */
 
 :root {
   /* ─────────────────────────────────────────
-     CORE COLORS (from Midnight Theme)
+     CORE COLORS (Minimal Light)
      ───────────────────────────────────────── */
 
-  /* Backgrounds - Deep blue-black for premium feel */
-  --bg-primary: #0F172A;      /* Main background */
-  --bg-secondary: #1E293B;    /* Cards, sections */
-  --bg-tertiary: #273549;     /* Elevated elements */
-  --bg-glass: rgba(30, 41, 59, 0.8);  /* Glass effect */
+  /* Backgrounds - Clean white & light gray */
+  --bg-primary: #FFFFFF;      /* Main background - pure white */
+  --bg-secondary: #F8FAFC;    /* Cards, sections - off-white */
+  --bg-tertiary: #F1F5F9;     /* Elevated elements - light gray */
+  --bg-glass: rgba(255, 255, 255, 0.9);  /* Glass effect */
 
-  /* Text - Cool gray scale */
-  --text-primary: #F1F5F9;    /* Headings, important */
-  --text-secondary: #94A3B8;  /* Body text */
-  --text-tertiary: #64748B;   /* Muted, captions */
-  --text-inverse: #0F172A;    /* Text on light bg */
+  /* Text - Dark gray scale for readability */
+  --text-primary: #0F172A;    /* Headings - near black */
+  --text-secondary: #475569;  /* Body text - dark gray */
+  --text-tertiary: #94A3B8;   /* Muted, captions - medium gray */
+  --text-inverse: #FFFFFF;    /* Text on dark bg */
 
-  /* Borders & Dividers */
-  --border-default: #334155;
-  --border-light: #475569;
-  --border-glow: rgba(99, 102, 241, 0.5);
+  /* Borders & Dividers - subtle */
+  --border-default: #E2E8F0;
+  --border-light: #F1F5F9;
+  --border-glow: rgba(245, 158, 11, 0.3);
 
   /* ─────────────────────────────────────────
-     ACCENT COLORS (Gaming + Trading vibe)
+     ACCENT COLORS (Minimal - Yellow & Red only)
      ───────────────────────────────────────── */
 
-  /* Primary Accent - Gold/Amber (CTA buttons, highlights) */
+  /* Primary Accent - Amber/Gold (CTA buttons) */
   --accent-primary: #F59E0B;
-  --accent-primary-hover: #FBBF24;
-  --accent-primary-glow: rgba(245, 158, 11, 0.4);
+  --accent-primary-hover: #D97706;
+  --accent-primary-glow: rgba(245, 158, 11, 0.2);
 
-  /* Secondary Accent - Warm Yellow (Links, secondary actions) */
-  --accent-secondary: #FCD34D;
-  --accent-secondary-hover: #FDE68A;
-  --accent-secondary-glow: rgba(252, 211, 77, 0.3);
+  /* Secondary Accent - Darker amber */
+  --accent-secondary: #D97706;
+  --accent-secondary-hover: #B45309;
+  --accent-secondary-glow: rgba(217, 119, 6, 0.15);
 
-  /* Tertiary Accent - Orange (Premium features) */
-  --accent-tertiary: #FB923C;
-  --accent-tertiary-hover: #FDBA74;
-  --accent-tertiary-glow: rgba(251, 146, 60, 0.3);
+  /* Tertiary Accent - Orange-amber */
+  --accent-tertiary: #EA580C;
+  --accent-tertiary-hover: #C2410C;
+  --accent-tertiary-glow: rgba(234, 88, 12, 0.15);
 
-  /* Trading Colors */
-  --color-profit: #22C55E;    /* Green - gains */
-  --color-profit-glow: rgba(34, 197, 94, 0.3);
-  --color-loss: #EF4444;      /* Red - losses */
-  --color-loss-glow: rgba(239, 68, 68, 0.3);
+  /* Trading Colors - Muted for light theme */
+  --color-profit: #16A34A;    /* Green - gains */
+  --color-profit-glow: rgba(22, 163, 74, 0.15);
+  --color-loss: #DC2626;      /* Red - losses */
+  --color-loss-glow: rgba(220, 38, 38, 0.15);
 
   /* ─────────────────────────────────────────
-     GRADIENTS (Eye-catching, gaming feel)
+     GRADIENTS (Subtle for light theme)
      ───────────────────────────────────────── */
 
-  /* Primary CTA gradient - Gold to Orange */
-  --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #FB923C 100%);
-  --gradient-primary-hover: linear-gradient(135deg, #FBBF24 0%, #FDBA74 100%);
+  /* Primary CTA gradient - Amber */
+  --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #D97706 0%, #B45309 100%);
 
-  /* Secondary gradient - Yellow to Gold */
+  /* Secondary gradient */
   --gradient-secondary: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
 
   /* Profit gradient */
   --gradient-profit: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
 
-  /* Background gradient - Subtle depth */
-  --gradient-bg: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
-  --gradient-bg-radial: radial-gradient(ellipse at top, #1E293B 0%, #0F172A 70%);
+  /* Background gradient - Very subtle */
+  --gradient-bg: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  --gradient-bg-radial: radial-gradient(ellipse at top, #F8FAFC 0%, #FFFFFF 70%);
 
-  /* Card hover gradient */
-  --gradient-card-hover: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  /* Card hover gradient - subtle warm tint */
+  --gradient-card-hover: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%);
 
   /* ─────────────────────────────────────────
-     EFFECTS & SHADOWS
+     EFFECTS & SHADOWS (Softer for light theme)
      ───────────────────────────────────────── */
 
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  /* Shadows - lighter and softer */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
 
-  /* Glow effects */
-  --glow-primary: 0 0 20px var(--accent-primary-glow), 0 0 40px rgba(245, 158, 11, 0.2);
-  --glow-secondary: 0 0 20px var(--accent-secondary-glow);
-  --glow-profit: 0 0 20px var(--color-profit-glow);
+  /* Glow effects - subtle */
+  --glow-primary: 0 0 20px var(--accent-primary-glow);
+  --glow-secondary: 0 0 15px var(--accent-secondary-glow);
+  --glow-profit: 0 0 15px var(--color-profit-glow);
 
   /* ─────────────────────────────────────────
      TYPOGRAPHY (Claude-like with Geist)
@@ -203,7 +202,7 @@
   mix-blend-mode: overlay;
 }
 
-/* Gradient Mesh Background */
+/* Gradient Mesh Background - Light theme version */
 .gradient-mesh {
   position: fixed;
   top: 0;
@@ -213,14 +212,12 @@
   pointer-events: none;
   z-index: -2;
   background:
-    /* Primary gold orb - top right */
-    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-    /* Purple accent - left side */
-    radial-gradient(ellipse 60% 80% at 10% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    /* Teal accent - bottom */
-    radial-gradient(ellipse 100% 40% at 50% 100%, rgba(20, 184, 166, 0.08) 0%, transparent 50%),
-    /* Deep blue base */
-    radial-gradient(ellipse 120% 100% at 50% 0%, #1E293B 0%, #0F172A 60%);
+    /* Subtle warm accent - top right */
+    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
+    /* Very subtle gray - left side */
+    radial-gradient(ellipse 60% 80% at 10% 60%, rgba(148, 163, 184, 0.05) 0%, transparent 50%),
+    /* Light base */
+    radial-gradient(ellipse 120% 100% at 50% 0%, #F8FAFC 0%, #FFFFFF 60%);
 }
 
 /* Animated Gradient Orbs */
@@ -235,7 +232,7 @@
 .gradient-orb-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
   top: -10%;
   right: -10%;
   animation-delay: 0s;
@@ -244,7 +241,7 @@
 .gradient-orb-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.08) 0%, transparent 70%);
   bottom: 20%;
   left: -15%;
   animation-delay: -7s;
@@ -253,7 +250,7 @@
 .gradient-orb-3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.03) 0%, transparent 70%);
   top: 50%;
   right: 5%;
   animation-delay: -14s;
@@ -295,41 +292,39 @@
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
-/* Custom Cursor Styles */
+/* Custom Cursor Styles - Clean for light theme */
 body {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='%23F59E0B' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23F59E0B'/%3E%3C/svg%3E") 12 12, auto;
+  cursor: auto;
 }
 
 a, button, .clickable, [role="button"] {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23F59E0B' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23F59E0B'/%3E%3Cpath d='M16 4v4M16 24v4M4 16h4M24 16h4' stroke='%23F59E0B' stroke-width='2'/%3E%3C/svg%3E") 16 16, pointer;
+  cursor: pointer;
 }
 
-/* Dramatic Multi-Layer Shadows */
+/* Subtle Multi-Layer Shadows - Light theme */
 .shadow-dramatic {
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15),
-    0 16px 32px rgba(0, 0, 0, 0.1),
-    0 32px 64px rgba(0, 0, 0, 0.1);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.03);
 }
 
 .shadow-dramatic-glow {
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15),
-    0 16px 32px rgba(0, 0, 0, 0.1),
-    0 0 60px var(--accent-primary-glow);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 0 30px var(--accent-primary-glow);
 }
 
 .shadow-inset-dramatic {
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
-    0 1px 2px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15);
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.03);
 }
 
 /* Decorative Borders */
@@ -337,7 +332,7 @@ a, button, .clickable, [role="button"] {
   border: 1px solid transparent;
   background:
     linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
-    linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary), #8B5CF6) border-box;
+    linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary), var(--accent-primary)) border-box;
 }
 
 .border-gradient {
@@ -372,7 +367,7 @@ a, button, .clickable, [role="button"] {
   inset: 0;
   padding: 2px;
   border-radius: inherit;
-  background: conic-gradient(from var(--angle, 0deg), var(--accent-primary), #8B5CF6, var(--accent-tertiary), var(--accent-primary));
+  background: conic-gradient(from var(--angle, 0deg), var(--accent-primary), var(--accent-secondary), var(--accent-tertiary), var(--accent-primary));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -393,19 +388,19 @@ a, button, .clickable, [role="button"] {
   }
 }
 
-/* Layered Transparency Effects */
+/* Layered Transparency Effects - Light theme */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .glass-panel-strong {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .frosted-overlay {
@@ -453,7 +448,7 @@ a, button, .clickable, [role="button"] {
   box-shadow: 0 0 20px var(--accent-primary-glow);
 }
 
-/* Vignette Effect */
+/* Vignette Effect - Very subtle for light theme */
 .vignette {
   position: relative;
 }
@@ -465,8 +460,8 @@ a, button, .clickable, [role="button"] {
   background: radial-gradient(
     ellipse at center,
     transparent 0%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.3) 100%
+    transparent 70%,
+    rgba(0, 0, 0, 0.03) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -511,9 +506,9 @@ a, button, .clickable, [role="button"] {
   100% { left: 100%; }
 }
 
-/* Particle Dots Background */
+/* Particle Dots Background - Very subtle for light theme */
 .particle-dots {
-  background-image: radial-gradient(rgba(245, 158, 11, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -542,38 +537,20 @@ a, button, .clickable, [role="button"] {
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15),
-    0 16px 32px rgba(0, 0, 0, 0.1),
-    0 0 40px var(--accent-primary-glow);
+    0 4px 8px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.05),
+    0 16px 32px rgba(0, 0, 0, 0.03);
 }
 
-/* Ambient Light Effect */
+/* Ambient Light Effect - Disabled for light theme */
 .ambient-light {
   position: relative;
 }
 
 .ambient-light::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg at 50% 50%,
-    transparent 0deg,
-    rgba(245, 158, 11, 0.03) 60deg,
-    transparent 120deg,
-    rgba(139, 92, 246, 0.03) 180deg,
-    transparent 240deg,
-    rgba(34, 197, 94, 0.03) 300deg,
-    transparent 360deg
-  );
-  animation: ambient-rotate 30s linear infinite;
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes ambient-rotate {

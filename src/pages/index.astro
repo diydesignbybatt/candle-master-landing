@@ -140,8 +140,8 @@ const webUrl = 'https://web.candlemaster.app';
           </div>
           <h1 class="text-gradient text-glow-subtle">Candle Master</h1>
           <p class="tagline">{t.hero.title} <span class="text-gradient">{t.hero.titleHighlight}</span></p>
-          <p class="free-highlight">100% Free to Play - No Credit Card Required</p>
-          <p class="description">{t.hero.description}</p>
+          <p class="free-text"><span class="free-highlight">100% Free to Play</span></p>
+          <p class="sub-tagline">Real Historical Data - Trading Simulator Game</p>
 
           <div class="cta-buttons">
             <a href="/install" class="btn-3d">
@@ -741,24 +741,26 @@ const webUrl = 'https://web.candlemaster.app';
     letter-spacing: -0.01em;
   }
 
-  .free-highlight {
-    display: inline-block;
-    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%);
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-lg);
-    border-radius: var(--border-radius-full);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    margin-bottom: var(--spacing-lg);
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  .free-text {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
   }
 
-  .description {
-    font-size: var(--text-lg);
+  .free-highlight {
+    display: inline;
+    background: rgba(245, 158, 11, 0.25);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: var(--text-base);
+    font-weight: 600;
+  }
+
+  .sub-tagline {
+    font-size: var(--text-sm);
     color: var(--text-tertiary);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-2xl);
-    line-height: 1.7;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-2xl);
   }
 
   /* Buttons */
@@ -832,48 +834,40 @@ const webUrl = 'https://web.candlemaster.app';
     min-height: 56px;
   }
 
-  /* 3D Glass Button - Glossy Convex Effect */
+  /* 3D Glass Button - Dark Gray Theme */
   .btn-3d {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
-    font-size: 1.125rem;
+    padding: 16px 32px;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #FFFFFF;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     transform: translateY(0);
 
-    /* Base gradient - golden amber */
+    /* Base gradient - dark gray */
     background:
       linear-gradient(180deg,
-        #FFE066 0%,
-        #FFD700 15%,
-        #FFC107 50%,
-        #FF9800 85%,
-        #E65100 100%
+        #6B7280 0%,
+        #4B5563 15%,
+        #374151 50%,
+        #1F2937 85%,
+        #111827 100%
       );
 
-    /* Multi-layer shadow for 3D depth */
+    /* Subtle inset for 3D depth */
     box-shadow:
-      /* Inner top highlight - glass reflection */
-      inset 0 1px 0 rgba(255, 255, 255, 0.8),
-      inset 0 2px 4px rgba(255, 255, 255, 0.4),
-      /* Inner bottom shadow - convex effect */
-      inset 0 -3px 6px rgba(0, 0, 0, 0.15),
-      /* Outer bottom edge - 3D depth */
-      0 4px 0 #B8860B,
-      0 6px 0 #8B6914,
-      /* Outer glow */
-      0 8px 25px rgba(255, 165, 0, 0.5),
-      0 15px 40px rgba(255, 140, 0, 0.3);
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 2px 0 #0F172A;
   }
 
   /* Glass highlight overlay - creates convex glass look */
@@ -883,54 +877,34 @@ const webUrl = 'https://web.candlemaster.app';
     top: 0;
     left: 0;
     right: 0;
-    height: 55%;
+    height: 50%;
     background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.4) 0%,
       rgba(255, 255, 255, 0) 100%
     );
     border-radius: 50px 50px 100px 100px;
     pointer-events: none;
   }
 
-  /* Secondary inner glow for extra depth */
+  /* Secondary inner glow - disabled for minimal */
   .btn-3d::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 10%;
-    right: 10%;
-    height: 30%;
-    background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    border-radius: 50px;
-    filter: blur(1px);
-    pointer-events: none;
+    display: none;
   }
 
   .btn-3d:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-      inset 0 2px 4px rgba(255, 255, 255, 0.5),
-      inset 0 -3px 6px rgba(0, 0, 0, 0.1),
-      0 8px 0 #B8860B,
-      0 10px 0 #8B6914,
-      0 12px 35px rgba(255, 165, 0, 0.6),
-      0 20px 50px rgba(255, 140, 0, 0.4);
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+      0 4px 0 #7F1D1D;
   }
 
   .btn-3d:active {
-    transform: translateY(2px) scale(0.98);
+    transform: translateY(1px);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.6),
-      inset 0 2px 4px rgba(255, 255, 255, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
       inset 0 -2px 4px rgba(0, 0, 0, 0.2),
-      0 2px 0 #B8860B,
-      0 3px 0 #8B6914,
-      0 4px 15px rgba(255, 165, 0, 0.4);
+      0 1px 0 #7F1D1D;
   }
 
   .btn-3d-content {
@@ -978,14 +952,14 @@ const webUrl = 'https://web.candlemaster.app';
     50% { transform: translateY(-3px); }
   }
 
-  /* 3D Glass Button - Purple Variant (Lifetime) */
+  /* 3D Glass Button - Gold Variant (Lifetime) - Minimal Light Theme */
   .btn-3d-purple {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
-    font-size: 1.125rem;
+    padding: 16px 24px;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     color: #ffffff;
@@ -993,29 +967,26 @@ const webUrl = 'https://web.candlemaster.app';
     border-radius: 50px;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transform: translateY(0);
+    white-space: nowrap;
 
-    /* Base gradient - royal purple */
+    /* Base gradient - golden amber */
     background:
       linear-gradient(180deg,
-        #C084FC 0%,
-        #A855F7 15%,
-        #9333EA 50%,
-        #7C3AED 85%,
-        #5B21B6 100%
+        #FCD34D 0%,
+        #FBBF24 15%,
+        #F59E0B 50%,
+        #D97706 85%,
+        #B45309 100%
       );
 
-    /* Multi-layer shadow for 3D depth */
+    /* Subtle inset for 3D depth - no external shadow */
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.5),
-      inset 0 2px 4px rgba(255, 255, 255, 0.25),
-      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
-      0 4px 0 #6B21A8,
-      0 6px 0 #4C1D95,
-      0 8px 25px rgba(147, 51, 234, 0.5),
-      0 15px 40px rgba(139, 92, 246, 0.3);
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+      0 2px 0 #92400E;
   }
 
   .btn-3d-purple::before {
@@ -1024,10 +995,9 @@ const webUrl = 'https://web.candlemaster.app';
     top: 0;
     left: 0;
     right: 0;
-    height: 55%;
+    height: 50%;
     background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.3) 0%,
       rgba(255, 255, 255, 0) 100%
     );
     border-radius: 50px 50px 100px 100px;
@@ -1035,42 +1005,23 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .btn-3d-purple::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 10%;
-    right: 10%;
-    height: 30%;
-    background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    border-radius: 50px;
-    filter: blur(1px);
-    pointer-events: none;
+    display: none;
   }
 
   .btn-3d-purple:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.6),
-      inset 0 2px 4px rgba(255, 255, 255, 0.35),
-      inset 0 -3px 6px rgba(0, 0, 0, 0.15),
-      0 8px 0 #6B21A8,
-      0 10px 0 #4C1D95,
-      0 12px 35px rgba(147, 51, 234, 0.6),
-      0 20px 50px rgba(139, 92, 246, 0.4);
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+      0 4px 0 #92400E;
   }
 
   .btn-3d-purple:active {
-    transform: translateY(2px) scale(0.98);
+    transform: translateY(1px);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.4),
-      inset 0 2px 4px rgba(255, 255, 255, 0.2),
-      inset 0 -2px 4px rgba(0, 0, 0, 0.25),
-      0 2px 0 #6B21A8,
-      0 3px 0 #4C1D95,
-      0 4px 15px rgba(147, 51, 234, 0.4);
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 1px 0 #92400E;
   }
 
   /* 3D Button - Full Width variant for pricing cards */
@@ -1155,45 +1106,46 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .feature-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #FFFFFF;
+    border: 1px solid var(--border-default);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
-  /* Subtle inner glow on cards */
+  /* Subtle top accent line on cards */
   .feature-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), transparent);
   }
 
   .feature-card:hover {
-    border-color: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .feature-card.highlight-card {
-    border: 1px solid rgba(245, 158, 11, 0.4);
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(245, 158, 11, 0.08) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(245, 158, 11, 0.05) 100%);
     position: relative;
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.15);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
   }
 
   .feature-card.highlight-card:hover {
-    border-color: rgba(245, 158, 11, 0.6);
+    border-color: rgba(245, 158, 11, 0.5);
     box-shadow:
-      0 4px 8px rgba(0, 0, 0, 0.2),
-      0 8px 16px rgba(0, 0, 0, 0.15),
-      0 0 40px rgba(245, 158, 11, 0.2);
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      0 0 20px rgba(245, 158, 11, 0.1);
   }
 
   .feature-card.highlight-card::after {
@@ -1587,58 +1539,52 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .pricing-card {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #FFFFFF;
+    border: 1px solid var(--border-default);
     border-radius: var(--border-radius-xl);
     padding: var(--spacing-xl);
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
-  /* Top edge glow */
+  /* Top edge accent */
   .pricing-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border-default), transparent);
     border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
   }
 
   .pricing-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow:
-      0 4px 8px rgba(0, 0, 0, 0.2),
-      0 8px 16px rgba(0, 0, 0, 0.15),
-      0 16px 32px rgba(0, 0, 0, 0.1);
-    border-color: rgba(255, 255, 255, 0.1);
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--border-default);
   }
 
   .pricing-card.pro {
-    border-color: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.4);
     position: relative;
-    box-shadow:
-      0 0 60px var(--accent-primary-glow),
-      inset 0 1px 0 rgba(245, 158, 11, 0.1);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
   }
 
   .pricing-card.pro::after {
     content: '';
     position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
-    background: radial-gradient(ellipse, var(--accent-primary-glow) 0%, transparent 70%);
-    opacity: 0.3;
+    height: 3px;
+    background: var(--gradient-primary);
     z-index: 0;
   }
 
@@ -1672,27 +1618,23 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .lifetime-badge {
-    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: white;
   }
 
   .pricing-card.lifetime {
-    border-color: rgba(139, 92, 246, 0.4);
-    box-shadow:
-      0 0 60px rgba(139, 92, 246, 0.3),
-      0 0 100px rgba(139, 92, 246, 0.1),
-      inset 0 1px 0 rgba(139, 92, 246, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
   }
 
   .pricing-card.lifetime::after {
-    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   }
 
   .pricing-card.lifetime:hover {
     box-shadow:
-      0 0 80px rgba(139, 92, 246, 0.4),
-      0 0 120px rgba(139, 92, 246, 0.15),
-      0 8px 32px rgba(0, 0, 0, 0.3);
+      0 4px 12px rgba(245, 158, 11, 0.15),
+      0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
   .pricing-plan {
@@ -1797,11 +1739,11 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .btn-lifetime {
-    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   }
 
   .btn-lifetime:hover {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
   }
 
   .btn-full {
@@ -1828,11 +1770,9 @@ const webUrl = 'https://web.candlemaster.app';
     gap: var(--spacing-lg);
     margin-top: var(--spacing-3xl);
     padding: var(--spacing-xl);
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: var(--bg-tertiary);
     border-radius: var(--border-radius-xl);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-default);
     flex-wrap: wrap;
     position: relative;
     overflow: hidden;
@@ -1844,8 +1784,8 @@ const webUrl = 'https://web.candlemaster.app';
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border-default), transparent);
   }
 
   .comparison-item {
