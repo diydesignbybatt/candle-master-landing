@@ -229,6 +229,13 @@
   animation: float-orb 20s ease-in-out infinite;
 }
 
+/* Hide gradient orbs on mobile to prevent horizontal scroll */
+@media (max-width: 768px) {
+  .gradient-orb {
+    display: none;
+  }
+}
+
 .gradient-orb-1 {
   width: 600px;
   height: 600px;
