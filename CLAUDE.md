@@ -219,6 +219,24 @@ PWA installation guide page with:
 - [ ] Firebase integration verification
 - [ ] App Store / Google Play submission prep
 
+## Recent Changes (2025-02-05)
+
+### Mobile Optimization
+- Fixed horizontal scroll issue on mobile (overflow-x hidden + page-wrapper)
+- Hidden gradient orbs on mobile (< 768px) to prevent overflow
+- Increased mobile h1 font size: `clamp(2.75rem, 14vw, 4rem)`
+- Improved hero section spacing for better breathing room
+
+### Button Colors
+- "Play Free on Mobile" → Golden Yellow (#FCD34D → #B45309)
+- "Lifetime Access" → Dark Red (#EF4444 → #7F1D1D)
+
+### Title & USP
+- Changed "Candle Master" → "CANDLE MASTER" (uppercase)
+- Added USP statement below CTA buttons:
+  - EN: "No Signal Chat Groups. No BS News. Just You, Basic Tools, and Skills."
+  - TH: "ไม่มีกลุ่ม Signal ไม่มีข่าวมัวๆ มีแค่คุณ เครื่องมือพื้นฐาน และทักษะ"
+
 ## Next Session Notes
 
 **Affiliate Program Options Being Considered:**
