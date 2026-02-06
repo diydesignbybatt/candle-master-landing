@@ -91,6 +91,13 @@ const appUrl = 'https://app.candlemaster.app';
             <p class="tutorial-mockup-subtitle">{t.install.tutorial?.subtitle || "เลื่อนดูตัวอย่างวิธีการเล่น"}</p>
 
             <div class="mockup-slider-wrapper">
+              <!-- Prev Button -->
+              <button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="สไลด์ก่อนหน้า">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"/>
+                </svg>
+              </button>
+
               <!-- Phone Mockup Frame -->
               <div class="phone-mockup">
                 <div class="phone-notch"></div>
@@ -113,6 +120,13 @@ const appUrl = 'https://app.candlemaster.app';
                 </div>
                 <div class="phone-home-indicator"></div>
               </div>
+
+              <!-- Next Button -->
+              <button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="สไลด์ถัดไป">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
 
               <!-- Navigation Dots -->
               <div class="mockup-dots">
@@ -235,6 +249,8 @@ const appUrl = 'https://app.candlemaster.app';
     document.addEventListener('DOMContentLoaded', () => {
       const slider = document.getElementById('install-slider');
       const dots = document.querySelectorAll('.mockup-dots .mockup-dot');
+      const prevBtn = document.getElementById('slider-prev');
+      const nextBtn = document.getElementById('slider-next');
       let currentIndex = 0;
       const totalSlides = 4;
 
@@ -255,9 +271,23 @@ const appUrl = 'https://app.candlemaster.app';
         });
       }
 
+      // Arrow button handlers
+      prevBtn?.addEventListener('click', () => {
+        clearInterval(autoPlay);
+        goToSlide(currentIndex - 1);
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        clearInterval(autoPlay);
+        goToSlide(currentIndex + 1);
+      });
+
       // Dot click handlers
       dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
+        dot.addEventListener('click', () => {
+          clearInterval(autoPlay);
+          goToSlide(index);
+        });
       });
 
       // Scroll snap detection
@@ -276,9 +306,8 @@ const appUrl = 'https://app.candlemaster.app';
       // Auto-play every 3 seconds
       let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 3000);
 
-      // Pause auto-play on interaction
+      // Pause auto-play on touch
       slider?.addEventListener('touchstart', () => clearInterval(autoPlay));
-      slider?.addEventListener('mousedown', () => clearInterval(autoPlay));
     });
   </script>
   </body>
@@ -849,6 +878,55 @@ const appUrl = 'https://app.candlemaster.app';
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-lg);
+    position: relative;
+  }
+
+  /* Slider Arrow Buttons */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-default);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .slider-arrow:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    transform: translateY(-70%) scale(1.1);
+  }
+
+  .slider-arrow-prev {
+    left: -60px;
+  }
+
+  .slider-arrow-next {
+    right: -60px;
+  }
+
+  @media (max-width: 480px) {
+    .slider-arrow {
+      width: 32px;
+      height: 32px;
+    }
+    .slider-arrow-prev {
+      left: -8px;
+    }
+    .slider-arrow-next {
+      right: -8px;
+    }
   }
 
   /* Phone Mockup - Light Theme */
