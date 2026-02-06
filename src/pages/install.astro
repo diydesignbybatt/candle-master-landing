@@ -95,27 +95,31 @@ const appUrl = 'https://app.candlemaster.app';
               <div class="phone-mockup">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <!-- Placeholder - Single Image for now, can become slider later -->
-                  <div class="mockup-placeholder">
-                    <div class="placeholder-content">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <circle cx="8.5" cy="8.5" r="1.5" />
-                        <polyline points="21 15 16 10 5 21" />
-                      </svg>
-                      <span>Tutorial Image</span>
-                      <span class="placeholder-size">1080 x 2340 px</span>
+                  <!-- Tutorial Slider -->
+                  <div class="install-slider" id="install-slider">
+                    <div class="install-slide" data-index="0">
+                      <img src="/tutorial/install-01.webp" alt="Step 1 - Open Candle Master" loading="lazy" />
+                    </div>
+                    <div class="install-slide" data-index="1">
+                      <img src="/tutorial/install-02.webp" alt="Step 2 - Add to Home Screen" loading="lazy" />
+                    </div>
+                    <div class="install-slide" data-index="2">
+                      <img src="/tutorial/install-03.webp" alt="Step 3 - Confirm Installation" loading="lazy" />
+                    </div>
+                    <div class="install-slide" data-index="3">
+                      <img src="/tutorial/install-04.webp" alt="Step 4 - Ready to Play" loading="lazy" />
                     </div>
                   </div>
                 </div>
                 <div class="phone-home-indicator"></div>
               </div>
 
-              <!-- Navigation Dots (ready for slider) -->
+              <!-- Navigation Dots -->
               <div class="mockup-dots">
-                <button class="mockup-dot active" aria-label="Slide 1"></button>
-                <button class="mockup-dot" aria-label="Slide 2"></button>
-                <button class="mockup-dot" aria-label="Slide 3"></button>
+                <button class="mockup-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="mockup-dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="mockup-dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="mockup-dot" data-index="3" aria-label="Slide 4"></button>
               </div>
             </div>
           </div>
@@ -227,6 +231,56 @@ const appUrl = 'https://app.candlemaster.app';
         </div>
       </section>
     </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('install-slider');
+      const dots = document.querySelectorAll('.mockup-dots .mockup-dot');
+      let currentIndex = 0;
+      const totalSlides = 4;
+
+      function goToSlide(index: number) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+
+        if (slider) {
+          slider.scrollTo({
+            left: slider.clientWidth * index,
+            behavior: 'smooth'
+          });
+        }
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      // Dot click handlers
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+      });
+
+      // Scroll snap detection
+      slider?.addEventListener('scrollend', () => {
+        if (slider) {
+          const newIndex = Math.round(slider.scrollLeft / slider.clientWidth);
+          if (newIndex !== currentIndex) {
+            currentIndex = newIndex;
+            dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === currentIndex);
+            });
+          }
+        }
+      });
+
+      // Auto-play every 3 seconds
+      let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 3000);
+
+      // Pause auto-play on interaction
+      slider?.addEventListener('touchstart', () => clearInterval(autoPlay));
+      slider?.addEventListener('mousedown', () => clearInterval(autoPlay));
+    });
+  </script>
   </body>
 </html>
 
@@ -855,31 +909,33 @@ const appUrl = 'https://app.candlemaster.app';
     border-radius: 2px;
   }
 
-  /* Placeholder - Light Theme */
-  .mockup-placeholder {
+  /* Install Slider */
+  .install-slider {
+    display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-tertiary);
-    border: 2px dashed rgba(245, 158, 11, 0.4);
-    border-radius: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-  .placeholder-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-    color: var(--text-tertiary);
-    font-size: var(--text-sm);
+  .install-slider::-webkit-scrollbar {
+    display: none;
   }
 
-  .placeholder-size {
-    font-size: var(--text-xs);
-    color: var(--text-tertiary);
-    opacity: 0.6;
+  .install-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  .install-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
   /* Mockup Image (when added) */

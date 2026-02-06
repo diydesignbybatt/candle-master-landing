@@ -40,12 +40,17 @@
         "description": "Learn professional trading through easy-to-understand lessons that you can actually apply."
       },
       "legendary": {
-        "title": "300+ Legendary Stocks",
+        "title": "500+ Legendary Stocks",
         "description": "Experience Tesla's crashes, Apple's rallies, and Silver's volatility. Learn from history's biggest moves."
       },
       "themes": {
         "title": "Beautiful Themes",
         "description": "3 stunning chart themes to match your style. Trade in comfort."
+      },
+      "crisisEvent": {
+        "badge": "PRO",
+        "title": "Crisis Event — Boss Stage",
+        "description": "Randomly encounter legendary market crashes like Dot-Com Bubble, 2008 Financial Crisis, and COVID Crash. Can you survive the boss stage?"
       }
     }
   },
@@ -104,7 +109,7 @@
       "description": "Buy the dev a coffee & keep this project alive",
       "features": {
         "days": "200 Moves per game",
-        "stocks": "300+ Legendary Stocks worldwide",
+        "stocks": "500+ Legendary Stocks worldwide",
         "data": "Random Historical Data 1980-2025",
         "themes": "3 Beautiful Themes",
         "academy": "Full Academy Access",
@@ -187,7 +192,7 @@
       },
       {
         "question": "What stocks can I practice with?",
-        "answer": "300+ legendary stocks with data from 1980-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 10 stocks, PRO unlocks everything."
+        "answer": "500+ legendary stocks with data from 1980-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 10 stocks, PRO unlocks everything."
       },
       {
         "question": "Can I use it on desktop?",
