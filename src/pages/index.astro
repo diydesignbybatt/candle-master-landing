@@ -137,10 +137,13 @@ const webUrl = 'https://web.candlemaster.app';
         </div>
         <HeroBackground />
         <div class="container">
-          <div class="hero-badge">
-            <span>Built by Traders, for Beginners</span>
+          <div class="hero-mascot">
+            <img src="/mascot-teacher.webp" alt="Candle Master - Trading Teacher" class="mascot-img" width="180" height="180" />
           </div>
           <h1 class="text-gradient text-glow-subtle">CANDLE MASTER</h1>
+          <div class="hero-badge">
+            <span>Game for Trader, by Trader.</span>
+          </div>
           <p class="tagline">{t.hero.title} <span class="text-gradient">{t.hero.titleHighlight}</span></p>
           <p class="free-text"><span class="free-highlight">100% Free to Play</span></p>
           <p class="sub-tagline">Real Historical Data - Trading Simulator Game</p>
@@ -236,15 +239,6 @@ const webUrl = 'https://web.candlemaster.app';
               <p>Start with $100,000 virtual capital. Learn from mistakes without losing real money.</p>
             </div>
 
-            <div class="feature-card highlight-card hover-lift">
-              <div class="feature-icon-svg">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                </svg>
-              </div>
-              <h3>{t.features.cards.crisisEvent.title}</h3>
-              <p>{t.features.cards.crisisEvent.description}</p>
-            </div>
           </div>
         </div>
       </section>
@@ -360,6 +354,10 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item disabled">
                   <span class="feature-icon cross">✕</span>
+                  <span>Crisis Event — Boss Stage</span>
+                </li>
+                <li class="feature-item disabled">
+                  <span class="feature-icon cross">✕</span>
                   <span>Position Calculator</span>
                 </li>
               </ul>
@@ -403,6 +401,10 @@ const webUrl = 'https://web.candlemaster.app';
                   <span class="feature-icon check">✓</span>
                   <span>{t.pricing.proMonthly.features.academy}</span>
                 </li>
+                <li class="feature-item highlight">
+                  <span class="feature-icon check">✓</span>
+                  <span>Crisis Event — Boss Stage</span>
+                </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
                   <span>{t.pricing.proMonthly.features.updates}</span>
@@ -443,6 +445,10 @@ const webUrl = 'https://web.candlemaster.app';
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
                   <span>{t.pricing.proLifetime.features.updates}</span>
+                </li>
+                <li class="feature-item highlight">
+                  <span class="feature-icon check">✓</span>
+                  <span>Crisis Event — Boss Stage</span>
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
@@ -735,6 +741,19 @@ const webUrl = 'https://web.candlemaster.app';
   @keyframes line-pulse {
     0%, 100% { opacity: 0.05; }
     50% { opacity: 0.15; }
+  }
+
+  .hero-mascot {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mascot-img {
+    width: 207px;
+    height: 207px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 4px 24px rgba(245, 158, 11, 0.18));
+    border: 3px solid var(--primary);
   }
 
   .hero-badge {
@@ -1491,6 +1510,11 @@ const webUrl = 'https://web.candlemaster.app';
       font-size: clamp(2.75rem, 14vw, 4rem);
       margin-bottom: var(--spacing-xl);
       letter-spacing: 0.02em;
+    }
+
+    .mascot-img {
+      width: 193px;
+      height: 193px;
     }
 
     .hero-badge {
