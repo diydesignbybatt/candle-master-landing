@@ -78,7 +78,7 @@ public/
 ## Landing Page Sections
 
 1. **Hero** - Animated candlestick background + main CTA
-2. **Features** - 4 cards (Blind Trading, Legendary Stocks, Academy, Risk-Free)
+2. **Features** - 5 cards (Blind Trading, Legendary Stocks, Academy, Beautiful Themes, Crisis Event [PRO])
 3. **How It Works** - 4 steps with connectors
 4. **Tutorial Slider** - Phone mockup with screenshot carousel
 5. **Pricing** - Free / PRO Monthly / PRO Lifetime cards
@@ -119,10 +119,11 @@ public/
 
 ### PRO Features
 - 200 Moves per Game
-- 300+ Legendary Stocks worldwide
+- 500+ Legendary Stocks worldwide
 - All Chart Themes
 - Candle Academy
 - Position Calculator
+- Crisis Event — Boss Stage (legendary market crashes)
 - Lifetime updates (Lifetime plan)
 
 ## i18n Content Editing
@@ -198,53 +199,61 @@ PWA installation guide page with:
 ## TODO
 
 ### Landing Page
-- [ ] Configure actual Stripe Payment Links (currently placeholders)
+- [ ] Configure actual Stripe Payment Links (currently placeholders) — next priority
 - [ ] Configure Resend API key and audience ID
-- [ ] Update tutorial images (currently placeholder quality)
-- [x] PWA installation guide page
+- [x] Update tutorial images (9 new high-quality screenshots)
+- [x] PWA installation guide page with image slider + arrow navigation
 - [x] Light theme implementation (Minimal Light with Gold Accents)
-- [ ] Add actual tutorial images to install page mockup
+- [x] Install page tutorial slider with 4 images + prev/next arrows
+- [x] Updated 300+ → 500+ stocks across all pages
+- [x] Added Crisis Event / Boss Stage PRO feature card
+- [x] Touch swipe fix (`touch-action: pan-x` + `overscroll-behavior: contain`)
 - [ ] Add testimonials when user reviews available
 - [ ] Google Analytics / conversion tracking
 
-### Affiliate / Referral Program (Next Priority)
+### Affiliate / Referral Program (Future)
 - [ ] Research & decide on solution (considering Refgrow + Stripe)
 - [ ] Implement referral tracking system
 - [ ] Create referral dashboard/page
 - [ ] Set up affiliate commission structure
 
 ### Mobile App (candle-master repo)
+- [ ] Stripe integration for PWA payments — next priority
 - [ ] iOS deployment readiness check
 - [ ] Android deployment readiness check
 - [ ] Firebase integration verification
 - [ ] App Store / Google Play submission prep
 
-## Recent Changes (2025-02-05)
+## Recent Changes
 
-### Mobile Optimization
+### v0.3.0 (2025-02-06)
+- Updated 300+ → 500+ legendary stocks across all pages and i18n
+- Added Crisis Event / Boss Stage PRO feature card (EN + TH)
+- Updated all 9 tutorial screenshots
+- Install page: real image slider with 4 images + prev/next arrow buttons
+- Fixed slider swipe: `touch-action: pan-x` + `overscroll-behavior: contain` on all sliders
+- FAQ section and email signup form
+
+### v0.2.0 (2025-02-05)
 - Fixed horizontal scroll issue on mobile (overflow-x hidden + page-wrapper)
 - Hidden gradient orbs on mobile (< 768px) to prevent overflow
-- Increased mobile h1 font size: `clamp(2.75rem, 14vw, 4rem)`
-- Improved hero section spacing for better breathing room
-
-### Button Colors
-- "Play Free on Mobile" → Golden Yellow (#FCD34D → #B45309)
-- "Lifetime Access" → Dark Red (#EF4444 → #7F1D1D)
-
-### Title & USP
-- Changed "Candle Master" → "CANDLE MASTER" (uppercase)
-- Added USP statement below CTA buttons:
-  - EN: "No Signal Chat Groups. No BS News. Just You, Basic Tools, and Skills."
-  - TH: "ไม่มีกลุ่ม Signal ไม่มีข่าวมัวๆ มีแค่คุณ เครื่องมือพื้นฐาน และทักษะ"
+- Button color updates (Golden Yellow CTA, Dark Red Lifetime)
+- Title & USP statement added
 
 ## Next Session Notes
 
+**Priority: Stripe Integration**
+- Set up Stripe products/prices for PRO Monthly ($3.99) and Lifetime ($29.99)
+- Implement Stripe Checkout for PWA users
+- Connect payment links on landing page pricing cards
+- Sync subscription status to App via Firebase user ID
+
 **Affiliate Program Options Being Considered:**
 - **Refgrow** (https://refgrow.com) - Works with Stripe
-- Need to evaluate: pricing, features, ease of integration
+- **Lemon Squeezy** - Payment + affiliate in one (may replace Stripe for PWA)
 
-**App Status (to verify):**
+**App Status:**
 - Location: `E:\CANDLE MASTER\PROJECT\Candle Master`
-- Stack: React + Vite (PWA)
-- Firebase status: needs verification
-- Platform readiness: iOS & Android - needs testing
+- Version: v2.1.0
+- Stack: React + Vite (PWA) + Capacitor 8
+- Live PWA: https://app.candlemaster.app
