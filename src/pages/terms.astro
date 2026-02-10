@@ -1,0 +1,279 @@
+---
+// Candle Master - Terms of Service Page
+const appName = 'Candle Master';
+const appUrl = 'https://app.candlemaster.app';
+const siteUrl = 'https://candlemaster.app';
+const contactEmail = 'pathofmeow.dev@gmail.com';
+const lastUpdated = 'February 10, 2026';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Terms of Service — {appName}</title>
+    <meta name="description" content="Terms of Service for Candle Master trading simulator game." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={`${siteUrl}/terms`} />
+
+    <!-- Geist Font -->
+    <link rel="preconnect" href="https://cdn.vercel.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.vercel.com/geist/font/sans/geist-sans.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/styles/theme.css" />
+  </head>
+
+  <body>
+    <main class="legal-page">
+      <div class="legal-container">
+        <!-- Back to Home -->
+        <a href="/" class="back-link">← Back to Home</a>
+
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: {lastUpdated}</p>
+
+        <section>
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By accessing or using {appName} ("the Service"), you agree to be bound by these Terms of
+            Service. If you do not agree to these terms, please do not use the Service.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Description of Service</h2>
+          <p>
+            {appName} is a trading simulator game designed for educational purposes. The Service allows
+            users to practice stock trading using historical market data in a simulated environment.
+          </p>
+          <p><strong>Important:</strong></p>
+          <ul>
+            <li>{appName} is NOT a financial advisor, broker, or investment platform.</li>
+            <li>No real money is traded within the game.</li>
+            <li>Historical stock data is used for educational simulation only.</li>
+            <li>Past performance in the simulator does not indicate future real-world results.</li>
+            <li>We do not provide investment advice or recommendations.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. User Accounts</h2>
+          <ul>
+            <li>You may sign in using your Google account through Firebase Authentication.</li>
+            <li>You are responsible for maintaining the security of your account.</li>
+            <li>You must provide accurate information when creating your account.</li>
+            <li>One account per person. Sharing accounts is not permitted.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Subscriptions and Payments</h2>
+
+          <h3>4.1 Free and PRO Plans</h3>
+          <p>
+            {appName} offers a free tier with limited features and a PRO subscription with expanded
+            access. Current pricing and feature details are available within the app and on our website.
+          </p>
+
+          <h3>4.2 Payment Processing</h3>
+          <ul>
+            <li><strong>Web (PWA):</strong> Payments are processed by Stripe. By purchasing a subscription, you also agree to <a href="https://stripe.com/legal" target="_blank" rel="noopener">Stripe's Terms of Service</a>.</li>
+            <li><strong>iOS:</strong> Payments are processed through Apple's In-App Purchase system and are subject to <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener">Apple's Terms</a>.</li>
+            <li><strong>Android:</strong> Payments are processed through Google Play Billing and are subject to <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play's Terms</a>.</li>
+          </ul>
+
+          <h3>4.3 Monthly Subscriptions</h3>
+          <p>
+            Monthly subscriptions renew automatically each billing cycle until cancelled. You may
+            cancel at any time. Cancellation takes effect at the end of the current billing period.
+          </p>
+
+          <h3>4.4 Lifetime Plans</h3>
+          <p>
+            Lifetime plans provide permanent access to PRO features with a one-time payment.
+            Lifetime access is tied to your account and is non-transferable.
+          </p>
+
+          <h3>4.5 Refunds</h3>
+          <ul>
+            <li><strong>Web (Stripe):</strong> Refund requests can be made within 7 days of purchase by contacting us at <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</li>
+            <li><strong>iOS / Android:</strong> Refunds are handled by Apple or Google respectively, per their refund policies.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Acceptable Use</h2>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Reverse engineer, decompile, or disassemble any part of the Service</li>
+            <li>Use the Service for any unlawful purpose</li>
+            <li>Attempt to gain unauthorized access to the Service or related systems</li>
+            <li>Interfere with or disrupt the Service</li>
+            <li>Use automated tools or bots to interact with the Service</li>
+            <li>Share or redistribute PRO content without authorization</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Intellectual Property</h2>
+          <p>
+            All content, features, and functionality of the Service — including but not limited to
+            design, graphics, characters, sounds, and code — are owned by {appName} and are protected
+            by copyright and intellectual property laws.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Disclaimer of Financial Advice</h2>
+          <p>
+            <strong>The Service is for educational and entertainment purposes only.</strong> Nothing
+            in {appName} constitutes financial advice, investment advice, trading advice, or any other
+            sort of advice. You should not treat any of the content as such. We do not recommend that
+            any financial instrument should be bought, sold, or held by you. Trading and investing in
+            financial markets involves risk. Always do your own research and consult with a qualified
+            financial advisor before making investment decisions.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by law, {appName} shall not be liable for any indirect,
+            incidental, special, consequential, or punitive damages, including but not limited to
+            loss of profits, data, or other intangible losses resulting from your use of the Service.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Service Availability</h2>
+          <p>
+            We strive to maintain the Service but do not guarantee uninterrupted availability. We
+            reserve the right to modify, suspend, or discontinue the Service at any time with
+            reasonable notice.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Changes to Terms</h2>
+          <p>
+            We may update these Terms from time to time. Continued use of the Service after changes
+            constitutes acceptance of the new Terms. We will notify users of material changes via
+            the app or email.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Contact Us</h2>
+          <p>
+            If you have any questions about these Terms, please contact us at:
+          </p>
+          <ul>
+            <li>Email: <a href={`mailto:${contactEmail}`}>{contactEmail}</a></li>
+            <li>Website: <a href={siteUrl}>{siteUrl}</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  .legal-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: opacity 0.2s;
+  }
+
+  .back-link:hover {
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--accent-primary);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .legal-page {
+      padding: 1.5rem 1rem 3rem;
+    }
+  }
+</style>

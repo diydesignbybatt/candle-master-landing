@@ -1,0 +1,342 @@
+---
+// Candle Master - Customer Support Page
+const appName = 'Candle Master';
+const appUrl = 'https://app.candlemaster.app';
+const siteUrl = 'https://candlemaster.app';
+const supportEmail = 'pathofmeow.dev@gmail.com';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Support — {appName}</title>
+    <meta name="description" content="Get help with Candle Master. Contact our support team for questions about the app, subscriptions, or technical issues." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={`${siteUrl}/support`} />
+
+    <!-- Geist Font -->
+    <link rel="preconnect" href="https://cdn.vercel.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.vercel.com/geist/font/sans/geist-sans.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/styles/theme.css" />
+  </head>
+
+  <body>
+    <main class="support-page">
+      <div class="support-container">
+        <!-- Back to Home -->
+        <a href="/" class="back-link">← Back to Home</a>
+
+        <h1>Support</h1>
+        <p class="subtitle">We're here to help you get the most out of {appName}.</p>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h2>Contact Us</h2>
+          <p>For any questions, issues, or feedback, reach out to us at:</p>
+          <a href={`mailto:${supportEmail}`} class="email-link">{supportEmail}</a>
+          <p class="response-time">We typically respond within 24-48 hours.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <h3>What is Candle Master?</h3>
+            <p>
+              Candle Master is a trading simulator game where you practice stock trading using real
+              historical market data. You trade "blind" — meaning you don't know which stock you're
+              trading until the game ends. It's designed to help you learn market patterns and develop
+              trading strategies in a risk-free environment.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is this real trading?</h3>
+            <p>
+              No. Candle Master is purely an educational simulator. No real money is involved in
+              trades. The app uses historical stock data for simulation purposes only. It is not
+              a financial advisor or brokerage.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do I install the app?</h3>
+            <p>
+              Candle Master is available as a Progressive Web App (PWA). Visit
+              <a href={appUrl}>{appUrl}</a> on your mobile browser and follow the
+              <a href="/install">installation guide</a> to add it to your home screen.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What's included in PRO?</h3>
+            <p>
+              PRO unlocks 500+ legendary stocks (worldwide), 250 trading days per game,
+              all chart themes, the full Candle Academy, Position Calculator, Crisis Event mode,
+              and more. See our <a href="/#pricing">pricing page</a> for details.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do I upgrade to PRO?</h3>
+            <p>
+              Open the app, go to your Profile, and tap "Upgrade to PRO". You can choose between
+              a Monthly subscription ($3.99/mo) or a Lifetime plan ($29.99 one-time).
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do I cancel my subscription?</h3>
+            <p>
+              <strong>Web (PWA):</strong> Contact us at <a href={`mailto:${supportEmail}`}>{supportEmail}</a> to cancel your subscription.<br>
+              <strong>iOS:</strong> Go to Settings → Apple ID → Subscriptions → Candle Master → Cancel.<br>
+              <strong>Android:</strong> Go to Google Play Store → Payments & Subscriptions → Subscriptions → Candle Master → Cancel.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I get a refund?</h3>
+            <p>
+              <strong>Web (Stripe):</strong> Contact us within 7 days of purchase at <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.<br>
+              <strong>iOS / Android:</strong> Request a refund through Apple or Google's refund process respectively.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>I found a bug. How do I report it?</h3>
+            <p>
+              Please email us at <a href={`mailto:${supportEmail}`}>{supportEmail}</a> with a
+              description of the issue, your device type, and any screenshots if possible. We
+              appreciate your help in improving the app!
+            </p>
+          </div>
+        </section>
+
+        <!-- Links -->
+        <section class="links-section">
+          <h2>Useful Links</h2>
+          <div class="links-grid">
+            <a href="/" class="link-card">
+              <span class="link-icon">🏠</span>
+              <span>Home</span>
+            </a>
+            <a href={appUrl} class="link-card" target="_blank" rel="noopener">
+              <span class="link-icon">📱</span>
+              <span>Open App</span>
+            </a>
+            <a href="/privacy" class="link-card">
+              <span class="link-icon">🔒</span>
+              <span>Privacy Policy</span>
+            </a>
+            <a href="/terms" class="link-card">
+              <span class="link-icon">📄</span>
+              <span>Terms of Service</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  .support-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .support-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: opacity 0.2s;
+  }
+
+  .back-link:hover {
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Contact Card */
+  .contact-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    border: none;
+    padding: 0;
+  }
+
+  .contact-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .email-link {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    padding: 0.75rem 1.5rem;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+  }
+
+  .email-link:hover {
+    background: rgba(245, 158, 11, 0.2);
+    text-decoration: none;
+  }
+
+  .response-time {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--bg-tertiary);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  /* Links Section */
+  .links-section {
+    padding: 0;
+  }
+
+  .links-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.2s;
+  }
+
+  .link-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+
+  .link-icon {
+    font-size: 1.25rem;
+  }
+
+  a {
+    color: var(--accent-primary);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .support-page {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .links-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
