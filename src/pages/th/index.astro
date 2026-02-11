@@ -59,9 +59,9 @@ const webUrl = 'https://web.candlemaster.app';
           },
           {
             "@type": "Offer",
-            "price": "29.99",
+            "price": "19.99",
             "priceCurrency": "USD",
-            "description": "PRO Lifetime - One-time payment, lifetime access"
+            "description": "PRO Yearly - Annual subscription, save 58%"
           }
         ],
         "description": "ฝึกเทรดก่อนเสียเงินจริง เรียนรู้จากข้อผิดพลาดฟรี ด้วยข้อมูลจริงตั้งแต่ 1980-2025"
@@ -416,31 +416,31 @@ const webUrl = 'https://web.candlemaster.app';
               <p class="pricing-note">ยกเลิกได้ทุกเมื่อ ไม่ต้องถามเหตุผล</p>
             </div>
 
-            <!-- Pro Lifetime -->
-            <div class="pricing-card pro lifetime border-animated">
+            <!-- Pro Yearly -->
+            <div class="pricing-card pro yearly border-animated">
               <div class="pricing-header">
-                <div class="pricing-badge lifetime-badge">{t.pricing.proLifetime.badge}</div>
-                <h3 class="pricing-plan">{t.pricing.proLifetime.plan}</h3>
+                <div class="pricing-badge yearly-badge">{t.pricing.proYearly.badge}</div>
+                <h3 class="pricing-plan">{t.pricing.proYearly.plan}</h3>
                 <div class="pricing-price">
-                  <span class="price-original">{t.pricing.proLifetime.priceOriginal}</span>
-                  <span class="price-amount">{t.pricing.proLifetime.price}</span>
-                  <span class="price-period">{t.pricing.proLifetime.period}</span>
+                  <span class="price-original">{t.pricing.proYearly.priceOriginal}</span>
+                  <span class="price-amount">{t.pricing.proYearly.price}</span>
+                  <span class="price-period">{t.pricing.proYearly.period}</span>
                 </div>
-                <p class="pricing-desc">{t.pricing.proLifetime.description}</p>
+                <p class="pricing-desc">{t.pricing.proYearly.description}</p>
               </div>
 
               <ul class="pricing-features">
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>{t.pricing.proLifetime.features.everything}</span>
+                  <span>{t.pricing.proYearly.features.everything}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span>{t.pricing.proLifetime.features.forever}</span>
+                  <span>{t.pricing.proYearly.features.forever}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
-                  <span>{t.pricing.proLifetime.features.updates}</span>
+                  <span>{t.pricing.proYearly.features.updates}</span>
                 </li>
                 <li class="feature-item highlight">
                   <span class="feature-icon check">✓</span>
@@ -448,17 +448,17 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
                 <li class="feature-item">
                   <span class="feature-icon check">✓</span>
-                  <span>{t.pricing.proLifetime.features.support}</span>
+                  <span>{t.pricing.proYearly.features.support}</span>
                 </li>
               </ul>
 
-              <a href="#" class="btn-3d-purple btn-3d-purple-full" id="checkout-lifetime-btn">
+              <a href="#" class="btn-3d-purple btn-3d-purple-full" id="checkout-yearly-btn">
                 <span class="btn-3d-content">
-                  <span class="btn-3d-text">{t.pricing.proLifetime.cta}</span>
+                  <span class="btn-3d-text">{t.pricing.proYearly.cta}</span>
                 </span>
                 <span class="btn-3d-shine"></span>
               </a>
-              <p class="pricing-note">จ่ายครั้งเดียว ไม่มีค่าสมาชิกรายเดือน</p>
+              <p class="pricing-note">ยกเลิกได้ทุกเมื่อ ประหยัด 58% เทียบกับรายเดือน</p>
             </div>
           </div>
 
@@ -540,25 +540,14 @@ const webUrl = 'https://web.candlemaster.app';
 
     <!-- Stripe Checkout Script -->
     <script>
-      // Stripe Payment Links
-      const STRIPE_LINKS = {
-        monthly: 'https://buy.stripe.com/test_4gMfZ99r4d0K6pWcgDeAg00',  // $3.99/mo (Launch price)
-        lifetime: 'https://buy.stripe.com/test_00wcMX0UyaSC8y41BZeAg02' // $29.99 one-time (Launch price)
-      };
-
+      // Landing page redirects to PWA app for checkout (Stripe Checkout Sessions)
       document.addEventListener('DOMContentLoaded', () => {
         const monthlyBtn = document.getElementById('checkout-monthly-btn');
-        const lifetimeBtn = document.getElementById('checkout-lifetime-btn');
+        const yearlyBtn = document.getElementById('checkout-yearly-btn');
 
-        function handleCheckout(type) {
-          const link = STRIPE_LINKS[type];
-
-          if (link.includes('YOUR_')) {
-            alert('Stripe checkout ยังไม่ได้ตั้งค่า กรุณาอัพเกรดเป็น PRO ในหน้าตั้งค่าของแอพ');
-            return;
-          }
-
-          window.location.href = link;
+        function handleCheckout(plan) {
+          // Redirect to PWA app — payment handled via Stripe Checkout Sessions in-app
+          window.location.href = 'https://app.candlemaster.app';
         }
 
         if (monthlyBtn) {
@@ -568,10 +557,10 @@ const webUrl = 'https://web.candlemaster.app';
           });
         }
 
-        if (lifetimeBtn) {
-          lifetimeBtn.addEventListener('click', (e) => {
+        if (yearlyBtn) {
+          yearlyBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            handleCheckout('lifetime');
+            handleCheckout('yearly');
           });
         }
       });
@@ -1017,7 +1006,7 @@ const webUrl = 'https://web.candlemaster.app';
     50% { transform: translateY(-3px); }
   }
 
-  /* 3D Glass Button - Gold Variant (Lifetime) - Minimal Light Theme */
+  /* 3D Glass Button - Gold Variant (Yearly) - Minimal Light Theme */
   .btn-3d-purple {
     position: relative;
     display: inline-flex;
@@ -1726,21 +1715,21 @@ const webUrl = 'https://web.candlemaster.app';
     color: white;
   }
 
-  .lifetime-badge {
+  .yearly-badge {
     background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: white;
   }
 
-  .pricing-card.lifetime {
+  .pricing-card.yearly {
     border-color: rgba(245, 158, 11, 0.4);
     box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
   }
 
-  .pricing-card.lifetime::after {
+  .pricing-card.yearly::after {
     background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   }
 
-  .pricing-card.lifetime:hover {
+  .pricing-card.yearly:hover {
     box-shadow:
       0 4px 12px rgba(245, 158, 11, 0.15),
       0 8px 24px rgba(0, 0, 0, 0.06);
@@ -1847,11 +1836,11 @@ const webUrl = 'https://web.candlemaster.app';
     font-weight: 500;
   }
 
-  .btn-lifetime {
+  .btn-yearly {
     background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   }
 
-  .btn-lifetime:hover {
+  .btn-yearly:hover {
     box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
   }
 
@@ -1977,11 +1966,11 @@ const webUrl = 'https://web.candlemaster.app';
       max-width: 380px;
     }
 
-    .pricing-card.lifetime {
-      order: -2; /* Show Lifetime first on mobile */
+    .pricing-card.yearly {
+      order: -2; /* Show Yearly first on mobile */
     }
 
-    .pricing-card.pro:not(.lifetime) {
+    .pricing-card.pro:not(.yearly) {
       order: -1; /* Show PRO Monthly second */
     }
   }

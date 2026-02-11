@@ -117,20 +117,20 @@
       },
       "cta": "Get PRO Monthly"
     },
-    "proLifetime": {
+    "proYearly": {
       "badge": "Best Value",
-      "plan": "PRO Lifetime",
-      "priceOriginal": "$39.99",
-      "price": "$29.99",
-      "period": "one-time",
-      "description": "Much cheaper than one bad trade",
+      "plan": "PRO Yearly",
+      "priceOriginal": "$47.88",
+      "price": "$19.99",
+      "period": "/year",
+      "description": "Save 58% compared to monthly",
       "features": {
         "everything": "Everything in PRO Monthly",
-        "forever": "Pay once, learn forever",
-        "updates": "Lifetime updates included",
+        "forever": "Best value for serious learners",
+        "updates": "All future updates included",
         "support": "Support Indie Developer"
       },
-      "cta": "Get Lifetime Access"
+      "cta": "Get Yearly Access"
     },
     "coffeeNote": "The average beginner loses $1,000+ in their first month. This costs less than a coffee."
   },
@@ -200,7 +200,7 @@
       },
       {
         "question": "How do I cancel PRO?",
-        "answer": "Cancel anytime from app settings. No questions, no hassle. Lifetime plan? Nothing to cancel - it's yours forever."
+        "answer": "Cancel anytime from app settings. No questions, no hassle. Both monthly and yearly plans can be cancelled at any time."
       }
     ]
   },
