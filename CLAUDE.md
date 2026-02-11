@@ -67,12 +67,15 @@ src/
 ├── styles/
 │   └── theme.css              # Minimal Light theme variables
 public/
-├── favicon.svg                # Candle Master icon (candlesticks)
-├── favicon.ico
+├── favicon-32.png             # Uncle mascot favicon (32x32)
+├── favicon.ico                # Uncle mascot favicon (16x16 + 32x32)
+├── apple-touch-icon.png       # Uncle mascot (180x180)
+├── app-icon-uncle.webp        # Uncle mascot for install page icon
+├── mascot-teacher.webp        # Uncle teaching mascot (main page)
 ├── og-image.webp              # Open Graph image
 ├── sitemap.xml                # SEO sitemap
 ├── robots.txt                 # Search engine rules
-└── tutorial/                  # Tutorial screenshots (001-009.webp)
+└── tutorial/                  # Tutorial screenshots (001-009.webp + install-01~04.webp)
 ```
 
 ## Landing Page Sections
@@ -81,7 +84,7 @@ public/
 2. **Features** - 5 cards (Blind Trading, Legendary Stocks, Academy, Beautiful Themes, Crisis Event [PRO])
 3. **How It Works** - 4 steps with connectors
 4. **Tutorial Slider** - Phone mockup with screenshot carousel
-5. **Pricing** - Free / PRO Monthly / PRO Lifetime cards
+5. **Pricing** - Free / PRO Monthly / PRO Yearly cards
 6. **FAQ** - Accordion-style questions
 7. **Email Signup** - Newsletter + Desktop waitlist
 8. **CTA** - Final call to action
@@ -104,12 +107,12 @@ public/
 - Player doesn't know which stock until game ends
 - "History Always Repeats Itself" - learn from real market history
 
-### Pricing (Current)
+### Pricing (Current — Updated Feb 2026)
 | Plan | Regular | Launch Price |
 |------|---------|--------------|
 | Free | $0 | $0 |
 | PRO Monthly | $4.99/mo | $3.99/mo (~฿140) |
-| PRO Lifetime | $39.99 | $29.99 (~฿1,050) |
+| PRO Yearly | $47.88/yr | $19.99/yr (~฿700) |
 
 ### Free Tier Limits
 - 100 Moves per Game
@@ -118,13 +121,12 @@ public/
 - 3 Chart Themes
 
 ### PRO Features
-- 200 Moves per Game
+- 250 Moves per Game
 - 500+ Legendary Stocks worldwide
 - All Chart Themes
 - Candle Academy
 - Position Calculator
 - Crisis Event — Boss Stage (legendary market crashes)
-- Lifetime updates (Lifetime plan)
 
 ## i18n Content Editing
 
@@ -199,8 +201,10 @@ PWA installation guide page with:
 ## TODO
 
 ### Landing Page
-- [ ] Configure actual Stripe Payment Links (currently placeholders) — next priority
-- [ ] Configure Resend API key and audience ID
+- [x] Pricing migrated from Lifetime → Yearly ($19.99/yr)
+- [x] Checkout buttons redirect to PWA app (not Stripe Payment Links)
+- [x] Uncle mascot favicon (PNG + ICO + apple-touch-icon)
+- [x] Uncle mascot icon on install pages (replaced candlestick SVG)
 - [x] Update tutorial images (9 new high-quality screenshots)
 - [x] PWA installation guide page with image slider + arrow navigation
 - [x] Light theme implementation (Minimal Light with Gold Accents)
@@ -208,6 +212,7 @@ PWA installation guide page with:
 - [x] Updated 300+ → 500+ stocks across all pages
 - [x] Added Crisis Event / Boss Stage PRO feature card
 - [x] Touch swipe fix (`touch-action: pan-x` + `overscroll-behavior: contain`)
+- [ ] Configure Resend API key and audience ID
 - [ ] Add testimonials when user reviews available
 - [ ] Google Analytics / conversion tracking
 
@@ -226,6 +231,16 @@ PWA installation guide page with:
 
 ## Recent Changes
 
+### v0.4.0 (2026-02-11)
+- **Pricing migration**: Lifetime → Yearly ($19.99/yr) across all pages (EN + TH)
+- **Checkout buttons**: Redirect to PWA app (`app.candlemaster.app`) instead of Stripe Payment Links
+- **Favicon**: Uncle mascot (favicon-32.png, favicon.ico, apple-touch-icon.png)
+- **Install page**: Uncle mascot icon replaces candlestick SVG (EN + TH)
+- **CSS renames**: `.lifetime-badge` → `.yearly-badge`, `.pricing-card.lifetime` → `.pricing-card.yearly`
+- **Support page**: Updated pricing FAQ
+- **Terms page**: Updated section 4.4 (Lifetime → Yearly plans)
+- **Structured data**: Price updated to $19.99
+
 ### v0.3.0 (2025-02-06)
 - Updated 300+ → 500+ legendary stocks across all pages and i18n
 - Added Crisis Event / Boss Stage PRO feature card (EN + TH)
@@ -242,11 +257,10 @@ PWA installation guide page with:
 
 ## Next Session Notes
 
-**Priority: Stripe Integration**
-- Set up Stripe products/prices for PRO Monthly ($3.99) and Lifetime ($29.99)
-- Implement Stripe Checkout for PWA users
-- Connect payment links on landing page pricing cards
-- Sync subscription status to App via Firebase user ID
+**Stripe Status: ✅ Live Mode**
+- Monthly: $3.99 (`price_1SzX9500THgK6a8eMmajk8sQ`)
+- Yearly: $19.99 (`price_1SzX9X00THgK6a8eQ6GfnYnn`)
+- Checkout flow: Landing page buttons → redirect to PWA app → Stripe Checkout Session
 
 **Affiliate Program Options Being Considered:**
 - **Refgrow** (https://refgrow.com) - Works with Stripe
@@ -254,6 +268,6 @@ PWA installation guide page with:
 
 **App Status:**
 - Location: `E:\CANDLE-MASTER\PROJECT\Candle-Master-app`
-- Version: v2.1.0
+- Version: v2.5.0
 - Stack: React + Vite (PWA) + Capacitor 8
 - Live PWA: https://app.candlemaster.app
