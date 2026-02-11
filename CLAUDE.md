@@ -28,8 +28,8 @@ This file provides guidance to Claude Code when working with this repository.
 
 | Repo | Purpose | Location |
 |------|---------|----------|
-| `candle-master-landing` | This repo - Landing Page | `E:\CANDLE MASTER\PROJECT\candle-master-landing` |
-| `candle-master` | Mobile App (React + Vite) | `E:\CANDLE MASTER\PROJECT\Candle Master` |
+| `candle-master-landing` | This repo - Landing Page | `E:\CANDLE-MASTER\PROJECT\candle-master-landing` |
+| `candle-master` | Mobile App (React + Vite) | `E:\CANDLE-MASTER\PROJECT\Candle-Master-app` |
 | `candle-master-web` | Desktop App | TBD |
 
 ## Common Commands
@@ -253,7 +253,7 @@ PWA installation guide page with:
 - **Lemon Squeezy** - Payment + affiliate in one (may replace Stripe for PWA)
 
 **App Status:**
-- Location: `E:\CANDLE MASTER\PROJECT\Candle Master`
+- Location: `E:\CANDLE-MASTER\PROJECT\Candle-Master-app`
 - Version: v2.1.0
 - Stack: React + Vite (PWA) + Capacitor 8
 - Live PWA: https://app.candlemaster.app
