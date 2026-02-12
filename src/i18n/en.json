@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Candle Master - Free Stock Trading Game That Teaches You Trading Discipline",
-    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. Practice chart reading with Candle Master, a free trading game using real historical data from 1980-2025."
+    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. Practice chart reading with Candle Master, a free trading game using real historical data from 1970-2025."
   },
   "nav": {
     "features": "Features",
@@ -13,7 +13,7 @@
     "badge": "Game for Trader, by Trader.",
     "title": "Real Trading,",
     "titleHighlight": "Without Real Pain!",
-    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. We built this game so you can make mistakes without getting hurt. Using real data from 1980-2025.",
+    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. We built this game so you can make mistakes without getting hurt. Using real data from 1970-2025.",
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
@@ -21,7 +21,7 @@
     },
     "stats": {
       "stocks": "Legendary Stocks",
-      "data": "Data from 1980-2025",
+      "data": "Data from 1970-2025",
       "risk": "Zero Risk"
     }
   },
@@ -32,7 +32,7 @@
     "cards": {
       "realData": {
         "title": "Real Historical Data",
-        "description": "Trade real market scenarios from 1980-2025. Feel the pressure of real price action without losing real money."
+        "description": "Trade real market scenarios from 1970-2025. Feel the pressure of real price action without losing real money."
       },
       "academy": {
         "badge": "PRO",
@@ -94,8 +94,8 @@
       "description": "Start learning without any commitment",
       "features": {
         "days": "100 Moves per game",
-        "stocks": "10 Legendary Stocks",
-        "data": "Random Historical Data 1980-2025",
+        "stocks": "20 Legendary Stocks",
+        "data": "Random Historical Data 1970-2025",
         "themes": "3 Beautiful Themes"
       },
       "cta": "Start Playing Free"
@@ -110,7 +110,7 @@
       "features": {
         "days": "200 Moves per game",
         "stocks": "500+ Legendary Stocks worldwide",
-        "data": "Random Historical Data 1980-2025",
+        "data": "Random Historical Data 1970-2025",
         "themes": "3 Beautiful Themes",
         "academy": "Full Academy Access",
         "updates": "All Future Updates"
@@ -181,7 +181,7 @@
     "items": [
       {
         "question": "Is Candle Master really free?",
-        "answer": "Yes! The basic version is 100% free forever. You get 100 moves per game, 10 legendary stocks, and all 3 themes. No credit card, no tricks."
+        "answer": "Yes! The basic version is 100% free forever. You get 100 moves per game, 20 legendary stocks, and all 3 themes. No credit card, no tricks."
       },
       {
         "question": "Why should I practice here instead of paper trading?",
@@ -193,7 +193,7 @@
       },
       {
         "question": "What stocks can I practice with?",
-        "answer": "500+ legendary stocks with data from 1980-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 10 stocks, PRO unlocks everything."
+        "answer": "500+ legendary stocks with data from 1970-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 20 stocks, PRO unlocks everything."
       },
       {
         "question": "Can I play on desktop or tablet?",
@@ -271,7 +271,7 @@
     "solution": {
       "title": "So I Built",
       "titleHighlight": "Candle Master",
-      "description": "Candle Master runs on simple logic that actually works. You control the pace — skip ahead anytime to see the result of your decisions. The game is built around real market data from 1980 to 2025.",
+      "description": "Candle Master runs on simple logic that actually works. You control the pace — skip ahead anytime to see the result of your decisions. The game is built around real market data from 1970 to 2025.",
       "features": {
         "historical": {
           "icon": "📊",
