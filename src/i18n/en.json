@@ -215,6 +215,12 @@
     "successMessage": "You're in! Check your inbox.",
     "errorMessage": "Something went wrong. Please try again."
   },
+  "creatorStory": {
+    "title": "Why I Built Candle Master",
+    "quote": "This game was born from pure accident — a personal blind trading tool that turned into something bigger. Built by a trader who's been through it all, for traders just starting out.",
+    "attribution": "— The Creator",
+    "cta": "Read the Full Story →"
+  },
   "why": {
     "meta": {
       "title": "Why I Built Candle Master — The Story Behind the Game",
