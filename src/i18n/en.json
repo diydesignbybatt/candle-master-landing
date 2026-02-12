@@ -218,92 +218,92 @@
   "why": {
     "meta": {
       "title": "Why I Built Candle Master — The Story Behind the Game",
-      "description": "The Creator shares why Candle Master was built: a risk-free trading simulator born from real trading losses and the belief that skills matter more than signals."
+      "description": "The Creator shares how Candle Master was born from a personal trading journey — from painful losses to building a game that helps traders practice with real historical data."
     },
     "backHome": "Back",
     "hero": {
       "title": "Why I Built",
       "titleHighlight": "Candle Master",
-      "story": "I used to be that trader. The one glued to signal groups at 3 AM, chasing every breaking news headline, buying whatever the guru said to buy. And I lost money. A lot of it. Not because the market was unfair — but because I never actually learned to read it.",
+      "story": "This game was born from pure accident. Originally, I just wanted to build a personal tool to practice blind trading for myself. But as I kept adding features, it started getting fun. When I shared it with my trader friends, even more ideas came pouring in — and before I knew it, it had turned into the game you see today.",
       "attribution": "— The Creator"
     },
     "problem": {
-      "title": "The Problem",
-      "titleHighlight": "I Saw",
-      "description": "After years in the market, I realized most new traders lose money for the exact same reasons I did.",
+      "title": "The Losses",
+      "titleHighlight": "That Taught Me",
+      "description": "As a trader myself, I know exactly what we all go through when starting out. If you haven't quit the game already, haha — you've probably experienced the same things I did.",
       "cards": {
         "signals": {
           "icon": "📡",
-          "title": "Signal Group Addiction",
-          "description": "Following other people's calls instead of learning to read the market yourself. When the guru is wrong, you lose — and you learn nothing."
+          "title": "Trusting Signal Groups",
+          "description": "Following calls from trading groups, trusting gurus blindly. When they're wrong, you lose money — and you learn absolutely nothing."
         },
         "news": {
           "icon": "📰",
-          "title": "News & Hype Trading",
-          "description": "Making decisions based on headlines and social media buzz instead of price action and chart patterns."
+          "title": "Trading on News & Emotion",
+          "description": "Making decisions based on headlines, FOMO, revenge trading to win back losses, and overconfidence after a winning streak."
         },
         "noSkill": {
           "icon": "💸",
-          "title": "No Practice, Real Money",
-          "description": "Jumping into live markets without ever practicing. Like flying a plane without a single hour in a simulator."
+          "title": "Poor Money Management",
+          "description": "Using the wrong tools, mismanaging capital, and jumping into live markets without proper skills. Even paper trading didn't save us from real-market pain."
         }
       }
     },
     "realization": {
       "title": "The",
       "titleHighlight": "Realization",
-      "description": "After years of losing and learning, I realized something simple but powerful: the traders who consistently win aren't the ones with the best signals or the fastest news feed.",
-      "quote": "They're the ones who can look at a naked chart with basic tools — and make a decision. That's the real skill. Everything else is noise."
+      "description": "We've all been taught that \"History Always Repeats Itself.\" We've studied hard, and we've bled in the markets. But with experience, you come to understand — it's not just about knowledge. It's about everything combined: psychology, experience, risk management, and trading method.",
+      "quote": "No matter how fancy your tools are, at the end of the day, it all comes down to price going up or down. Real Historical Data is the ultimate test of whether you can read the market right."
     },
     "solution": {
       "title": "So I Built",
       "titleHighlight": "Candle Master",
-      "description": "I wanted to create the training tool I wish I had when I started. A place where you can make every mistake in the book — and learn from all of them — without losing a single dollar.",
+      "description": "Candle Master runs on simple logic that actually works. You control the pace — skip ahead anytime to see the result of your decisions. The game is built around real market data from 1980 to 2025.",
       "features": {
         "historical": {
           "icon": "📊",
-          "title": "Real Historical Data",
-          "description": "Train with actual market data from 1980-2025. No fake charts, no simulated patterns."
+          "title": "Why Less is More?",
+          "description": "Why so few tools? Because you need to prove that simple tools are enough to survive. Just Volume and MA. If you can do it with these, why clutter your decisions with a million indicators? Keep it simple."
         },
         "blind": {
-          "icon": "🎯",
-          "title": "Blind Trading",
-          "description": "You don't know the stock name or time period. Just you and the chart — pure skill."
+          "icon": "🕯️",
+          "title": "Why End-of-Day?",
+          "description": "Whether you trade manually or via automation, you need a framework. EOD means collecting the full day's data and making decisions on complete candles. Imagine managing 10+ assets without clear execution rules — chaos. This is the foundation for building automation later."
         },
         "riskFree": {
-          "icon": "🛡️",
-          "title": "Zero Real Risk",
-          "description": "Start with $100K virtual capital. Make mistakes, learn, repeat. No financial pain."
+          "icon": "🏛️",
+          "title": "Think Trading Was Easier Back Then?",
+          "description": "Some say \"trading was easier before HFT.\" Have you actually tried it? Life during those times wasn't easy at all. This game lets you taste the bitterness of the Dot-Com crash firsthand, haha."
         }
       }
     },
     "philosophy": {
       "title": "The",
       "titleHighlight": "Philosophy",
-      "usp1": "No Signal Chat Groups. No BS News.",
-      "usp2": "Just You, Basic Tools, and Skills.",
+      "usp1": "Candle Master wasn't built by a master.",
+      "usp2": "It was built by a fellow dreamer — just like you.",
       "values": {
         "skills": {
           "icon": "🧠",
-          "title": "Skills > Signals",
-          "description": "Develop your own ability to read the market. Stop relying on other people's calls — they won't always be there."
+          "title": "Not a Master, Just a Player",
+          "description": "The creator is just another trader who dreamed of becoming a master. The road to consistent profits and trading for a living wasn't easy. For some it might be — but I'm one of the many who needed a lot of time to build this skill."
         },
         "practice": {
           "icon": "🎮",
-          "title": "Practice Before You Risk",
-          "description": "Would you fly a plane without a simulator? Would you perform surgery without practice? Don't trade real money without training first."
+          "title": "Simple Logic, Real Results",
+          "description": "Candle Master is built on logic that's simple and actually works. No gimmicks, no shortcuts. Just you, the chart, and your decisions."
         },
         "fun": {
           "icon": "⚡",
-          "title": "Learning Should Be Fun",
-          "description": "Trading education doesn't have to be boring. A game-like experience makes building real skills actually enjoyable."
+          "title": "From Indie Trader to Indie Dev",
+          "description": "What started as a personal training tool became a passion project. I never planned to become a developer — but here we are, and I wouldn't change a thing."
         }
       }
     },
     "closer": {
-      "title": "Built by a Trader,",
-      "titleHighlight": "for Traders",
-      "description": "Candle Master is an indie passion project. No VC funding, no corporate agenda, no hidden motives. Just one creator who lost money trading and decided to build something that actually helps people learn — the hard way turned into the fun way.",
+      "title": "Thank You",
+      "titleHighlight": "From the Heart",
+      "description": "Seriously, thank you to everyone who supports this indie trader's dream project. I guess I'm an indie dev now too, haha. Candle Master is built with love, from a trader who's been through it all — for traders who are just getting started.",
       "cta": "Start Trading — It's Free"
     }
   },
