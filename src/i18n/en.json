@@ -163,7 +163,8 @@
       }
     },
     "copyright": "© 2025 Candle Master. All rights reserved.",
-    "madeWith": "Made with love for traders"
+    "madeWith": "Made with love for traders",
+    "whyLink": "Why I Built This"
   },
   "language": {
     "en": "English",
@@ -213,6 +214,98 @@
     "newsletterLabel": "Send me trading tips",
     "successMessage": "You're in! Check your inbox.",
     "errorMessage": "Something went wrong. Please try again."
+  },
+  "why": {
+    "meta": {
+      "title": "Why I Built Candle Master — The Story Behind the Game",
+      "description": "The Creator shares why Candle Master was built: a risk-free trading simulator born from real trading losses and the belief that skills matter more than signals."
+    },
+    "backHome": "Back",
+    "hero": {
+      "title": "Why I Built",
+      "titleHighlight": "Candle Master",
+      "story": "I used to be that trader. The one glued to signal groups at 3 AM, chasing every breaking news headline, buying whatever the guru said to buy. And I lost money. A lot of it. Not because the market was unfair — but because I never actually learned to read it.",
+      "attribution": "— The Creator"
+    },
+    "problem": {
+      "title": "The Problem",
+      "titleHighlight": "I Saw",
+      "description": "After years in the market, I realized most new traders lose money for the exact same reasons I did.",
+      "cards": {
+        "signals": {
+          "icon": "📡",
+          "title": "Signal Group Addiction",
+          "description": "Following other people's calls instead of learning to read the market yourself. When the guru is wrong, you lose — and you learn nothing."
+        },
+        "news": {
+          "icon": "📰",
+          "title": "News & Hype Trading",
+          "description": "Making decisions based on headlines and social media buzz instead of price action and chart patterns."
+        },
+        "noSkill": {
+          "icon": "💸",
+          "title": "No Practice, Real Money",
+          "description": "Jumping into live markets without ever practicing. Like flying a plane without a single hour in a simulator."
+        }
+      }
+    },
+    "realization": {
+      "title": "The",
+      "titleHighlight": "Realization",
+      "description": "After years of losing and learning, I realized something simple but powerful: the traders who consistently win aren't the ones with the best signals or the fastest news feed.",
+      "quote": "They're the ones who can look at a naked chart with basic tools — and make a decision. That's the real skill. Everything else is noise."
+    },
+    "solution": {
+      "title": "So I Built",
+      "titleHighlight": "Candle Master",
+      "description": "I wanted to create the training tool I wish I had when I started. A place where you can make every mistake in the book — and learn from all of them — without losing a single dollar.",
+      "features": {
+        "historical": {
+          "icon": "📊",
+          "title": "Real Historical Data",
+          "description": "Train with actual market data from 1980-2025. No fake charts, no simulated patterns."
+        },
+        "blind": {
+          "icon": "🎯",
+          "title": "Blind Trading",
+          "description": "You don't know the stock name or time period. Just you and the chart — pure skill."
+        },
+        "riskFree": {
+          "icon": "🛡️",
+          "title": "Zero Real Risk",
+          "description": "Start with $100K virtual capital. Make mistakes, learn, repeat. No financial pain."
+        }
+      }
+    },
+    "philosophy": {
+      "title": "The",
+      "titleHighlight": "Philosophy",
+      "usp1": "No Signal Chat Groups. No BS News.",
+      "usp2": "Just You, Basic Tools, and Skills.",
+      "values": {
+        "skills": {
+          "icon": "🧠",
+          "title": "Skills > Signals",
+          "description": "Develop your own ability to read the market. Stop relying on other people's calls — they won't always be there."
+        },
+        "practice": {
+          "icon": "🎮",
+          "title": "Practice Before You Risk",
+          "description": "Would you fly a plane without a simulator? Would you perform surgery without practice? Don't trade real money without training first."
+        },
+        "fun": {
+          "icon": "⚡",
+          "title": "Learning Should Be Fun",
+          "description": "Trading education doesn't have to be boring. A game-like experience makes building real skills actually enjoyable."
+        }
+      }
+    },
+    "closer": {
+      "title": "Built by a Trader,",
+      "titleHighlight": "for Traders",
+      "description": "Candle Master is an indie passion project. No VC funding, no corporate agenda, no hidden motives. Just one creator who lost money trading and decided to build something that actually helps people learn — the hard way turned into the fun way.",
+      "cta": "Start Trading — It's Free"
+    }
   },
   "install": {
     "meta": {

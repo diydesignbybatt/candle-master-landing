@@ -1,0 +1,643 @@
+---
+// Candle Master - ทำไมถึงสร้าง (Thai)
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const lang = 'th';
+const t = useTranslations(lang);
+
+const appUrl = 'https://app.candlemaster.app';
+const siteUrl = 'https://candlemaster.app';
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>{t.why.meta.title}</title>
+    <meta name="description" content={t.why.meta.description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={t.why.meta.title} />
+    <meta property="og:description" content={t.why.meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${siteUrl}/th/why`} />
+
+    <!-- Canonical & Alternate Languages -->
+    <link rel="canonical" href={`${siteUrl}/th/why`} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/why`} />
+    <link rel="alternate" hreflang="th" href={`${siteUrl}/th/why`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/why`} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css">
+
+    <!-- Theme CSS -->
+    <style>
+      @import '../../styles/theme.css';
+    </style>
+  </head>
+
+  <body class="thai-font">
+    <main>
+      <div class="page-wrapper">
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher-container glass-panel">
+          <LanguageSwitcher currentLang={lang} currentPath="/why" />
+        </div>
+
+        <!-- Back to Home -->
+        <a href="/th/" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>{t.why.backHome}</span>
+        </a>
+
+        <!-- Section 1: Hero / Opener -->
+        <section class="why-hero">
+          <div class="container">
+            <h1 class="why-title">{t.why.hero.title} <span class="text-gradient">{t.why.hero.titleHighlight}</span></h1>
+            <div class="why-story-card glass-panel-strong">
+              <p class="why-story">{t.why.hero.story}</p>
+              <p class="why-attribution">{t.why.hero.attribution}</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: The Problem -->
+        <section class="why-section why-section-alt">
+          <div class="container">
+            <h2 class="section-title">{t.why.problem.title} <span class="text-gradient">{t.why.problem.titleHighlight}</span></h2>
+            <p class="section-subtitle">{t.why.problem.description}</p>
+            <div class="problem-grid">
+              <div class="problem-card glass-panel">
+                <span class="card-icon">{t.why.problem.cards.signals.icon}</span>
+                <h3>{t.why.problem.cards.signals.title}</h3>
+                <p>{t.why.problem.cards.signals.description}</p>
+              </div>
+              <div class="problem-card glass-panel">
+                <span class="card-icon">{t.why.problem.cards.news.icon}</span>
+                <h3>{t.why.problem.cards.news.title}</h3>
+                <p>{t.why.problem.cards.news.description}</p>
+              </div>
+              <div class="problem-card glass-panel">
+                <span class="card-icon">{t.why.problem.cards.noSkill.icon}</span>
+                <h3>{t.why.problem.cards.noSkill.title}</h3>
+                <p>{t.why.problem.cards.noSkill.description}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: The Realization -->
+        <section class="why-section">
+          <div class="container">
+            <h2 class="section-title">{t.why.realization.title} <span class="text-gradient">{t.why.realization.titleHighlight}</span></h2>
+            <p class="section-description">{t.why.realization.description}</p>
+            <blockquote class="why-quote">
+              <p>{t.why.realization.quote}</p>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- Section 4: The Solution -->
+        <section class="why-section why-section-alt">
+          <div class="container">
+            <h2 class="section-title">{t.why.solution.title} <span class="text-gradient">{t.why.solution.titleHighlight}</span></h2>
+            <p class="section-subtitle">{t.why.solution.description}</p>
+            <div class="solution-grid">
+              <div class="solution-card">
+                <span class="card-icon">{t.why.solution.features.historical.icon}</span>
+                <h3>{t.why.solution.features.historical.title}</h3>
+                <p>{t.why.solution.features.historical.description}</p>
+              </div>
+              <div class="solution-card">
+                <span class="card-icon">{t.why.solution.features.blind.icon}</span>
+                <h3>{t.why.solution.features.blind.title}</h3>
+                <p>{t.why.solution.features.blind.description}</p>
+              </div>
+              <div class="solution-card">
+                <span class="card-icon">{t.why.solution.features.riskFree.icon}</span>
+                <h3>{t.why.solution.features.riskFree.title}</h3>
+                <p>{t.why.solution.features.riskFree.description}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Philosophy -->
+        <section class="why-section">
+          <div class="container">
+            <h2 class="section-title">{t.why.philosophy.title} <span class="text-gradient">{t.why.philosophy.titleHighlight}</span></h2>
+            <div class="usp-block">
+              <p class="usp-line">{t.why.philosophy.usp1}</p>
+              <p class="usp-line highlight">{t.why.philosophy.usp2}</p>
+            </div>
+            <div class="values-grid">
+              <div class="value-card glass-panel">
+                <span class="card-icon">{t.why.philosophy.values.skills.icon}</span>
+                <h3>{t.why.philosophy.values.skills.title}</h3>
+                <p>{t.why.philosophy.values.skills.description}</p>
+              </div>
+              <div class="value-card glass-panel">
+                <span class="card-icon">{t.why.philosophy.values.practice.icon}</span>
+                <h3>{t.why.philosophy.values.practice.title}</h3>
+                <p>{t.why.philosophy.values.practice.description}</p>
+              </div>
+              <div class="value-card glass-panel">
+                <span class="card-icon">{t.why.philosophy.values.fun.icon}</span>
+                <h3>{t.why.philosophy.values.fun.title}</h3>
+                <p>{t.why.philosophy.values.fun.description}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Closer + CTA -->
+        <section class="why-section why-closer">
+          <div class="container">
+            <h2 class="section-title">{t.why.closer.title} <span class="text-gradient">{t.why.closer.titleHighlight}</span></h2>
+            <p class="closer-description">{t.why.closer.description}</p>
+            <a href={appUrl} class="btn-3d" target="_blank" rel="noopener noreferrer">
+              <span class="btn-3d-content">
+                <span class="btn-3d-text">{t.why.closer.cta}</span>
+              </span>
+              <span class="btn-3d-shine"></span>
+            </a>
+            <a href="/th/" class="home-link">← {t.why.backHome}</a>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <div class="container">
+            <div class="footer-content">
+              <div class="footer-brand">
+                <span class="footer-name">Candle Master</span>
+              </div>
+              <p class="footer-copyright">{t.footer.copyright}</p>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  @import '../../styles/theme.css';
+
+  /* Reset & Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  body.thai-font {
+    font-family: 'IBM Plex Sans Thai', var(--font-primary);
+  }
+
+  .page-wrapper {
+    position: relative;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass Panel */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius-lg);
+  }
+
+  .glass-panel-strong {
+    background: #FFFFFF;
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Language Switcher */
+  .lang-switcher-container {
+    position: fixed;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xs);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Back Link */
+  .back-link {
+    position: fixed;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius-md);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .back-link:hover {
+    color: var(--text-primary);
+    background: #FFFFFF;
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ========== HERO ========== */
+  .why-hero {
+    padding: calc(var(--spacing-4xl) + 40px) 0 var(--spacing-3xl);
+    text-align: center;
+  }
+
+  .why-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .why-story-card {
+    padding: var(--spacing-2xl);
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .why-story {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .why-attribution {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--accent-primary);
+    text-align: right;
+  }
+
+  /* ========== SECTIONS ========== */
+  .why-section {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .why-section-alt {
+    background: var(--bg-secondary);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+    line-height: 1.7;
+  }
+
+  .section-description {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+  }
+
+  /* ========== CARDS GRID ========== */
+  .problem-grid,
+  .solution-grid,
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .problem-card,
+  .solution-card,
+  .value-card {
+    padding: var(--spacing-xl);
+    text-align: center;
+    border-radius: var(--border-radius-xl);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .solution-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius-xl);
+  }
+
+  .problem-card:hover,
+  .solution-card:hover,
+  .value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .problem-card h3,
+  .solution-card h3,
+  .value-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+  }
+
+  .problem-card p,
+  .solution-card p,
+  .value-card p {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  /* ========== QUOTE ========== */
+  .why-quote {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    border-left: 4px solid var(--accent-primary);
+    background: rgba(245, 158, 11, 0.06);
+    border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+  }
+
+  .why-quote p {
+    font-size: var(--text-lg);
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* ========== USP BLOCK ========== */
+  .usp-block {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .usp-line {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .usp-line.highlight {
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+
+  /* ========== CLOSER / CTA ========== */
+  .why-closer {
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  }
+
+  .closer-description {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+  }
+
+  .home-link {
+    display: inline-block;
+    margin-top: var(--spacing-xl);
+    color: var(--text-tertiary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color 0.2s ease;
+  }
+
+  .home-link:hover {
+    color: var(--accent-primary);
+  }
+
+  /* ========== 3D BUTTON ========== */
+  .btn-3d {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(0);
+    background: linear-gradient(180deg, #FFE066 0%, #FFD700 15%, #FFC107 50%, #FF9800 85%, #E65100 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+      0 4px 0 #B8860B,
+      0 6px 0 #8B6914,
+      0 8px 25px rgba(255, 165, 0, 0.5),
+      0 15px 40px rgba(255, 140, 0, 0.3);
+  }
+
+  .btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50px 50px 100px 100px;
+    pointer-events: none;
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.1),
+      0 8px 0 #B8860B,
+      0 10px 0 #8B6914,
+      0 12px 35px rgba(255, 165, 0, 0.6),
+      0 20px 50px rgba(255, 140, 0, 0.4);
+  }
+
+  .btn-3d:active {
+    transform: translateY(2px) scale(0.98);
+  }
+
+  .btn-3d-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-3d-text {
+    letter-spacing: 0.5px;
+  }
+
+  .btn-3d-shine {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    z-index: 3;
+  }
+
+  .btn-3d:hover .btn-3d-shine {
+    left: 150%;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    padding: var(--spacing-2xl) 0;
+    border-top: 1px solid var(--border-default);
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .footer-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-base);
+    color: var(--text-primary);
+  }
+
+  .footer-copyright {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .problem-grid,
+    .solution-grid,
+    .values-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .why-hero {
+      padding-top: calc(var(--spacing-3xl) + 40px);
+    }
+
+    .back-link {
+      top: var(--spacing-sm);
+      left: var(--spacing-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .back-link span {
+      display: none;
+    }
+
+    .lang-switcher-container {
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+    }
+
+    .why-story-card {
+      padding: var(--spacing-lg);
+    }
+
+    .why-quote {
+      padding: var(--spacing-lg);
+    }
+  }
+</style>

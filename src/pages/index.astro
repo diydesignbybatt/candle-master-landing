@@ -556,6 +556,15 @@ const webUrl = 'https://web.candlemaster.app';
             <div class="footer-brand">
               <span class="footer-name">Candle Master</span>
             </div>
+            <div class="footer-links">
+              <a href="/why" class="footer-link">{t.footer.whyLink}</a>
+              <span class="footer-divider">·</span>
+              <a href="/privacy" class="footer-link">{t.footer.sections.legal.privacy}</a>
+              <span class="footer-divider">·</span>
+              <a href="/terms" class="footer-link">{t.footer.sections.legal.terms}</a>
+              <span class="footer-divider">·</span>
+              <a href="/support" class="footer-link">Support</a>
+            </div>
             <p class="footer-copyright">{t.footer.copyright}</p>
           </div>
         </div>
@@ -1496,6 +1505,30 @@ const webUrl = 'https://web.candlemaster.app';
   .footer-name {
     font-weight: 600;
     font-size: var(--text-lg);
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-link {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-link:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-divider {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
   }
 
   .footer-copyright {
