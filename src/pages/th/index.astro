@@ -237,6 +237,23 @@ const webUrl = 'https://web.candlemaster.app';
         </div>
       </section>
 
+      <!-- Uncle Tang Showcase -->
+      <section class="uncle-tang-section">
+        <div class="container">
+          <div class="uncle-showcase">
+            <div class="uncle-state">
+              <img src="/uncle-rich.webp" alt="ลุงแท่ง - เทรดเดอร์รวย" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
+              <p class="uncle-label uncle-label-rich">{t.why.uncle.richLabel}</p>
+            </div>
+            <div class="uncle-state">
+              <img src="/uncle-poor.webp" alt="ลุงแท่ง - กินบะหมี่ถ้วย" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
+              <p class="uncle-label uncle-label-poor">{t.why.uncle.poorLabel}</p>
+            </div>
+          </div>
+          <p class="uncle-tang-desc">{t.why.uncle.description}</p>
+        </div>
+      </section>
+
       <!-- Section Divider -->
       <div class="section-divider" aria-hidden="true"></div>
 
@@ -532,19 +549,6 @@ const webUrl = 'https://web.candlemaster.app';
             <h2 class="creator-title">{t.creatorStory.title}</h2>
             <p class="creator-quote">"{t.creatorStory.quote}"</p>
             <p class="creator-attribution">{t.creatorStory.attribution}</p>
-
-            <!-- Uncle Tang Showcase -->
-            <div class="uncle-showcase">
-              <div class="uncle-state">
-                <img src="/uncle-rich.webp" alt="ลุงแท่ง - เทรดเดอร์รวย" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
-                <p class="uncle-label uncle-label-rich">{t.why.uncle.richLabel}</p>
-              </div>
-              <div class="uncle-state">
-                <img src="/uncle-poor.webp" alt="ลุงแท่ง - กินบะหมี่ถ้วย" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
-                <p class="uncle-label uncle-label-poor">{t.why.uncle.poorLabel}</p>
-              </div>
-            </div>
-
             <a href="/th/why" class="creator-cta">{t.creatorStory.cta}</a>
           </div>
         </div>
@@ -1623,12 +1627,26 @@ const webUrl = 'https://web.candlemaster.app';
     box-shadow: var(--shadow-md);
   }
 
-  /* Uncle Showcase inside Creator Card */
+  /* Uncle Tang Section (below Features) */
+  .uncle-tang-section {
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+    background: var(--bg-secondary);
+    text-align: center;
+  }
+
+  .uncle-tang-desc {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    max-width: 500px;
+    margin: var(--spacing-md) auto 0;
+    line-height: 1.6;
+  }
+
+  /* Uncle Showcase */
   .uncle-showcase {
     display: flex;
     justify-content: center;
     gap: var(--spacing-2xl);
-    margin: var(--spacing-xl) 0;
     flex-wrap: wrap;
   }
 
