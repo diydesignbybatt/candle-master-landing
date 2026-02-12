@@ -242,20 +242,21 @@ const webUrl = 'https://web.candlemaster.app';
         </div>
       </section>
 
-      <!-- Uncle Tang Showcase -->
+      <!-- Meet Uncle Tang Section -->
       <section class="uncle-tang-section">
         <div class="container">
+          <h2 class="section-title">{t.why.uncle.title} <span class="text-gradient">{t.why.uncle.titleHighlight}</span></h2>
+          <p class="section-subtitle uncle-tang-desc">{t.why.uncle.description}</p>
           <div class="uncle-showcase">
             <div class="uncle-state">
-              <img src="/uncle-rich.webp" alt="Uncle Tang - rich trader" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
+              <img src="/uncle-rich.webp" alt="Uncle Tang - rich trader with martini" class="uncle-showcase-img" width="160" height="160" loading="lazy" />
               <p class="uncle-label uncle-label-rich">{t.why.uncle.richLabel}</p>
             </div>
             <div class="uncle-state">
-              <img src="/uncle-poor.webp" alt="Uncle Tang - eating noodles" class="uncle-showcase-img" width="130" height="130" loading="lazy" />
+              <img src="/uncle-poor.webp" alt="Uncle Tang - eating instant noodles" class="uncle-showcase-img" width="160" height="160" loading="lazy" />
               <p class="uncle-label uncle-label-poor">{t.why.uncle.poorLabel}</p>
             </div>
           </div>
-          <p class="uncle-tang-desc">{t.why.uncle.description}</p>
         </div>
       </section>
 
@@ -1634,25 +1635,26 @@ const webUrl = 'https://web.candlemaster.app';
 
   /* Uncle Tang Section (below Features) */
   .uncle-tang-section {
-    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
     background: var(--bg-secondary);
     text-align: center;
   }
 
   .uncle-tang-desc {
     color: var(--text-secondary);
-    font-size: var(--text-sm);
-    max-width: 500px;
-    margin: var(--spacing-md) auto 0;
-    line-height: 1.6;
+    font-size: var(--text-base);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.8;
   }
 
   /* Uncle Showcase */
   .uncle-showcase {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-3xl);
     flex-wrap: wrap;
+    margin-top: var(--spacing-xl);
   }
 
   .uncle-state {
@@ -1663,8 +1665,8 @@ const webUrl = 'https://web.candlemaster.app';
   }
 
   .uncle-showcase-img {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border-default);
