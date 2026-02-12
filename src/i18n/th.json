@@ -17,7 +17,7 @@
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
-      "desktopComingSoon": "Desktop - เร็วๆ นี้"
+      "playDesktop": "เล่นบน Desktop"
     },
     "stats": {
       "stocks": "หุ้นระดับตำนาน",
@@ -197,8 +197,8 @@
         "answer": "500+ หุ้นในตำนานพร้อมข้อมูลตั้งแต่ปี 1980-2025 คุณจะได้สัมผัส Tesla crashes, Apple rallies, Bitcoin volatility และ market crashes ผู้ใช้ฟรีได้ 10 หุ้น PRO ปลดล็อคทั้งหมด"
       },
       {
-        "question": "ใช้บน Desktop ได้ไหม?",
-        "answer": "ตอนนี้ออกแบบมาสำหรับมือถือเป็นหลักในรูปแบบ Progressive Web App เวอร์ชัน Desktop กำลังจะมา - ลงทะเบียน waitlist เพื่อรับแจ้งเตือน"
+        "question": "เล่นบน Desktop หรือ Tablet ได้ไหม?",
+        "answer": "ได้เลย! เล่นได้ทุกอุปกรณ์ ทั้งมือถือ แท็บเล็ต และ Desktop ผ่าน browser เกมออกแบบมาสำหรับมือถือเป็นหลัก แต่บน Tablet และ Desktop จะได้กราฟกว้างขึ้น เข้า app.candlemaster.app ใน browser ได้เลย"
       },
       {
         "question": "ยกเลิก PRO ยังไง?",
@@ -208,10 +208,10 @@
   },
   "emailSignup": {
     "title": "ไม่พลาดทุกอัพเดท",
-    "subtitle": "รับแจ้งเตือนเมื่อ Desktop เปิดตัว และเคล็ดลับการเทรด",
+    "subtitle": "รับเคล็ดลับการเทรด และอัพเดทฟีเจอร์ใหม่",
     "emailPlaceholder": "กรอกอีเมลของคุณ",
     "submitText": "สมัครรับข่าว",
-    "desktopWaitlistLabel": "แจ้งเตือนเมื่อ Desktop เปิดตัว",
+    "updatesLabel": "แจ้งเตือนฟีเจอร์ใหม่",
     "newsletterLabel": "ส่งเคล็ดลับการเทรด",
     "successMessage": "เรียบร้อย! เช็คอินบอกซ์ได้เลย",
     "errorMessage": "มีบางอย่างผิดพลาด กรุณาลองใหม่"

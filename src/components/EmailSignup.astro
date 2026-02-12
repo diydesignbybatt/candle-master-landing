@@ -1,7 +1,7 @@
 ---
 /**
  * EmailSignup Component
- * Multi-purpose email signup: Newsletter + Desktop Waitlist
+ * Multi-purpose email signup: Newsletter + Feature Updates
  */
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   subtitle?: string;
   emailPlaceholder: string;
   submitText: string;
-  desktopWaitlistLabel: string;
+  updatesLabel: string;
   newsletterLabel: string;
   successMessage: string;
   errorMessage: string;
@@ -20,7 +20,7 @@ const {
   subtitle,
   emailPlaceholder,
   submitText,
-  desktopWaitlistLabel,
+  updatesLabel,
   newsletterLabel,
   successMessage,
   errorMessage
@@ -56,9 +56,9 @@ const {
 
         <div class="checkbox-group">
           <label class="checkbox-label">
-            <input type="checkbox" name="desktop_waitlist" checked />
+            <input type="checkbox" name="feature_updates" checked />
             <span class="checkmark"></span>
-            <span class="label-text">{desktopWaitlistLabel}</span>
+            <span class="label-text">{updatesLabel}</span>
           </label>
           <label class="checkbox-label">
             <input type="checkbox" name="newsletter" checked />
@@ -104,7 +104,7 @@ const {
     const formData = new FormData(form);
     const data = {
       email: formData.get('email'),
-      desktop_waitlist: formData.get('desktop_waitlist') === 'on',
+      feature_updates: formData.get('feature_updates') === 'on',
       newsletter: formData.get('newsletter') === 'on',
     };
 

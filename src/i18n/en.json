@@ -17,7 +17,7 @@
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
-      "desktopComingSoon": "Desktop Coming Soon"
+      "playDesktop": "Play on Desktop"
     },
     "stats": {
       "stocks": "Legendary Stocks",
@@ -195,8 +195,8 @@
         "answer": "500+ legendary stocks with data from 1980-2025. You'll experience Tesla crashes, Apple rallies, Bitcoin volatility, and market crashes. Free users get 10 stocks, PRO unlocks everything."
       },
       {
-        "question": "Can I use it on desktop?",
-        "answer": "Currently mobile-optimized as a Progressive Web App. Desktop is coming soon - sign up for the waitlist to be notified."
+        "question": "Can I play on desktop or tablet?",
+        "answer": "Yes! You can play on any device — mobile, tablet, or desktop browser. The game works best on mobile, but the tablet and desktop layout gives you a wider chart view. Just open app.candlemaster.app in your browser."
       },
       {
         "question": "How do I cancel PRO?",
@@ -206,10 +206,10 @@
   },
   "emailSignup": {
     "title": "Stay Updated",
-    "subtitle": "Get notified when Desktop launches and receive trading tips",
+    "subtitle": "Get trading tips and new feature updates",
     "emailPlaceholder": "Enter your email",
     "submitText": "Subscribe",
-    "desktopWaitlistLabel": "Notify me when Desktop launches",
+    "updatesLabel": "Notify me about new features",
     "newsletterLabel": "Send me trading tips",
     "successMessage": "You're in! Check your inbox.",
     "errorMessage": "Something went wrong. Please try again."
