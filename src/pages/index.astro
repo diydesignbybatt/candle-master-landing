@@ -533,7 +533,7 @@ const webUrl = 'https://web.candlemaster.app';
       <section class="creator-story">
         <div class="container">
           <div class="creator-card glass-panel">
-            <span class="creator-icon">📖</span>
+            <img src="/uncle-thumbsup.webp" alt="Uncle Tang - Candle Master mascot" class="uncle-img" width="120" height="120" loading="lazy" />
             <h2 class="creator-title">{t.creatorStory.title}</h2>
             <p class="creator-quote">"{t.creatorStory.quote}"</p>
             <p class="creator-attribution">{t.creatorStory.attribution}</p>
@@ -1563,10 +1563,14 @@ const webUrl = 'https://web.candlemaster.app';
     padding: var(--spacing-2xl);
   }
 
-  .creator-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: var(--spacing-md);
+  .uncle-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-lg);
+    border: 3px solid var(--border-default);
+    box-shadow: var(--shadow-md);
   }
 
   .creator-title {

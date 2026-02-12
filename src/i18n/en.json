@@ -233,6 +233,13 @@
       "story": "This game was born from pure accident. Originally, I just wanted to build a personal tool to practice blind trading for myself. But as I kept adding features, it started getting fun. When I shared it with my trader friends, even more ideas came pouring in — and before I knew it, it had turned into the game you see today.",
       "attribution": "— The Creator"
     },
+    "uncle": {
+      "title": "Meet",
+      "titleHighlight": "Uncle Tang",
+      "description": "Uncle Tang is your trading mentor and companion. He'll be right there with you through every trade — judging your decisions and living with the consequences. Trade well, and Uncle Tang sips martinis in his finest suit. Trade poorly... and he's back to instant noodles in a tank top.",
+      "richLabel": "Trade well → Uncle lives the good life",
+      "poorLabel": "Trade badly → Back to instant noodles"
+    },
     "problem": {
       "title": "The Losses",
       "titleHighlight": "That Taught Me",

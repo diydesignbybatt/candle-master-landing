@@ -73,6 +73,24 @@ const siteUrl = 'https://candlemaster.app';
           </div>
         </section>
 
+        <!-- Section: Meet Uncle Tang -->
+        <section class="why-section uncle-section">
+          <div class="container">
+            <h2 class="section-title">{t.why.uncle.title} <span class="text-gradient">{t.why.uncle.titleHighlight}</span></h2>
+            <p class="section-subtitle">{t.why.uncle.description}</p>
+            <div class="uncle-showcase">
+              <div class="uncle-state">
+                <img src="/uncle-rich.webp" alt="Uncle Tang - rich trader with martini" class="uncle-showcase-img" width="160" height="160" loading="lazy" />
+                <p class="uncle-label uncle-label-rich">{t.why.uncle.richLabel}</p>
+              </div>
+              <div class="uncle-state">
+                <img src="/uncle-poor.webp" alt="Uncle Tang - eating instant noodles" class="uncle-showcase-img" width="160" height="160" loading="lazy" />
+                <p class="uncle-label uncle-label-poor">{t.why.uncle.poorLabel}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Section 2: The Problem -->
         <section class="why-section why-section-alt">
           <div class="container">
@@ -418,6 +436,60 @@ const siteUrl = 'https://candlemaster.app';
     color: var(--text-secondary);
     font-size: var(--text-sm);
     line-height: 1.6;
+  }
+
+  /* ========== UNCLE TANG ========== */
+  .uncle-section {
+    background: var(--bg-secondary);
+  }
+
+  .uncle-showcase {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-3xl);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+  }
+
+  .uncle-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .uncle-showcase-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-default);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+  }
+
+  .uncle-showcase-img:hover {
+    transform: scale(1.05);
+  }
+
+  .uncle-label {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-full, 50px);
+  }
+
+  .uncle-label-rich {
+    color: #15803d;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .uncle-label-poor {
+    color: #dc2626;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
   }
 
   /* ========== QUOTE ========== */
