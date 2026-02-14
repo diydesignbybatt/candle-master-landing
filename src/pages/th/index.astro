@@ -395,8 +395,11 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
               </ul>
 
-              <a href={appUrl} class="btn btn-secondary btn-full">
-                {t.pricing.free.cta}
+              <a href="/th/install" class="btn-3d btn-3d-full">
+                <span class="btn-3d-content">
+                  <span class="btn-3d-text">{t.pricing.free.cta}</span>
+                </span>
+                <span class="btn-3d-shine"></span>
               </a>
             </div>
 
@@ -444,13 +447,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
               </ul>
 
-              <a href="#" class="btn-3d btn-3d-full" id="checkout-monthly-btn">
-                <span class="btn-3d-content">
-                  <span class="btn-3d-text">{t.pricing.proMonthly.cta}</span>
-                </span>
-                <span class="btn-3d-shine"></span>
-              </a>
-              <p class="pricing-note">ยกเลิกได้ทุกเมื่อ ไม่ต้องถามเหตุผล</p>
+              <p class="pricing-note-upgrade">อัพเกรดเป็น PRO ได้ในแอป</p>
             </div>
 
             <!-- Pro Yearly -->
@@ -489,13 +486,7 @@ const webUrl = 'https://web.candlemaster.app';
                 </li>
               </ul>
 
-              <a href="#" class="btn-3d-purple btn-3d-purple-full" id="checkout-yearly-btn">
-                <span class="btn-3d-content">
-                  <span class="btn-3d-text">{t.pricing.proYearly.cta}</span>
-                </span>
-                <span class="btn-3d-shine"></span>
-              </a>
-              <p class="pricing-note">ยกเลิกได้ทุกเมื่อ ประหยัด 58% เทียบกับรายเดือน</p>
+              <p class="pricing-note-upgrade">อัพเกรดเป็น PRO ได้ในแอป</p>
             </div>
           </div>
 
@@ -597,33 +588,6 @@ const webUrl = 'https://web.candlemaster.app';
       </footer>
     </main>
 
-    <!-- Stripe Checkout Script -->
-    <script>
-      // Landing page redirects to PWA app for checkout (Stripe Checkout Sessions)
-      document.addEventListener('DOMContentLoaded', () => {
-        const monthlyBtn = document.getElementById('checkout-monthly-btn');
-        const yearlyBtn = document.getElementById('checkout-yearly-btn');
-
-        function handleCheckout(plan) {
-          // Redirect to PWA app — payment handled via Stripe Checkout Sessions in-app
-          window.location.href = 'https://app.candlemaster.app';
-        }
-
-        if (monthlyBtn) {
-          monthlyBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            handleCheckout('monthly');
-          });
-        }
-
-        if (yearlyBtn) {
-          yearlyBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            handleCheckout('yearly');
-          });
-        }
-      });
-    </script>
     </div><!-- end page-wrapper -->
   </body>
 </html>
@@ -2068,6 +2032,18 @@ const webUrl = 'https://web.candlemaster.app';
     font-size: var(--text-xs);
     color: var(--text-tertiary);
     margin-top: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+  }
+
+  .pricing-note-upgrade {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: 8px;
     position: relative;
     z-index: 1;
   }
