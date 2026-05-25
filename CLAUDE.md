@@ -130,32 +130,33 @@ Used on: Landing page (Uncle Tang section + Creator Story), Why page (/why)
 - Player doesn't know which stock until game ends
 - "History Always Repeats Itself" — learn from real market history
 
-## Pricing (Current — Updated Feb 2026)
+## Pricing (Current — Updated May 2026, v3.0 migration)
 
-| Plan | Regular | Launch Price |
-|------|---------|--------------|
-| Free | $0 | $0 |
-| PRO Monthly | $4.99/mo | **$3.99/mo** (~฿140) |
-| PRO Yearly | $47.88/yr | **$19.99/yr** (~฿700) |
+| Plan | Price | หมายเหตุ |
+|------|-------|---------|
+| Free | $0 | ตลอดไป |
+| **PRO Lifetime** | **$3.99 (USD) / ฿99 (THB)** | จ่ายครั้งเดียว ไม่มี subscription |
 
 ### Free Tier
-- 100 Moves per Game
+- 100 trading days per game
 - **20 Legendary Stocks**
 - Historical Data 1970-2025
-- 3 Chart Themes
+- 1 chart theme (Sandstone)
 
-### PRO Features
-- 200 Moves per Game
+### PRO Lifetime Features
+- 250 trading days per game
 - 500+ Legendary Stocks worldwide
-- All Chart Themes
-- Full Academy Access
-- Crisis Event — Boss Stage
+- All 3 Chart Themes (Sandstone, Midnight, Solarized)
+- Full Academy Access (50+ lessons)
+- Crisis Event — Boss Stages
+- Position Calculator
 - All Future Updates
 
-### Stripe (Live Mode)
-- Monthly: `price_1SzX9500THgK6a8eMmajk8sQ`
-- Yearly: `price_1SzX9X00THgK6a8eQ6GfnYnn`
-- Flow: Landing page CTA → redirect to PWA app → Stripe Checkout Session
+### Payment Channels (v3.0+)
+- **Web/PWA**: ❌ No payment — Pricing card shows "Get on Play Store / App Store" CTA
+- **Android**: Google Play Managed Product `candle_master_pro_lifetime` via RevenueCat
+- **iOS** (pending): Apple IAP Non-Consumable via RevenueCat
+- **Stripe**: ❌ Removed (account banned May 2026) — landing must direct all upgrades to mobile
 
 ## i18n Content Editing
 
@@ -205,6 +206,17 @@ Collects: email, desktop waitlist opt-in, newsletter opt-in
 
 ## Recent Changes
 
+### v0.6.0 (2026-05-25) — Lifetime Pricing Migration
+- 🚨 **Stripe removed entirely** (account banned)
+- 💎 **Pricing**: Monthly/Yearly subscriptions → **Lifetime ฿99 / $3.99 one-time**
+- 🎨 **Pricing UI**: 3-card layout (Free/Monthly/Yearly) → 2-card (Free/Lifetime)
+- 📱 **CTAs**: All upgrade buttons now point to Play Store / App Store (no in-page checkout)
+- 📝 **FAQ updated**: Removed "cancel subscription" Q&A, added "request refund" via Apple/Google
+- 🔒 **Privacy + Terms**: Stripe references removed; payment processing now Apple/Google only
+- 🌐 **JSON-LD schema**: Updated to single Lifetime offer (was 3-offer monthly/yearly)
+- 🇹🇭 **TH pricing fix**: ฿139 typo → ฿99
+- See full plan: `E:\CANDLE-MASTER\PROJECT\docs\superpowers\plans\2026-05-25-lifetime-pricing-migration.md`
+
 ### v0.5.0 (2026-02-12)
 - **Uncle Tang full section**: Moved from Creator Story card to dedicated section below Features (title + description + 160px images)
 - **Data range**: Updated 1980-2025 → **1970-2025** across all pages
@@ -233,5 +245,7 @@ Collects: email, desktop waitlist opt-in, newsletter opt-in
 - [ ] Google Analytics / conversion tracking
 
 ### Future
-- [ ] Affiliate/Referral program (considering Refgrow + Stripe)
-- [ ] Native App Store / Google Play submission
+- [ ] Affiliate/Referral program (Lemon Squeezy — NOT Stripe, account banned)
+- [ ] Native App Store submission (iOS — pending Phase 5 of v3 migration)
+- [ ] Native Google Play submission (Android — pending Phase 4: Closed Testing 12 testers × 14 days)
+- [ ] Real App Store URL in landing pricing CTA (currently `href="#"` placeholder until iOS launches)
