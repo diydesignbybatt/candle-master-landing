@@ -82,57 +82,75 @@
     }
   },
   "pricing": {
+    "title": "Simple Pricing",
+    "subtitle": "One price. Forever. No subscriptions.",
     "badge": "Simple Pricing",
-    "title": "Start Free,",
     "titleHighlight": "Upgrade When Ready",
-    "launchBanner": "Launch Sale - Limited Time Only!",
+    "coffeeNote": "The average beginner loses $1,000+ in their first month. This costs less than a coffee.",
     "free": {
+      "title": "Free",
       "badge": "Forever Free",
       "plan": "Free",
       "price": "$0",
-      "period": "forever",
+      "period": "Forever",
       "description": "Start learning without any commitment",
       "features": {
-        "days": "100 Moves per game",
-        "stocks": "20 Legendary Stocks",
-        "data": "Random Historical Data 1970-2025",
-        "themes": "3 Beautiful Themes"
+        "days": "100 trading days per game",
+        "stocks": "20 legendary stocks",
+        "data": "Historical data 1970-2025",
+        "themes": "1 chart theme"
       },
-      "cta": "Start Playing Free"
+      "cta": "Start Free"
+    },
+    "pro": {
+      "title": "PRO Lifetime",
+      "price": "$3.99",
+      "period": "One-Time",
+      "badge": "Best Value",
+      "features": [
+        "250 trading days per game",
+        "500+ legendary stocks worldwide",
+        "All 3 chart themes",
+        "Full Academy access (50+ lessons)",
+        "Crisis Event boss stages",
+        "Position calculator",
+        "All future updates included"
+      ],
+      "cta": "Get on Mobile App"
     },
     "proMonthly": {
-      "badge": "Launch Sale",
-      "plan": "PRO Monthly",
-      "priceOriginal": "$4.99",
+      "badge": "Best Value",
+      "plan": "PRO Lifetime",
+      "priceOriginal": "",
       "price": "$3.99",
-      "period": "/month",
-      "description": "Buy the dev a coffee & keep this project alive",
+      "period": "One-Time",
+      "description": "Pay once, use forever — no subscriptions",
       "features": {
-        "days": "200 Moves per game",
-        "stocks": "500+ Legendary Stocks worldwide",
-        "data": "Random Historical Data 1970-2025",
-        "themes": "3 Beautiful Themes",
-        "academy": "Full Academy Access",
-        "updates": "All Future Updates"
+        "days": "250 trading days per game",
+        "stocks": "500+ legendary stocks worldwide",
+        "data": "Historical data 1970-2025",
+        "themes": "All 3 chart themes",
+        "academy": "Full Academy access (50+ lessons)",
+        "updates": "All future updates included"
       },
-      "cta": "Get PRO Monthly"
+      "cta": "Get on Mobile App"
     },
     "proYearly": {
       "badge": "Best Value",
-      "plan": "PRO Yearly",
-      "priceOriginal": "$47.88",
-      "price": "$19.99",
-      "period": "/year",
-      "description": "Save 58% compared to monthly",
+      "plan": "PRO Lifetime",
+      "priceOriginal": "",
+      "price": "$3.99",
+      "period": "One-Time",
+      "description": "Pay once, use forever — no subscriptions",
       "features": {
-        "everything": "Everything in PRO Monthly",
-        "forever": "Best value for serious learners",
+        "everything": "Everything in PRO — forever",
+        "forever": "One-time purchase, no recurring charges",
         "updates": "All future updates included",
         "support": "Support Indie Developer"
       },
-      "cta": "Get Yearly Access"
+      "cta": "Get on Mobile App"
     },
-    "coffeeNote": "The average beginner loses $1,000+ in their first month. This costs less than a coffee."
+    "comingSoon": "Available on Google Play and App Store"
   },
   "cta": {
     "title": "Ready to Learn",
@@ -200,8 +218,12 @@
         "answer": "Yes! You can play on any device — mobile, tablet, or desktop browser. The game works best on mobile, but the tablet and desktop layout gives you a wider chart view. Just open app.candlemaster.app in your browser."
       },
       {
-        "question": "How do I cancel PRO?",
-        "answer": "Cancel anytime from app settings. No questions, no hassle. Both monthly and yearly plans can be cancelled at any time."
+        "question": "Is there a free trial for PRO?",
+        "answer": "Yes! The Free version lets you try 100 trading days per game with 20 legendary stocks — no time limit, no credit card. Upgrade to PRO Lifetime for $3.99 to unlock everything, forever."
+      },
+      {
+        "question": "Will I be charged again after purchasing PRO?",
+        "answer": "No. PRO Lifetime is a single one-time payment — no recurring charges, no subscriptions, ever. Pay once, use forever."
       }
     ]
   },
