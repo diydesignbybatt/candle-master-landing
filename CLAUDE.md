@@ -14,7 +14,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Output**: Static
 - **i18n**: URL-based routing (EN default `/`, Thai `/th/`)
 - **Email Service**: Resend (newsletter/waitlist)
-- **Payments**: Stripe (checkout handled by PWA app, not landing page)
+- **Payments**: Native app-store purchases only for PRO unlocks; landing page has no checkout
 
 ## URLs
 

@@ -11,9 +11,9 @@
   },
   "hero": {
     "badge": "Game for Trader, by Trader.",
-    "title": "Real Trading,",
+    "title": "Market Practice,",
     "titleHighlight": "Without Real Pain!",
-    "description": "History Always Repeats Itself - This isn't just a cool phrase, it's the key to trading success. We built this game so you can make mistakes without getting hurt. Using real data from 1970-2025.",
+    "description": "History Always Repeats Itself - not as a promise, but as a practice ground. Candle Master lets you study historical charts and make mistakes safely with no real money involved. Using real data from 1970-2025.",
     "cta": {
       "appStore": "App Store",
       "googlePlay": "Google Play",
@@ -32,7 +32,7 @@
     "cards": {
       "realData": {
         "title": "Real Historical Data",
-        "description": "Trade real market scenarios from 1970-2025. Feel the pressure of real price action without losing real money."
+        "description": "Practice with historical market scenarios from 1970-2025. Feel the pressure of real price action without risking real money."
       },
       "academy": {
         "badge": "PRO",
@@ -321,7 +321,7 @@
         "skills": {
           "icon": "🧠",
           "title": "Not a Master, Just a Player",
-          "description": "The creator is just another trader who dreamed of becoming a master. The road to consistent profits and trading for a living wasn't easy. For some it might be — but I'm one of the many who needed a lot of time to build this skill."
+          "description": "The creator is just another trader who dreamed of becoming a master. Building chart-reading discipline wasn't easy. For some it might be — but I'm one of the many who needed a lot of time and practice."
         },
         "practice": {
           "icon": "🎮",

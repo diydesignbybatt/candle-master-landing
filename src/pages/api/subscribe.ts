@@ -4,6 +4,7 @@
  *
  * Environment variable required:
  * - RESEND_API_KEY: Your Resend API key
+ * - RESEND_AUDIENCE_ID: Resend audience ID for storing contacts
  *
  * To set up:
  * 1. Create account at https://resend.com
@@ -11,15 +12,18 @@
  * 3. Add to wrangler.toml or Cloudflare dashboard:
  *    [vars]
  *    RESEND_API_KEY = "re_xxxxx"
+ *    RESEND_AUDIENCE_ID = "aud_xxxxx"
  */
 
 import type { APIRoute } from 'astro';
 
 interface SubscribeRequest {
   email: string;
-  desktop_waitlist: boolean;
+  feature_updates: boolean;
   newsletter: boolean;
 }
+
+export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -34,7 +38,7 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Check if at least one option is selected
-    if (!data.desktop_waitlist && !data.newsletter) {
+    if (!data.feature_updates && !data.newsletter) {
       return new Response(JSON.stringify({ error: 'Please select at least one option' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
@@ -43,9 +47,10 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Get Resend API key from environment
     const resendApiKey = import.meta.env.RESEND_API_KEY;
+    const resendAudienceId = import.meta.env.RESEND_AUDIENCE_ID;
 
-    if (!resendApiKey) {
-      console.error('RESEND_API_KEY not configured');
+    if (!resendApiKey || !resendAudienceId) {
+      console.error('Resend environment is not fully configured');
       // Still return success to not break UX, but log the error
       // In production, you might want to store these emails in KV as backup
       return new Response(JSON.stringify({
@@ -60,14 +65,12 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Prepare tags based on preferences
     const tags = [];
-    if (data.desktop_waitlist) tags.push({ name: 'desktop_waitlist', value: 'true' });
+    if (data.feature_updates) tags.push({ name: 'feature_updates', value: 'true' });
     if (data.newsletter) tags.push({ name: 'newsletter', value: 'true' });
     tags.push({ name: 'source', value: 'landing_page' });
 
     // Add contact to Resend audience
-    // Note: You'll need to create an audience in Resend dashboard first
-    // and replace 'YOUR_AUDIENCE_ID' with the actual ID
-    const response = await fetch('https://api.resend.com/audiences/YOUR_AUDIENCE_ID/contacts', {
+    const response = await fetch(`https://api.resend.com/audiences/${encodeURIComponent(resendAudienceId)}/contacts`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${resendApiKey}`,
@@ -100,7 +103,7 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Send welcome email (optional)
-    const welcomeSubject = data.desktop_waitlist
+    const welcomeSubject = data.feature_updates
       ? '🎮 Welcome to Candle Master - Desktop Waitlist'
       : '🎮 Welcome to Candle Master Newsletter';
 
@@ -142,7 +145,7 @@ function isValidEmail(email: string): boolean {
 
 function getWelcomeEmailHTML(data: SubscribeRequest): string {
   const preferences = [];
-  if (data.desktop_waitlist) preferences.push('Desktop version updates');
+  if (data.feature_updates) preferences.push('Feature updates');
   if (data.newsletter) preferences.push('Trading tips & news');
 
   return `
